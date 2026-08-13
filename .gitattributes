@@ -1,0 +1,2 @@
+public/assets/images/banners/home-banner.mp4 filter=lfs diff=lfs merge=lfs -text
+*.mp4 filter=lfs diff=lfs merge=lfs -text

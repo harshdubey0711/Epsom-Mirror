@@ -1,0 +1,63 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    "./*.html",
+    "./partials/**/*.html",
+    "./locations/**/*.html",
+    "./*/**/*.html",
+  ],
+  theme: {
+    extend: {
+      colors: {
+        epsom: {
+          // Ivory / honey palette
+          salt: "#FAF0D9", // Ivory — page bg (60%)
+          soft: "#F3E6C4", // warm ivory panels
+          mist: "#FFF8EC", // elevated near-ivory
+          ink: "#2A2118", // espresso body text
+          muted: "#BDA587", // Sandstone secondary (10%)
+          maroon: "#D39645", // Honey primary brand (25%)
+          deep: "#F5B64E", // Gold accent (5%)
+          crystal: "#BDA587", // Sandstone borders
+          pearl: "#FAF0D9",
+          // legacy aliases
+          dark: "#FAF0D9",
+          darker: "#F3E6C4",
+          accent: "#D39645",
+          accent2: "#F5B64E",
+          mint: "#BDA587",
+          teal: "#1F6B63", // utility / teal chrome
+        },
+      },
+      fontFamily: {
+        sans: ["Poppins", "system-ui", "sans-serif"],
+        display: ["Tenor Sans", "Georgia", "serif"],
+      },
+      boxShadow: {
+        soft: "0 8px 30px rgba(42, 33, 24, 0.08)",
+        "soft-lg": "0 16px 40px rgba(42, 33, 24, 0.14)",
+        glow: "0 8px 30px rgba(211, 150, 69, 0.28)",
+        "glow-lg": "0 12px 40px rgba(245, 182, 78, 0.32)",
+      },
+      backgroundImage: {
+        "gradient-cinematic":
+          "linear-gradient(180deg, rgba(42,33,24,0.25) 0%, rgba(42,33,24,0.78) 100%)",
+        "gradient-accent":
+          "linear-gradient(135deg, #D39645 0%, #F5B64E 100%)",
+        "salt-hero":
+          "linear-gradient(180deg, rgba(42,33,24,0.45) 0%, rgba(42,33,24,0.62) 55%, rgba(42,33,24,0.82) 100%)",
+      },
+      keyframes: {
+        "marquee-scroll": {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-50%)" },
+        },
+      },
+      animation: {
+        marquee: "marquee-scroll 45s linear infinite",
+        "marquee-slow": "marquee-scroll 60s linear infinite",
+      },
+    },
+  },
+  plugins: [],
+};

@@ -1,0 +1,17 @@
+---
+description: How to write per-page SEO metadata for Epsom Cryo Spa
+globs: "{app/**/page.tsx,lib/metadata.ts,docs/SEO.md}"
+alwaysApply: false
+---
+
+# Per-page SEO metadata
+
+Follow `docs/SEO.md`. Use `buildMetadata` from `lib/metadata.ts` with unique `title`, `description`, and `path`.
+
+- Static pages: `export const metadata = buildMetadata({ title, description, path })`
+- Dynamic pages (`app/[slug]`, `app/locations/[slug]`): `generateMetadata` that returns `buildMetadata(...)`
+- Never export both `metadata` and `generateMetadata` from the same file
+- Title pattern: `{Page} | Epsom Cryo Spa Mumbai` (~50–60 chars)
+- Description: unique, ~140–160 chars, benefit + Mumbai / location / CTA
+- `path` is the public URL with a trailing slash (`/` for home)
+- Canonical, Open Graph, and Twitter tags are generated — do not add duplicate meta tags in JSX

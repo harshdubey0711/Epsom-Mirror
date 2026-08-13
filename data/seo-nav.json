@@ -1,0 +1,128 @@
+{
+  "categories": [
+    {
+      "slug": "health-optimisation-longevity",
+      "name": "Health Optimisation & Longevity",
+      "href": "health-optimisation-longevity/",
+      "footerLabel": "Bio Hack",
+      "treatments": [
+        { "slug": "cryotherapy", "name": "Cryotherapy" },
+        { "slug": "hyperbaric-oxygen-therapy", "name": "Oxygen Therapy (HBOT)" },
+        { "slug": "iv-drip-therapy", "name": "IV Drip Therapy" },
+        { "slug": "red-light-therapy", "name": "Red Light Therapy" },
+        { "slug": "epsom-salt-sauna", "name": "Epsom Salt Sauna" },
+        { "slug": "compression-therapy", "name": "Compression Therapy" },
+        { "slug": "infrared-body-wrap", "name": "Infrared Body Wrap" },
+        { "slug": "collagen-light-therapy", "name": "Collagen Light Therapy" },
+        { "slug": "health-wellness-blood-test", "name": "Health & Wellness Blood Test" },
+        { "slug": "medical-consultation", "name": "Medical Consultation" },
+        { "slug": "body-composition-analysis", "name": "Body Composition Analysis" }
+      ]
+    },
+    {
+      "slug": "pain-management",
+      "name": "Pain Management",
+      "href": "pain-management/",
+      "footerLabel": "IV Drip",
+      "treatments": [
+        { "slug": "cryotherapy", "name": "Whole Body Cryotherapy" },
+        { "slug": "infrared-sauna", "name": "Infrared Sauna" },
+        { "slug": "hyperbaric-oxygen-therapy", "name": "Hyperbaric Oxygen Therapy (HBOT)" },
+        { "slug": "red-light-therapy", "name": "Red Light Therapy" }
+      ]
+    },
+    {
+      "slug": "beauty",
+      "name": "Beauty",
+      "href": "beauty/",
+      "footerLabel": "Aesthetic",
+      "treatments": [
+        { "slug": "circadia-facials", "name": "Circadia® Facials" },
+        { "slug": "cryofacial", "name": "Cryofacial" },
+        { "slug": "cryo-slimming", "name": "Cryo Slimming" },
+        { "slug": "cryo-toning", "name": "Cryo Toning" },
+        { "slug": "glow-getter-iv-drip", "name": "Glow Getter IV Drip" },
+        { "slug": "lymphatic-drainage-body-massage", "name": "Lymphatic Drainage Body Massage" },
+        { "slug": "body-ballancer", "name": "Body Ballancer" },
+        { "slug": "lymphatic-drainage-facial-massage", "name": "Lymphatic Drainage Facial Massage" }
+      ]
+    },
+    {
+      "slug": "sports-recovery-performance",
+      "name": "Sports Recovery & Performance",
+      "href": "sports-recovery-performance/",
+      "footerLabel": "Luxury Spa",
+      "treatments": [
+        { "slug": "cryotherapy", "name": "Whole Body Cryotherapy" },
+        { "slug": "compression-therapy", "name": "Compression Therapy" },
+        { "slug": "red-light-therapy", "name": "Red Light Therapy" },
+        { "slug": "infrared-sauna", "name": "Infrared Sauna" },
+        { "slug": "energise-iv-drip", "name": "Energise IV Drip Therapy" }
+      ]
+    }
+  ],
+  "primaryCategory": {
+    "cryotherapy": "health-optimisation-longevity",
+    "red-light-therapy": "health-optimisation-longevity",
+    "compression-therapy": "health-optimisation-longevity",
+    "hyperbaric-oxygen-therapy": "health-optimisation-longevity",
+    "infrared-sauna": "pain-management",
+    "iv-drip-therapy": "health-optimisation-longevity",
+    "epsom-salt-sauna": "health-optimisation-longevity",
+    "infrared-body-wrap": "health-optimisation-longevity",
+    "collagen-light-therapy": "health-optimisation-longevity",
+    "health-wellness-blood-test": "health-optimisation-longevity",
+    "medical-consultation": "health-optimisation-longevity",
+    "body-composition-analysis": "health-optimisation-longevity",
+    "circadia-facials": "beauty",
+    "cryofacial": "beauty",
+    "cryo-slimming": "beauty",
+    "cryo-toning": "beauty",
+    "glow-getter-iv-drip": "beauty",
+    "lymphatic-drainage-body-massage": "beauty",
+    "body-ballancer": "beauty",
+    "lymphatic-drainage-facial-massage": "beauty",
+    "energise-iv-drip": "sports-recovery-performance"
+  },
+  "locations": [
+    {
+      "slug": "santacruz",
+      "name": "Santacruz West",
+      "label": "Flagship Location",
+      "address": "Kamla Spaces, Shop no.6 Kamla Space Premises, S.V Road, VM Bhargav Rd, opp. Nabard society, Hasmukh Nagar, Santacruz (West), Mumbai, 400054",
+      "mapsUrl": "https://maps.google.com/?q=Epsom+Cryo+Spa+Santacruz"
+    },
+    {
+      "slug": "borivali",
+      "name": "Borivali West",
+      "label": "New Location",
+      "address": "Experience the full Epsom Cryo Spa menu of cryotherapy, IV drips, aesthetics, and luxury spa treatments at our Borivali center.",
+      "mapsUrl": "https://maps.google.com/?q=Epsom+Cryo+Spa+Borivali"
+    },
+    {
+      "slug": "andheri",
+      "name": "Andheri West",
+      "label": "New Location",
+      "address": "Our Andheri center brings premium recovery, IV therapy, and aesthetic treatments closer to you in western Mumbai.",
+      "mapsUrl": "https://maps.google.com/?q=Epsom+Cryo+Spa+Andheri"
+    }
+  ],
+  "footerServices": [
+    { "label": "Health Optimisation & Longevity", "href": "health-optimisation-longevity/" },
+    { "label": "Pain Management", "href": "pain-management/" },
+    { "label": "Sports Recovery & Performance", "href": "sports-recovery-performance/" },
+    { "label": "Beauty", "href": "beauty/" },
+    { "label": "Salon", "href": "salon/" }
+  ],
+  "popularSearches": [
+    { "label": "Cryotherapy", "href": "cryotherapy/" },
+    { "label": "IV Drip", "href": "iv-drip-therapy/" },
+    { "label": "Compression Therapy", "href": "compression-therapy/" },
+    { "label": "Hyperbaric Oxygen", "href": "hyperbaric-oxygen-therapy/" },
+    { "label": "Infrared Therapy", "href": "infrared-sauna/" },
+    { "label": "Red Light Therapy", "href": "red-light-therapy/" },
+    { "label": "Glow Getter IV", "href": "glow-getter-iv-drip/" },
+    { "label": "Circadia Facials", "href": "circadia-facials/" },
+    { "label": "Body Ballancer", "href": "body-ballancer/" }
+  ]
+}

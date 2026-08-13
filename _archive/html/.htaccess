@@ -1,0 +1,30 @@
+# Legacy URL redirects → SEO flat structure
+Redirect 301 /recovery.html /health-optimisation-longevity/
+Redirect 301 /categories/recovery-longevity.html /health-optimisation-longevity/
+Redirect 301 /categories/weight-loss-transformation.html /health-optimisation-longevity/
+Redirect 301 /categories/aesthetic-skin-rejuvenation.html /beauty/
+Redirect 301 /categories/iv-drips-cellular-wellness.html /iv-drip-therapy/
+Redirect 301 /categories/luxury-spa-relaxation.html /sports-recovery-performance/
+Redirect 301 /biohack.html /health-optimisation-longevity/
+Redirect 301 /iv-drip.html /iv-drip-therapy/
+Redirect 301 /spa-services.html /sports-recovery-performance/
+Redirect 301 /aesthetic.html /beauty/
+Redirect 301 /aesthetic-rejuvenation.html /beauty/
+Redirect 301 /weight-loss-transformation.html /health-optimisation-longevity/
+Redirect 301 /cryotherapy-in-mumbai.html /cryotherapy/
+Redirect 301 /infrared-therapy.html /infrared-sauna/
+Redirect 301 /services/cryotherapy.html /cryotherapy/
+Redirect 301 /services/red-light-therapy.html /red-light-therapy/
+Redirect 301 /services/compression-therapy.html /compression-therapy/
+Redirect 301 /services/infrared-therapy.html /infrared-sauna/
+Redirect 301 /contact-us.html /contact.html
+Redirect 301 /locations/santacruz.html /locations/santacruz/
+Redirect 301 /locations/borivali.html /locations/borivali/
+Redirect 301 /locations/andheri.html /locations/andheri/
+
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css application/javascript application/json
+</IfModule>
+
+# Serve directory index for clean URLs
+DirectoryIndex index.html

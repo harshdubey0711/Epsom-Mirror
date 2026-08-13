@@ -1,0 +1,311 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-epsom-salt text-epsom-ink font-sans antialiased;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-epsom-soft/70 border border-epsom-crystal/25 rounded-2xl shadow-soft;
+  }
+  .glass-card-hover {
+    @apply glass-card transition-all duration-300 hover:border-epsom-maroon/50 hover:shadow-soft-lg;
+  }
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-full font-semibold text-sm
+      bg-epsom-maroon text-white hover:bg-epsom-deep hover:text-epsom-ink transition-all shadow-glow;
+  }
+  .btn-outline {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-full font-semibold text-sm
+      border border-epsom-maroon/60 text-epsom-maroon hover:bg-epsom-maroon/10 transition-all;
+  }
+  .btn-ghost {
+    @apply inline-flex items-center justify-center px-4 py-2 rounded-full text-sm
+      text-epsom-maroon hover:bg-epsom-maroon/10 transition-all;
+  }
+  .section-heading {
+    @apply font-display text-3xl md:text-4xl lg:text-5xl text-epsom-ink tracking-wide;
+  }
+  .section-subheading {
+    @apply text-epsom-muted text-lg max-w-2xl mx-auto;
+  }
+  .glow-text {
+    color: #f5b64e;
+  }
+  .text-highlight {
+    @apply text-epsom-maroon font-medium;
+  }
+  .tag-pill {
+    @apply inline-block px-3 py-1 text-xs rounded-full bg-epsom-maroon/15 text-epsom-maroon border border-epsom-maroon/35;
+  }
+  .filter-btn {
+    @apply px-4 py-2 rounded-full text-sm border border-epsom-crystal/50 text-epsom-muted
+      hover:border-epsom-maroon hover:text-epsom-maroon transition-all;
+  }
+  .filter-btn.active {
+    @apply bg-epsom-maroon/15 border-epsom-maroon text-epsom-maroon;
+  }
+  .salt-texture {
+    background-color: #faf0d9;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  }
+
+  /* Luxury treatment card */
+  .treatment-card {
+    @apply flex-shrink-0 w-72 bg-epsom-mist border border-epsom-crystal/25 rounded-2xl overflow-hidden shadow-soft
+      transition-all duration-300 hover:shadow-soft-lg hover:border-epsom-maroon/45 hover:-translate-y-0.5;
+  }
+  .treatment-card-media {
+    @apply relative aspect-[4/5] overflow-hidden bg-epsom-soft;
+  }
+  .treatment-card-media img {
+    @apply w-full h-full object-cover transition-transform duration-500;
+  }
+  .treatment-card:hover .treatment-card-media img {
+    transform: scale(1.05);
+  }
+  .treatment-card-body {
+    @apply p-5;
+  }
+  .treatment-card-rule {
+    @apply w-10 h-px bg-epsom-maroon mt-3 mb-0;
+  }
+  .treatment-card-cta {
+    @apply flex-shrink-0 w-72 min-h-[22rem] border border-dashed border-epsom-maroon/45 rounded-2xl
+      flex flex-col items-center justify-center text-epsom-maroon font-medium text-sm bg-epsom-soft/40
+      hover:bg-epsom-maroon/10 transition-colors text-center px-4;
+  }
+  .category-band {
+    @apply py-16 border-l-4 border-epsom-maroon/35;
+  }
+
+  /* Horizontal treatment strip — CSS auto-scroll + JS L/R under */
+  .marquee-shell {
+    @apply w-4/5 max-w-7xl mx-auto;
+  }
+  .treatment-marquee {
+    @apply overflow-hidden;
+  }
+  .treatment-marquee.is-manual {
+    @apply overflow-x-auto overflow-y-hidden;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .treatment-marquee.is-manual::-webkit-scrollbar {
+    display: none;
+  }
+  .treatment-marquee-track {
+    @apply flex gap-5 w-max;
+    animation: marquee-scroll 45s linear infinite;
+    will-change: transform;
+  }
+  .treatment-marquee--slow .treatment-marquee-track {
+    animation-duration: 60s;
+  }
+  .marquee-shell:hover .treatment-marquee-track,
+  .marquee-shell:focus-within .treatment-marquee-track,
+  .treatment-marquee.is-paused .treatment-marquee-track {
+    animation-play-state: paused;
+  }
+  .treatment-marquee-track.is-reverse {
+    animation-direction: reverse;
+  }
+  .treatment-marquee.is-manual .treatment-marquee-track {
+    animation: none !important;
+    transform: none !important;
+  }
+  .marquee-nav {
+    @apply flex items-center justify-center gap-3 mt-6;
+  }
+  .marquee-btn {
+    @apply w-11 h-11 rounded-full border border-epsom-maroon/50 text-epsom-maroon
+      bg-white/80 flex items-center justify-center transition-all
+      hover:bg-epsom-maroon hover:text-white hover:border-epsom-maroon;
+  }
+
+  /* Legacy snap slider (fallback / reduced motion) */
+  .treatment-slider {
+    @apply flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory scroll-smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+  }
+  .treatment-slide {
+    @apply flex-shrink-0 w-64 snap-start;
+  }
+}
+
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .treatment-marquee-track {
+    animation: none !important;
+    transform: none !important;
+  }
+  .treatment-marquee {
+    overflow-x: auto;
+  }
+}
+
+/* Hero video */
+.hero-video-wrap video {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+/* FAQ accordion — ivory band */
+.faq-band {
+  @apply bg-epsom-mist text-epsom-ink;
+}
+.faq-stars {
+  @apply flex items-center justify-center gap-1.5 text-epsom-maroon text-sm mb-3;
+}
+.faq-item {
+  @apply rounded-xl border border-epsom-crystal/30 bg-white overflow-hidden transition-all duration-300;
+}
+.faq-item.open {
+  @apply border-epsom-maroon/50 shadow-[0_0_0_1px_rgba(211,150,69,0.25)];
+}
+.faq-item .faq-toggle {
+  @apply w-full text-left px-6 py-5 flex justify-between items-center gap-4 text-epsom-ink font-medium;
+}
+.faq-answer {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.45s ease;
+}
+.faq-item.open .faq-answer {
+  grid-template-rows: 1fr;
+}
+.faq-answer-inner {
+  overflow: hidden;
+  @apply px-6 pb-6;
+}
+.faq-icon {
+  @apply text-epsom-ink text-xl leading-none flex-shrink-0 transition-colors;
+}
+.faq-icon::before {
+  content: "+";
+}
+.faq-item.open .faq-icon {
+  @apply text-epsom-maroon;
+}
+.faq-item.open .faq-icon::before {
+  content: "\2212";
+}
+.faq-item.open .faq-toggle {
+  @apply text-epsom-maroon;
+}
+.faq-item.faq-page-hide {
+  display: none !important;
+}
+.faq-pagination {
+  @apply flex items-center justify-center gap-3 mt-10;
+}
+.faq-page-btn {
+  @apply w-10 h-10 rounded-full border border-epsom-crystal/40 text-epsom-ink text-sm
+    hover:border-epsom-maroon hover:text-epsom-maroon transition-all disabled:opacity-30 disabled:pointer-events-none;
+}
+.faq-page-btn.is-active {
+  @apply bg-epsom-maroon text-white border-epsom-maroon;
+}
+
+/* Reveal L→R on scroll — keep text visible even if JS is late */
+.reveal-ltr {
+  opacity: 1;
+  transform: translateX(-1.25rem);
+  transition: transform 0.65s ease, opacity 0.65s ease;
+  transition-delay: var(--reveal-delay, 0ms);
+}
+.reveal-ltr.is-visible {
+  transform: translateX(0);
+}
+
+/* Benefits — cardless */
+.benefits-band {
+  @apply py-20 px-4 bg-epsom-soft/40;
+}
+.benefits-heading-rule {
+  @apply mx-auto mt-4 mb-12 w-16 h-0.5 bg-epsom-maroon;
+}
+.benefit-item {
+  @apply flex items-start gap-3 py-4 border-b border-epsom-crystal/35;
+}
+.benefit-item:last-child {
+  @apply border-b-0;
+}
+.benefit-bullet {
+  @apply mt-1.5 w-1.5 h-1.5 rounded-full bg-epsom-maroon flex-shrink-0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-ltr {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* Sticky CTA icon dock */
+.sticky-cta {
+  @apply fixed bottom-5 right-4 z-40 flex flex-col gap-3 items-end;
+}
+.sticky-cta-btn {
+  @apply inline-flex items-center justify-center gap-2 w-12 h-12 sm:w-auto sm:h-12 sm:px-4
+    rounded-full shadow-glow-lg text-base transition-all;
+}
+.sticky-cta-label {
+  @apply hidden sm:inline text-xs font-semibold tracking-wide;
+}
+.sticky-cta-book {
+  @apply bg-epsom-deep text-epsom-ink hover:bg-epsom-maroon hover:text-white;
+}
+.sticky-cta-call {
+  @apply bg-epsom-maroon text-white hover:bg-epsom-maroon/90;
+}
+.sticky-cta-wa {
+  @apply bg-epsom-deep text-epsom-ink hover:bg-epsom-maroon hover:text-white;
+}
+.nav-dropdown {
+  @apply absolute right-0 top-full mt-2 min-w-[14rem] bg-white border border-black/10
+    rounded-xl shadow-soft-lg p-2 z-[60];
+}
+.nav-dropdown a {
+  @apply block px-3 py-2 rounded-lg text-sm text-black hover:bg-neutral-100 hover:text-epsom-deep transition;
+}
+.nav-link-accent {
+  @apply text-sm text-black hover:text-epsom-deep transition;
+}
+.nav-link-accent[aria-expanded="true"] {
+  @apply text-epsom-deep;
+}
+
+/* Mega menu — full width panel under sticky header */
+.mega-menu {
+  @apply absolute left-0 right-0 top-full w-full
+    bg-white border-b border-black/10 shadow-soft-lg z-[60];
+}
+.mega-menu-inner {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 grid grid-cols-2 lg:grid-cols-4 gap-6;
+}
+.mega-menu a:hover {
+  @apply text-black;
+}
+#site-header,
+#site-header .max-w-7xl {
+  overflow: visible;
+}

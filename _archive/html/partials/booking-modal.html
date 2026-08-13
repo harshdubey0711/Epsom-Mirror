@@ -1,0 +1,22 @@
+<div id="booking-modal" class="hidden fixed inset-0 z-[60] items-center justify-center bg-black/60 backdrop-blur-sm p-4" role="dialog" aria-labelledby="booking-modal-title">
+  <div class="glass-card max-w-lg w-full p-8 relative max-h-[90vh] overflow-y-auto bg-white border border-epsom-crystal/30">
+    <button type="button" data-booking-close class="absolute top-4 right-4 text-epsom-muted hover:text-epsom-ink text-2xl" aria-label="Close">&times;</button>
+    <h2 id="booking-modal-title" class="font-display text-2xl text-epsom-ink">Choose Your Location</h2>
+    <p class="text-epsom-muted text-sm mt-2">Select a branch to continue to our secure booking portal.</p>
+    <div id="booking-locations" class="flex flex-col gap-4 mt-6"></div>
+  </div>
+</div>
+<div class="sticky-cta" aria-label="Quick actions">
+  <button type="button" data-book-trigger class="sticky-cta-btn sticky-cta-book" aria-label="Book consultation">
+    <i class="fa-solid fa-calendar-check" aria-hidden="true"></i>
+    <span class="sticky-cta-label">Book</span>
+  </button>
+  <a href="tel:+919867670762" class="sticky-cta-btn sticky-cta-call" aria-label="Call us">
+    <i class="fa-solid fa-phone" aria-hidden="true"></i>
+    <span class="sticky-cta-label">Call</span>
+  </a>
+  <a id="sticky-whatsapp" href="https://wa.me/919867670762" target="_blank" rel="noopener noreferrer" class="sticky-cta-btn sticky-cta-wa" aria-label="WhatsApp us">
+    <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+    <span class="sticky-cta-label">WhatsApp</span>
+  </a>
+</div>

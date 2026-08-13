@@ -1,0 +1,45 @@
+{
+  "brand": "Epsom Cryo Spa",
+  "tagline": "Mumbai's Premier Cryotherapy & Wellness Center",
+  "domain": "https://www.epsomcryospa.com",
+  "contact": {
+    "phones": ["+919867670764", "+919867670762"],
+    "email": "info@epsomcryospa.com"
+  },
+  "locations": [
+    {
+      "id": "santacruz",
+      "name": "Santacruz West",
+      "address": "Kamla Spaces, Shop no.6, S.V Road, VM Bhargav Rd, opp. Nabard society, Hasmukh Nagar, Santacruz (West), Mumbai, 400054",
+      "mapsUrl": "https://maps.google.com/?q=Epsom+Cryo+Spa+Santacruz",
+      "gmbUrl": "https://www.google.com/maps/search/?api=1&query=Epsom+Cryo+Spa+Santacruz+West",
+      "bookingUrl": "https://booking.epsomcryospa.com/santacruz"
+    },
+    {
+      "id": "borivali",
+      "name": "Borivali West",
+      "address": "Borivali West, Mumbai",
+      "mapsUrl": "https://maps.google.com/?q=Epsom+Cryo+Spa+Borivali",
+      "gmbUrl": "https://www.google.com/maps/search/?api=1&query=Epsom+Cryo+Spa+Borivali+West",
+      "bookingUrl": "https://booking.epsomcryospa.com/borivali"
+    },
+    {
+      "id": "andheri",
+      "name": "Andheri West",
+      "address": "Andheri West, Mumbai",
+      "mapsUrl": "https://maps.google.com/?q=Epsom+Cryo+Spa+Andheri",
+      "gmbUrl": "https://www.google.com/maps/search/?api=1&query=Epsom+Cryo+Spa+Andheri+West",
+      "bookingUrl": "https://booking.epsomcryospa.com/andheri"
+    }
+  ],
+  "whatsapp": {
+    "number": "919867670762",
+    "defaultMessage": "Hi, I'd like to book a consultation at Epsom Cryo Spa."
+  },
+  "social": {
+    "instagram": "https://www.instagram.com/epsomcryospa/",
+    "facebook": "https://www.facebook.com/epsomcryospa",
+    "linkedin": "https://www.linkedin.com/company/epsomcryospa",
+    "youtube": "https://www.youtube.com/@epsomcryospa"
+  }
+}
