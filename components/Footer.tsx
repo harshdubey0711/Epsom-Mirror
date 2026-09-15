@@ -17,7 +17,7 @@ export function Footer() {
                 className="h-10 w-auto"
               />
             </Link>
-            <h3 className="font-display text-xl text-epsom-ink mb-2">Epsom Cryo Spa</h3>
+            <h3 className="font-display text-xl text-epsom-ink mb-2">Epsom Wellness</h3>
             <p className="text-epsom-muted text-sm">
               Mumbai&apos;s premier cryotherapy &amp; wellness center for recovery, biohacking, and luxury
               self-care.

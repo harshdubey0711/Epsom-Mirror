@@ -187,7 +187,7 @@ export function HomePage() {
 
       <FaqSection items={faqItems} />
 
-      <section className="py-12 px-4 border-t border-epsom-crystal/40 bg-epsom-mist">
+      <section className="py-12 px-4 border-t border-epsom-crystal/40 bg-epsom-teal">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-sm uppercase tracking-widest text-epsom-muted mb-4">Popular Searches</h2>
           <p className="text-sm text-epsom-muted leading-relaxed flex flex-wrap gap-x-2 gap-y-1">

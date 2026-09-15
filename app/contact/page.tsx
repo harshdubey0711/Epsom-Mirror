@@ -1,6 +1,7 @@
 import { BookButton } from "@/components/BookButton";
 import { ContactForm } from "@/components/ContactForm";
 import { buildMetadata } from "@/lib/metadata";
+import Image from "next/image";
 
 export const metadata = buildMetadata({
   title: "Contact Us | Epsom Cryo Spa Mumbai",
@@ -11,8 +12,29 @@ export const metadata = buildMetadata({
 
 export default function ContactPage() {
   return (
-    <main className="pt-24 pb-24 px-4">
-      <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12">
+    <main className="bg-epsom-salt" >
+<section className="relative min-h-[60vh] md:min-h-[70vh] flex items-center justify-center overflow-hidden">
+          <Image
+          src="/assets/images/contact/contact-banner.png"
+          alt="epsom wellness about us banner"
+          fill
+          priority
+          className="object-cover"
+          sizes="100vw"
+          />
+          <div className="absolute inset-0 bg-black/50"/>
+          <div className="relative z-10 text-center px-4 max-w-4xl mx-auto pt-16">
+          <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-white leading-tight">
+          We’re Here for You
+          </h1>
+
+          <p className="text-white/90 mt-4">
+          Book Your Wellness Experience </p>
+          </div>
+
+        </section>
+
+      <div className="max-w-7xl mx-auto  py-16 grid md:py-24 lg:grid-cols-2 gap-12">
         <div>
           <h1 className="font-display text-4xl text-epsom-ink">Contact Us</h1>
           <p className="text-epsom-muted mt-4">
