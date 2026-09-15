@@ -27,6 +27,91 @@ npm run build
 npm start
 ```
 
+## How to edit content (per page)
+
+**Rule of thumb**
+
+1. Open the file in the table below.
+2. Change text / images / metadata.
+3. Save, check in the browser at `npm run dev`.
+4. Commit and push (see [Publish to GitHub](#publish-to-github)).
+
+| URL | Where to go | What to edit |
+|---|---|---|
+| `/` Home | [`components/home/HomePage.tsx`](components/home/HomePage.tsx) | Hero, about blurb, sections layout |
+| `/` Home treatment cards & categories | [`content/home.ts`](content/home.ts) | Treatment names, descriptions, images, category bands, why-choose-us, benefits |
+| `/` Popular searches | [`data/seo-nav.json`](data/seo-nav.json) → `popularSearches` | Labels and links |
+| `/about/` | [`app/about/page.tsx`](app/about/page.tsx) | Hero image, story copy, stats, CTA |
+| `/contact/` | [`app/contact/page.tsx`](app/contact/page.tsx) | Hero, contact copy; phones/email also in [`data/site-config.json`](data/site-config.json) |
+| `/faq/` | [`content/faq.ts`](content/faq.ts) + [`app/faq/page.tsx`](app/faq/page.tsx) | Questions/answers in `content/faq.ts`; page title/layout in `app/faq/page.tsx` |
+| `/memberships/` | [`app/memberships/page.tsx`](app/memberships/page.tsx) | Package names, copy, CTAs |
+| `/franchise/` | [`app/franchise/page.tsx`](app/franchise/page.tsx) | Franchise page copy |
+| `/blog/` | [`app/blog/page.tsx`](app/blog/page.tsx) | Blog placeholder copy |
+| `/refund-policy/` | [`app/refund-policy/page.tsx`](app/refund-policy/page.tsx) | Policy text |
+| `/thankyou/` | [`app/thankyou/page.tsx`](app/thankyou/page.tsx) | Thank-you message |
+| `/error/` | [`app/error/page.tsx`](app/error/page.tsx) | Error message |
+| `/cryotherapy/` etc. (treatments) | [`app/[slug]/page.tsx`](app/[slug]/page.tsx) + [`data/seo-nav.json`](data/seo-nav.json) | Page template in `[slug]`; names/slugs under `categories` / `primaryCategory` in `seo-nav.json`; card images in [`content/home.ts`](content/home.ts) `treatmentImages` |
+| `/beauty/`, `/pain-management/`, etc. (categories) | Same as treatments: [`app/[slug]/page.tsx`](app/[slug]/page.tsx) + [`data/seo-nav.json`](data/seo-nav.json) | Category name/href/treatment lists in `seo-nav.json` |
+| `/locations/santacruz/` etc. | [`app/locations/[slug]/page.tsx`](app/locations/[slug]/page.tsx) + [`data/seo-nav.json`](data/seo-nav.json) + [`data/site-config.json`](data/site-config.json) | Nav labels/addresses in `seo-nav.json` `locations`; booking/maps/GMB in `site-config.json` `locations` |
+| Header / Footer / nav | [`components/Header.tsx`](components/Header.tsx), [`components/Footer.tsx`](components/Footer.tsx), [`data/seo-nav.json`](data/seo-nav.json) | Menu links, footer columns, phones, social |
+| Site-wide brand, phones, WhatsApp, social | [`data/site-config.json`](data/site-config.json) | Domain, contact, locations, WhatsApp, social URLs |
+| Images / videos | [`public/assets/`](public/assets/) | Add files here; reference as `/assets/images/...` or `/assets/videos/...` |
+| SEO title & description | Same `app/.../page.tsx` as the page (or `generateMetadata` in `[slug]` / locations) | See [docs/SEO.md](docs/SEO.md) |
+
+### Typical content-edit workflow
+
+```bash
+# 1. Start the site
+npm run dev
+
+# 2. Edit the file from the table (example: about page)
+#    open app/about/page.tsx in the editor and change copy/images
+
+# 3. Refresh http://localhost:3000/about/ and confirm
+
+# 4. Publish (see below)
+```
+
+## Publish to GitHub
+
+Remote:
+
+```text
+https://github.com/rishabhworkspace77-lab/epsom_revamp.git
+```
+
+After you finish edits:
+
+```bash
+git status
+git add .
+git commit -m "Describe what you changed"
+git push -u origin main
+```
+
+Examples:
+
+```bash
+git add app/about/page.tsx public/assets/images/about/
+git commit -m "Update about page story and hero image"
+git push origin main
+```
+
+```bash
+git add content/home.ts data/seo-nav.json
+git commit -m "Update home treatment copy and popular searches"
+git push origin main
+```
+
+If the remote is not set yet:
+
+```bash
+git remote add origin https://github.com/rishabhworkspace77-lab/epsom_revamp.git
+git push -u origin main
+```
+
+Do **not** commit `.env.local` (secrets). `.env.example` is safe to keep in the repo.
+
 ## Commands
 
 ```bash
@@ -36,30 +121,6 @@ npm run build
 npm start
 npm run typecheck
 npm run lint
-```
-
-## Git remote & push
-
-Remote:
-
-```text
-https://github.com/rishabhworkspace77-lab/epsom_revamp.git
-```
-
-Push local `main` to GitHub:
-
-```bash
-git status
-git add .
-git commit -m "Your message"
-git push -u origin main
-```
-
-If the remote is not set yet:
-
-```bash
-git remote add origin https://github.com/rishabhworkspace77-lab/epsom_revamp.git
-git push -u origin main
 ```
 
 ## Folder structure
@@ -75,13 +136,13 @@ tailwind.config.ts   Brand colors, fonts, shadows
 _archive/            Old static HTML (reference only — not used by Next)
 ```
 
-**Where to edit**
+**Where to edit (quick)**
 
-- **Pages / URLs** → `app/` (`page.tsx`, `app/[slug]/`, `app/locations/[slug]/`)
-- **Shared chrome** → `components/Header.tsx`, `Footer.tsx`, booking modal / sticky CTA
-- **Styles** → tokens in `tailwind.config.ts`; reusable classes in `app/globals.css`; layout also in component TSX
-- **Content vs style** → change copy in `content/` / `data/`; change look in CSS / Tailwind / components
-- **SEO titles & descriptions** → [docs/SEO.md](docs/SEO.md) (SEO team: per-page metadata)
+- **Pages / URLs** → `app/`
+- **Shared chrome** → `components/Header.tsx`, `Footer.tsx`
+- **Styles** → `tailwind.config.ts`, `app/globals.css`
+- **Copy / nav / config** → `content/`, `data/`
+- **SEO** → [docs/SEO.md](docs/SEO.md)
 
 ## Environment
 
