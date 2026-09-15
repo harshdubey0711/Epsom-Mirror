@@ -2,6 +2,31 @@
 
 Production Next.js App Router migration of the Epsom Cryo Spa marketing site.
 
+## Entry point
+
+| Piece | Path |
+|---|---|
+| App shell (fonts, header, footer, global CSS) | [`app/layout.tsx`](app/layout.tsx) |
+| Home page route (`/`) | [`app/page.tsx`](app/page.tsx) → [`components/home/HomePage.tsx`](components/home/HomePage.tsx) |
+| Other routes | `app/*/page.tsx`, `app/[slug]/page.tsx`, `app/locations/[slug]/page.tsx` |
+
+### Run locally
+
+```bash
+npm install
+cp .env.example .env.local   # then fill contact/Resend values
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000). That is the program entry in development (`next dev` → `app/layout.tsx` → `app/page.tsx`).
+
+Production:
+
+```bash
+npm run build
+npm start
+```
+
 ## Commands
 
 ```bash
@@ -11,6 +36,30 @@ npm run build
 npm start
 npm run typecheck
 npm run lint
+```
+
+## Git remote & push
+
+Remote:
+
+```text
+https://github.com/rishabhworkspace77-lab/epsom_revamp.git
+```
+
+Push local `main` to GitHub:
+
+```bash
+git status
+git add .
+git commit -m "Your message"
+git push -u origin main
+```
+
+If the remote is not set yet:
+
+```bash
+git remote add origin https://github.com/rishabhworkspace77-lab/epsom_revamp.git
+git push -u origin main
 ```
 
 ## Folder structure
