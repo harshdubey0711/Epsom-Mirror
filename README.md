@@ -45,7 +45,8 @@ npm start
 | `/contact/` | [`app/contact/page.tsx`](app/contact/page.tsx) | Hero, contact copy; phones/email also in [`data/site-config.json`](data/site-config.json) |
 | `/faq/` | [`content/faq.ts`](content/faq.ts) + [`app/faq/page.tsx`](app/faq/page.tsx) | Questions/answers in `content/faq.ts`; page title/layout in `app/faq/page.tsx` |
 | `/memberships/` | [`app/memberships/page.tsx`](app/memberships/page.tsx) | Package names, copy, CTAs |
-| `/franchise/` | [`app/franchise/page.tsx`](app/franchise/page.tsx) | Franchise page copy |
+| `/franchise/` | [`app/franchise/page.tsx`](app/franchise/page.tsx) + [`content/franchise.ts`](content/franchise.ts) + [`components/FranchiseEnquiryForm.tsx`](components/FranchiseEnquiryForm.tsx) | Page layout/hero in `app/franchise/page.tsx`; section copy (why partner, offerings, regions, steps) in `content/franchise.ts`; enquiry form fields/labels in `FranchiseEnquiryForm.tsx` |
+| `/franchise/` banner image | [`public/assets/images/franchise/`](public/assets/images/franchise/) | Placeholder: `franchise-banner.svg`. Replace with `franchise-banner.png` and update `src` in `app/franchise/page.tsx` |
 | `/blog/` | [`app/blog/page.tsx`](app/blog/page.tsx) | Blog placeholder copy |
 | `/refund-policy/` | [`app/refund-policy/page.tsx`](app/refund-policy/page.tsx) | Policy text |
 | `/thankyou/` | [`app/thankyou/page.tsx`](app/thankyou/page.tsx) | Thank-you message |
@@ -92,6 +93,12 @@ git push -u origin main
 Examples:
 
 ```bash
+git add app/franchise/page.tsx content/franchise.ts components/FranchiseEnquiryForm.tsx public/assets/images/franchise/
+git commit -m "Update franchise page content and banner"
+git push origin main
+```
+
+```bash
 git add app/about/page.tsx public/assets/images/about/
 git commit -m "Update about page story and hero image"
 git push origin main
@@ -127,8 +134,8 @@ npm run lint
 
 ```text
 app/                 Routes (App Router), layout, globals.css, API, sitemap/robots
-components/          Shared UI (Header, Footer, booking, FAQ, marquees, home)
-content/             Page copy modules (home sections, FAQ text)
+components/          Shared UI (Header, Footer, booking, FAQ, marquees, franchise form, home)
+content/             Page copy modules (home, FAQ, franchise)
 data/                JSON nav + site config (seo-nav, site-config)
 lib/                 Helpers (routes, metadata, types)
 public/assets/       Images and videos (referenced as /assets/...)

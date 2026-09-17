@@ -7,6 +7,7 @@ type ContactBody = {
   phone?: string;
   message?: string;
   website?: string;
+  type?: string;
 };
 
 function isEmail(value: string) {
@@ -43,7 +44,10 @@ export async function POST(request: Request) {
 
   const to = process.env.CONTACT_TO_EMAIL || "info@epsomcryospa.com";
   const from = process.env.CONTACT_FROM_EMAIL || "Epsom Cryo Spa <onboarding@resend.dev>";
-  const subject = `New Contact Form Submission from ${name}`;
+  const isFranchise = String(body.type || "").toLowerCase() === "franchise";
+  const subject = isFranchise
+    ? `Franchise Enquiry from ${name}`
+    : `New Contact Form Submission from ${name}`;
   const text = `You have received a new message:\n\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\n\nMessage:\n${message}\n`;
 
   const apiKey = process.env.RESEND_API_KEY;

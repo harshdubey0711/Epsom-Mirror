@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-label="Franchise banner placeholder">
+  <rect width="1920" height="1080" fill="#2A2118"/>
+  <rect x="80" y="80" width="1760" height="920" fill="none" stroke="#D39645" stroke-width="2" stroke-dasharray="16 12" opacity="0.5"/>
+  <text x="960" y="500" fill="#D39645" font-family="system-ui,sans-serif" font-size="42" text-anchor="middle">Franchise Banner Placeholder</text>
+  <text x="960" y="560" fill="#BDA587" font-family="system-ui,sans-serif" font-size="24" text-anchor="middle">Replace with /assets/images/franchise/franchise-banner.png</text>
+</svg>
