@@ -30,6 +30,7 @@ export function Header() {
     };
   }, [mobileOpen]);
 
+  
   return (
     <div className="border-b border-black/10 bg-white">
       <div className="bg-epsom-teal text-white text-xs sm:text-sm">
@@ -41,6 +42,7 @@ export function Header() {
             </a>
             <a
               href="tel:+919867670762"
+
               className="hover:text-white/80 transition hidden sm:inline-flex items-center gap-2"
             >
               <i className="fa-solid fa-phone" aria-hidden="true" />

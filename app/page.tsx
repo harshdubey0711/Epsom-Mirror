@@ -6,8 +6,8 @@ export const metadata = buildMetadata({
   description:
     "Mumbai's premier cryotherapy & wellness center. Advanced recovery, IV drip therapy, biohacking, luxury spa & aesthetic treatments across Santacruz, Borivali & Andheri.",
   path: "/",
-});
+}); 
 
 export default function Page() {
-  return <HomePage />;
+  return <HomePage/>
 }

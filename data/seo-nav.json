@@ -1,3 +1,4 @@
+
 {
   "categories": [
     {
@@ -6,18 +7,36 @@
       "href": "health-optimisation-longevity/",
       "footerLabel": "Bio Hack",
       "treatments": [
-        { "slug": "cryotherapy", "name": "Cryotherapy" },
-        { "slug": "hyperbaric-oxygen-therapy", "name": "Oxygen Therapy (HBOT)" },
-        { "slug": "iv-drip-therapy", "name": "IV Drip Therapy" },
-        { "slug": "red-light-therapy", "name": "Red Light Therapy" },
-        { "slug": "epsom-salt-sauna", "name": "Epsom Salt Sauna" },
-        { "slug": "compression-therapy", "name": "Compression Therapy" },
-        { "slug": "infrared-body-wrap", "name": "Infrared Body Wrap" },
-        { "slug": "collagen-light-therapy", "name": "Collagen Light Therapy" },
-        { "slug": "health-wellness-blood-test", "name": "Health & Wellness Blood Test" },
-        { "slug": "medical-consultation", "name": "Medical Consultation" },
-        { "slug": "body-composition-analysis", "name": "Body Composition Analysis" }
-      ]
+  { "slug": "cryotherapy", "name": "Whole Body Cryotherapy" },
+  { "slug": "hyperbaric-oxygen-therapy", "name": "Hyperbaric Oxygen Therapy (HBOT)" },
+  { "slug": "iv-drip-therapy", "name": "IV Drip Therapy" },
+  { "slug": "red-light-therapy", "name": "Red Light Therapy" },
+  { "slug": "epsom-salt-sauna", "name": "Epsom Salt Sauna" },
+  { "slug": "compression-therapy", "name": "Compression Therapy" },
+  { "slug": "infrared-body-wrap", "name": "Infrared Body Wrap" },
+  { "slug": "collagen-light-therapy", "name": "Collagen Light Therapy" }
+
+] , 
+
+
+"whyChoose": [
+    "Recover faster after exercise or a busy lifestyle",
+    "Improve energy levels",
+    "Support healthy ageing",
+    "Reduce everyday stress on the body",
+    "Improve sleep and relaxation",
+    "Promote better circulation",
+    "Support overall health and wellbeing",
+    "Feel your best every day"
+  ],
+    "whyEpsomWellness": [
+    "Doctor-led care",
+    "Personalised treatment plans",
+    "Wellness solutions under one roof",
+    "Experienced medical and wellness professionals",
+    "Comfortable and premium environment",
+    "Focus on long-term health and wellbeing"
+  ]
     },
     {
       "slug": "pain-management",
@@ -26,7 +45,6 @@
       "footerLabel": "IV Drip",
       "treatments": [
         { "slug": "cryotherapy", "name": "Whole Body Cryotherapy" },
-        { "slug": "infrared-sauna", "name": "Infrared Sauna" },
         { "slug": "hyperbaric-oxygen-therapy", "name": "Hyperbaric Oxygen Therapy (HBOT)" },
         { "slug": "red-light-therapy", "name": "Red Light Therapy" }
       ]
@@ -56,8 +74,9 @@
         { "slug": "cryotherapy", "name": "Whole Body Cryotherapy" },
         { "slug": "compression-therapy", "name": "Compression Therapy" },
         { "slug": "red-light-therapy", "name": "Red Light Therapy" },
-        { "slug": "infrared-sauna", "name": "Infrared Sauna" },
-        { "slug": "energise-iv-drip", "name": "Energise IV Drip Therapy" }
+         { "slug": "iv-drip-therapy", "name": "IV Drip Therapy" }
+
+       
       ]
     }
   ],
@@ -123,6 +142,37 @@
     { "label": "Red Light Therapy", "href": "red-light-therapy/" },
     { "label": "Glow Getter IV", "href": "glow-getter-iv-drip/" },
     { "label": "Circadia Facials", "href": "circadia-facials/" },
-    { "label": "Body Ballancer", "href": "body-ballancer/" }
+    { "label": "Body Ballancer", "href": "body-ballancer/" },
+    { "label": "Beauty Treatments Mumbai", "href": "beauty/" }
   ]
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

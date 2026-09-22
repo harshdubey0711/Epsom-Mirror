@@ -3,9 +3,11 @@ import { Poppins, Tenor_Sans } from "next/font/google";
 import { BookingProvider } from "@/components/BookingProvider";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
+import { PopularSearches } from "@/components/PopularSearches";
 import { StickyCta } from "@/components/StickyCta";
 import { buildMetadata } from "@/lib/metadata";
 import { SITE_URL } from "@/lib/site";
+// @ts-expect-error Global CSS is resolved by Next.js during the build.
 import "./globals.css";
 
 const poppins = Poppins({
@@ -25,9 +27,9 @@ const tenor = Tenor_Sans({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   ...buildMetadata({
-    title: "Cryotherapy Mumbai | Premier Wellness Center – Epsom Cryo Spa",
+    title: "Wellness Clinic in Mumbai | Epsom Wellness",
     description:
-      "Mumbai's premier cryotherapy & wellness center. Advanced recovery, IV drip therapy, biohacking, luxury spa & aesthetic treatments across Santacruz, Borivali & Andheri.",
+      "Welcome to Epsom Wellness, a premier wellness and aesthetic clinic in Mumbai. Our advanced wellness & longevity clinic in Mumbai specializes in health optimization, pain management, beauty, and sports recovery. Book your consultation today.",
     path: "/",
   }),
 };
@@ -47,6 +49,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <BookingProvider>
           <Header />
           {children}
+          <PopularSearches/>
           <Footer />
           <StickyCta />
         </BookingProvider>

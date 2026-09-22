@@ -8,9 +8,11 @@ const PAGE_SIZE = 4;
 
 export function FaqSection({
   items,
+  title = "FAQ's",
   showContactCta = true,
 }: {
   items: FaqItem[];
+  title?:string;
   showContactCta?: boolean;
 }) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -26,8 +28,8 @@ export function FaqSection({
   }, [items, page]);
 
   return (
-    <section id="faq" className="faq-band py-20 px-4">
-      <div className="max-w-5xl mx-auto">
+    <section id="faq"  className="faq-band relative left-1/2 w-screen -translate-x-1/2 py-20 px-4">
+      <div className="max-w-5xl mx-auto"> 
         <div className="text-center mb-12">
           <p className="faq-stars" aria-label="5 star rating">
             <i className="fa-solid fa-star" aria-hidden="true" />
@@ -37,7 +39,7 @@ export function FaqSection({
             <i className="fa-solid fa-star" aria-hidden="true" />
           </p>
           <h2 className="font-display text-3xl md:text-4xl text-epsom-ink">
-            FAQ&apos;s
+            {title}
           </h2>
         </div>
 

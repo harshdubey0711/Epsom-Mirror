@@ -68,3 +68,50 @@ export type FaqItem = {
   question: string;
   answer: string;
 };
+
+
+export type popularSearches =  {
+  label: string;
+  href: string;
+};
+
+export type LocationPageContent = {
+  hero: {
+    eyebrow: string;
+    title: string;
+    description: string;
+    image: string;
+  };
+
+  intro: {
+    eyebrow: string;
+    heading: string;
+    paragraphs: string[];
+    image: string;
+  };
+
+  treatments: TreatmentCard[];
+
+  offer: {
+    eyebrow: string;
+    heading: string;
+    description: string;
+  };
+
+  whyEpsom: {
+    eyebrow: string;
+    heading: string;
+    items: {
+      title: string;
+      description: string;
+    }[];
+  };
+
+  faq: FaqItem[];
+
+  cta: {
+    eyebrow: string;
+    heading: string;
+    description: string;
+  };
+};

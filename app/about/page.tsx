@@ -23,7 +23,7 @@ export default function AboutPage() {
 
         <section className="relative min-h-[60vh] md:min-h-[70vh] flex items-center justify-center overflow-hidden">
           <Image
-          src="/assets/images/about/about-us-3.png"
+          src="/assets/images/about/float-img.jpg"  
           alt="epsom wellness about us banner"
           fill
           priority
@@ -36,7 +36,7 @@ export default function AboutPage() {
           About Epsom Wellness
           </h1>
 
-          <p className="text-white/90 mt-4">
+          <p className="font-epsom-display text-white/90 mt-4">
           A premium wellness destination focused on recovery, longevity, pain management, body transformation, rejuvenation and relaxation.
           </p>
           </div>
@@ -55,10 +55,10 @@ export default function AboutPage() {
 
         <div className="flex flex-col md:flex-row items-start gap-2 ">
           <div className="flex flex-col md:flex-col items center gap-4 max-w-[640px]">
-          <h3 className="font-bold text-1xl md:text-2xl my-2">
+          <h3 className="text-1xl md:text-2xl my-2">
         Redefining Wellness In Mumbai
         </h3>
-        <p className="text-epsom-maroon ">
+        <p className="text-epsom-muted ">
         Epsom Wellness was created with one vision — to bring world-class wellness, recovery, and longevity therapies to India in a luxurious yet medically guided environment. </p>
         <p className="text-epsom-muted leading-relaxed">
         Inspired by international wellness clinics and recovery centers used by athletes, celebrities, entrepreneurs, and high performers globally, Epsom Wellness combines advanced biohacking therapies with holistic healing practices to create transformative wellness experiences.
@@ -90,13 +90,13 @@ Today, Epsom Wellness serves clients ranging from fitness enthusiasts and athlet
 
 
       <section className="py-16 px-4 max-w-4xl mx-auto">
-        <p className="text-epsom-muted leading-relaxed text-lg">
+        <p className="text-epsom-deep leading-relaxed text-lg">
           Epsom Wellness is a premier destination for cutting-edge cryotherapy, wellness, and
           aesthetic services in Mumbai. We are designed to revitalize your body, rejuvenate your mind, and
           elevate your well-being through advanced science-led treatments.
         </p>
         
-        <p className="text-epsom-muted leading-relaxed mt-6">
+        <p className="text-epsom-deep leading-relaxed mt-6">
           Our state-of-the-art facilities offer a serene, luxury environment where certified professionals
           prioritize safety, comfort, and effectiveness in every session. From whole-body cryotherapy to IV
           cellular wellness and non-invasive aesthetics, we deliver a complete inside-out transformation

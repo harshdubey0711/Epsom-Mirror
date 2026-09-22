@@ -27,12 +27,12 @@ export default function FranchisePage() {
       <section className="relative min-h-[60vh] md:min-h-[70vh] flex items-center justify-center overflow-hidden">
         {/* TODO: replace franchise-banner.svg with franchise-banner.png when final art is ready */}
         <Image
-          src="/assets/images/franchise/franchise-banner.svg"
+          src="/assets/images/franchise/franchise-banner.png"
           alt="Franchise and pan-India expansion at Epsom Cryo Spa"
           fill
           priority
           unoptimized
-          className="object-cover"
+          className="object-cover object-[50%_35%]"
           sizes="100vw"
         />
         <div className="absolute inset-0 bg-black/50" />
@@ -89,6 +89,7 @@ export default function FranchisePage() {
               A Proven Wellness Brand Ready To Scale
             </h2>
           </div>
+
           <ul className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 list-none p-0">
             {franchiseWhyPartner.map((item) => (
               <li key={item.title} className="glass-card p-6">
@@ -97,6 +98,7 @@ export default function FranchisePage() {
               </li>
             ))}
           </ul>
+          
         </div>
       </section>
 

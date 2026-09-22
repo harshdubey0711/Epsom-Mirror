@@ -2,30 +2,34 @@ import type { TreatmentCard } from "@/lib/types";
 
 export const whyChooseUs = [
   {
-    title: "Mumbai's first advanced cryotherapy & biohacking center",
-    description: "Pioneer-level recovery tech in a luxury clinical spa setting.",
+    title: "Advanced Beauty & Aesthetic Expertise",
+    
   },
   {
-    title: "Certified & experienced therapists",
-    description: "Trained professionals focused on safety and results.",
+    title: "Clinical-Grade Safety Protocols",
+   
   },
   {
-    title: "Science-backed, safe & non-invasive",
-    description: "Protocols designed for measurable wellness outcomes.",
+    title: "Elite, Certified Wellness Practitioners",
+   
   },
   {
-    title: "3 convenient Mumbai locations",
-    description: "Santacruz, Borivali, and Andheri — closer to your routine.",
+    title: "Transparent Luxury Pricings",
+   
   },
   {
-    title: "Personalized treatment plans",
-    description: "Every protocol is tailored to your goals and lifestyle.",
+    title: "Our Uncompromising Service Guarantee",
+   
   },
   {
-    title: "All services under one roof",
-    description: "Bio Hack, IV Drip, Spa, Aesthetic, and Salon together.",
+    title: "Diagnostic & Expert Consultations",
+  
   },
+
+  
 ];
+
+
 
 export const benefits = [
   "Faster muscle recovery",
@@ -251,6 +255,12 @@ export const homeCategorySections: HomeCategorySection[] = [
     ],
   },
 ];
+
+
+export const wellnessNote = {
+  "title": "A Note on Your Wellness Journey",
+  "description": "Wellness is personal, and no single therapy is right for everyone. Epsom Wellness & Longevity focuses on helping you make informed choices based on your individual goals, requirements, and suitability."
+}
 
 /** Default image for treatment stub pages */
 export const treatmentImages: Record<string, string> = Object.fromEntries(

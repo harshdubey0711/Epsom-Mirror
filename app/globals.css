@@ -136,7 +136,7 @@
 
 /* FAQ accordion — ivory band */
 .faq-band {
-  @apply bg-epsom-mist text-epsom-ink;
+  @apply bg-epsom-mist text-epsom-ink ;
 }
 .faq-stars {
   @apply flex items-center justify-center gap-1.5 text-epsom-maroon text-sm mb-3;
