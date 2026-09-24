@@ -1,8 +1,9 @@
 import seoNavJson from "@/data/seo-nav.json";
 import siteConfigJson from "@/data/site-config.json";
 import type { Category, SeoNav, SiteConfig, SiteLocation, TreatmentRef } from "@/lib/types";
+import type { ReactElement } from "react";
 
-export const seoNav = seoNavJson as SeoNav;
+export const seoNav = seoNavJson as unknown as SeoNav;
 export const siteConfig = siteConfigJson as SiteConfig;
 export const SITE_URL = siteConfig.domain;
 
@@ -11,7 +12,20 @@ export const SALON_CATEGORY: Category = {
   name: "Salon",
   href: "salon/",
   footerLabel: "Salon",
-  treatments: [{ slug: "circadia-facials", name: "Circadia® Facials" }],
+  treatments: [
+    {
+      slug: "circadia-facials",
+      name: "Circadia® Facials",
+      bestSuitedFor: "All skin types" as unknown as ReactElement,
+      description: "Professional Circadia® facials tailored to your skin's needs." as unknown as ReactElement,
+    },
+  ],
+  bannerImage: "",
+  introduction: undefined,
+  cta: undefined,
+  personalisedApproach: undefined,
+  suitability: undefined,
+  hero: undefined
 };
 
 export function getCategories(): Category[] {

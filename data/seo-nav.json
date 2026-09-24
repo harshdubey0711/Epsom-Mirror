@@ -1,4 +1,3 @@
-
 {
   "categories": [
     {
@@ -6,80 +5,456 @@
       "name": "Health Optimisation & Longevity",
       "href": "health-optimisation-longevity/",
       "footerLabel": "Bio Hack",
+      "bannerImage": "/assets/images/imagesEpsom/health-banner.png",
+      "hero": {
+        "title": "Health Optimisation & Longevity"
+      },
+      "introduction": {
+        "title": "Live Better. Feel Better. Stay Healthier.",
+        "paragraphs": [
+          "Your health is your greatest investment. At Epsom, we offer doctor-led therapies that help improve recovery, increase energy, support overall wellness, and promote healthy ageing.",
+          "Every treatment is tailored to your individual health goals, so you receive care that's right for you."
+        ],
+        "image": "/assets/images/imagesEpsom/healt-feature.png",
+        "imageAlt": "Health optimisation and longevity treatments at Epsom Wellness"
+      },
       "treatments": [
-  { "slug": "cryotherapy", "name": "Whole Body Cryotherapy" },
-  { "slug": "hyperbaric-oxygen-therapy", "name": "Hyperbaric Oxygen Therapy (HBOT)" },
-  { "slug": "iv-drip-therapy", "name": "IV Drip Therapy" },
-  { "slug": "red-light-therapy", "name": "Red Light Therapy" },
-  { "slug": "epsom-salt-sauna", "name": "Epsom Salt Sauna" },
-  { "slug": "compression-therapy", "name": "Compression Therapy" },
-  { "slug": "infrared-body-wrap", "name": "Infrared Body Wrap" },
-  { "slug": "collagen-light-therapy", "name": "Collagen Light Therapy" }
+        {
+          "slug": "cryotherapy",
+          "name": "Whole Body Cryotherapy",
+          "bannerImage": "/assets/images/imagesEpsom/banner-cryo.png",
+          "featureImage": "/assets/images/imagesEpsom/feature-cryo.png"
+        },
+        {
+          "slug": "hyperbaric-oxygen-therapy",
+          "name": "Hyperbaric Oxygen Therapy (HBOT)",
+          "bannerImage": "/assets/images/treatments/hyperbaric-oxygen-therapy-banner.jpg",
+          "featureImage": "/assets/images/treatments/hyperbaric-oxygen-therapy-feature.jpg"
+        },
+        {
+          "slug": "iv-drip-therapy",
+          "name": "IV Drip Therapy",
+          "bannerImage": "/assets/images/treatments/iv-drip-therapy-banner.jpg",
+          "featureImage": "/assets/images/treatments/iv-drip-therapy-feature.jpg"
+        },
+        {
+          "slug": "red-light-therapy",
+          "name": "Red Light Therapy",
+          "bannerImage": "/assets/images/treatments/red-light-therapy-banner.jpg",
+          "featureImage": "/assets/images/treatments/red-light-therapy-feature.jpg"
+        },
+        {
+          "slug": "epsom-salt-sauna",
+          "name": "Epsom Salt Sauna",
+          "bannerImage": "/assets/images/treatments/epsom-salt-sauna-banner.jpg",
+          "featureImage": "/assets/images/treatments/epsom-salt-sauna-feature.jpg"
+        },
+        {
+          "slug": "compression-therapy",
+          "name": "Compression Therapy",
+          "bannerImage": "/assets/images/treatments/compression-therapy-banner.jpg",
+          "featureImage": "/assets/images/treatments/compression-therapy-feature.jpg"
+        },
+        {
+          "slug": "infrared-body-wrap",
+          "name": "Infrared Body Wrap",
+          "bannerImage": "/assets/images/infrared-body-wrap.png",
+          "featureImage": "/assets/images/treatments/infrared-body-wrap-feature.jpg"
+        },
+        {
+          "slug": "collagen-light-therapy",
+          "name": "Collagen Light Therapy",
+          "bannerImage": "/assets/images/treatments/collagen-light-therapy-banner.jpg",
+          "featureImage": "/assets/images/treatments/collagen-light-therapy-feature.jpg"
+        }
 
-] , 
-
-
-"whyChoose": [
-    "Recover faster after exercise or a busy lifestyle",
-    "Improve energy levels",
-    "Support healthy ageing",
-    "Reduce everyday stress on the body",
-    "Improve sleep and relaxation",
-    "Promote better circulation",
-    "Support overall health and wellbeing",
-    "Feel your best every day"
-  ],
-    "whyEpsomWellness": [
-    "Doctor-led care",
-    "Personalised treatment plans",
-    "Wellness solutions under one roof",
-    "Experienced medical and wellness professionals",
-    "Comfortable and premium environment",
-    "Focus on long-term health and wellbeing"
-  ]
+      ],
+      "whyChoose": [
+        "Recover faster after exercise or a busy lifestyle",
+        "Improve energy levels",
+        "Support healthy ageing",
+        "Reduce everyday stress on the body",
+        "Improve sleep and relaxation",
+        "Promote better circulation",
+        "Support overall health and wellbeing",
+        "Feel your best every day"
+      ],
+      "whyEpsomWellness": [
+        "Doctor-led care",
+        "Personalised treatment plans",
+        "Wellness solutions under one roof",
+        "Experienced medical and wellness professionals",
+        "Comfortable and premium environment",
+        "Focus on long-term health and wellbeing"
+      ],
+      "cta": {
+        "title": "Ready to Take the Next Step?",
+        "description": "Whether you're looking to improve your health, recover better, or simply feel your best, our team is here to help you choose the therapies that suit your goals.",
+        "button": "Book Your Consultation"
+      }
     },
     {
       "slug": "pain-management",
       "name": "Pain Management",
       "href": "pain-management/",
-      "footerLabel": "IV Drip",
+      "footerLabel": "Pain Management",
+      "bannerImage": "/assets/images/imagesEpsom/pain-banner.png",
+      "hero": {
+        "title": "Pain Management"
+      },
+      "introduction": {
+        "title": "Move Better. Feel Better.",
+        "paragraphs": [
+          "Simple, non-invasive therapies designed to help ease everyday pain, improve mobility, and support a more comfortable, active lifestyle.",
+          "At Epsom, our pain management therapies focus on helping you move better and feel better. Whether you're dealing with muscle soreness, joint discomfort, back or neck tension, post-workout aches, or the physical strain of a busy lifestyle, our treatments are designed to support your body's natural recovery process in a safe and comfortable environment."
+        ],
+        "image": "/assets/images/categories/pain-management-introduction.jpg",
+        "imageAlt": "Pain management and recovery treatments at Epsom Wellness"
+      },
       "treatments": [
-        { "slug": "cryotherapy", "name": "Whole Body Cryotherapy" },
-        { "slug": "hyperbaric-oxygen-therapy", "name": "Hyperbaric Oxygen Therapy (HBOT)" },
-        { "slug": "red-light-therapy", "name": "Red Light Therapy" }
+        {
+          "slug": "cryotherapy",
+          "name": "Whole Body Cryotherapy",
+          "description": "Support recovery, reduce inflammation, and help ease everyday muscle and joint discomfort.",
+          "bannerImage": "/assets/images/treatments/cryotherapy-banner.jpg",
+          "featureImage": "/assets/images/treatments/cryotherapy-feature.jpg"
+        },
+        {
+          "slug": "hyperbaric-oxygen-therapy",
+          "name": "Hyperbaric Oxygen Therapy (HBOT)",
+          "description": "Support the body's natural healing process and promote recovery through increased oxygen delivery.",
+          "bannerImage": "/assets/images/treatments/hyperbaric-oxygen-therapy-banner.jpg",
+          "featureImage": "/assets/images/treatments/hyperbaric-oxygen-therapy-feature.jpg"
+        },
+        {
+          "slug": "red-light-therapy",
+          "name": "Red Light Therapy",
+          "description": "A gentle, non-invasive treatment that may help ease temporary muscle and joint discomfort.",
+          "bannerImage": "/assets/images/treatments/red-light-therapy-banner.jpg",
+          "featureImage": "/assets/images/treatments/red-light-therapy-feature.jpg"
+        },
+        {
+          "slug": "compression-therapy",
+          "name": "Compression Therapy",
+          "description": "Support circulation, reduce the feeling of tired or heavy legs, and promote post-exercise recovery.",
+          "bannerImage": "/assets/images/treatments/compression-therapy-banner.jpg",
+          "featureImage": "/assets/images/treatments/compression-therapy-feature.jpg"
+        },
+        {
+          "slug": "epsom-salt-sauna",
+          "name": "Epsom Salt Sauna",
+          "description": "Relax tight muscles, unwind, and support recovery through soothing heat and magnesium-rich Epsom salt.",
+          "bannerImage": "/assets/images/treatments/epsom-salt-sauna-banner.jpg",
+          "featureImage": "/assets/images/treatments/epsom-salt-sauna-feature.jpg"
+        },
+        {
+          "slug": "infrared-body-wrap",
+          "name": "Infrared Body Wrap",
+          "description": "A calming heat-based treatment designed to help ease tension and promote overall comfort.",
+          "bannerImage": "/assets/images/infrared/infrared-body-wrap.png",
+          "featureImage": "/assets/images/treatments/infrared-body-wrap-feature.jpg"
+        }
+      ],
+      "cta": {
+        "title": "Find the Right Therapy for Your Pain & Recovery Goals",
+        "description": "Whether you're recovering after exercise, managing muscle tension, or looking for non-invasive support for everyday discomfort, our team is here to help you choose the most suitable treatment.",
+        "button": "Book a Consultation"
+      }
+    },
+    {
+      "slug": "weight-loss-management",
+      "name": "Weight Loss & Body Management",
+      "href": "weight-loss-management/",
+      "footerLabel": "Weight Loss",
+      "bannerImage": "/assets/images/imagesEpsom/weight-banner.png",
+      "hero": {
+        "title": "Weight Loss & Body Management in Mumbai"
+      },
+      "introduction": {
+        "title": "Weight Management",
+        "paragraphs": [
+          "At Epsom Wellness & Longevity, we understand that weight management is different for everyone. Your goals, lifestyle, body composition, and overall wellness all play a role.",
+          "Our weight management therapies are designed to complement healthy nutrition, regular physical activity, and sustainable lifestyle habits. Whether your goal is to reduce excess body fat, support your metabolism, or work towards a healthier body composition, our team can help you understand which treatments may be suitable for you."
+        ],
+        "image": "/assets/images/imagesEpsom/weight-feature.png",
+        "imageAlt": "Weight loss and body management treatments at Epsom Wellness"
+      },
+      "treatments": [
+        {
+          "slug": "weight-loss-management",
+          "name": "Cryolipolysis",
+          "description": "A non-invasive body contouring treatment that uses controlled cooling to target fat cells in specific areas of the body.",
+          "bestSuitedFor": "Targeted body fat reduction and body contouring.",
+          "bannerImage": "/assets/images/treatments/cryolipolysis-banner.jpg",
+          "featureImage": "/assets/images/treatments/cryolipolysis-feature.jpg"
+        },
+        {
+          "slug": "weight-loss-management",
+          "name": "Emerald Laser Fat Reduction",
+          "description": "A non-invasive laser-based treatment designed to support targeted fat reduction and body contouring.",
+          "bestSuitedFor": "People looking to address specific areas of stubborn body fat.",
+          "bannerImage": "/assets/images/treatments/emerald-laser-fat-reduction-banner.jpg",
+          "featureImage": "/assets/images/treatments/emerald-laser-fat-reduction-feature.jpg"
+        },
+        {
+          "slug": "weight-loss-management",
+          "name": "SlimShot Drip",
+          "description": "A specialised IV wellness therapy offered as part of Epsom's weight management range.",
+          "bestSuitedFor": "Individuals looking to complement their personalised weight management routine.",
+          "bannerImage": "/assets/images/treatments/slimshot-drip-banner.jpg",
+          "featureImage": "/assets/images/treatments/slimshot-drip-feature.jpg"
+        },
+        {
+          "slug": "weight-loss-management",
+          "name": "SlimShot Plus",
+          "description": "A more comprehensive option within Epsom's weight management IV range, designed around individual wellness goals.",
+          "bestSuitedFor": "People looking for additional nutritional and wellness support alongside their weight management plan.",
+          "bannerImage": "/assets/images/treatments/slimshot-plus-banner.jpg",
+          "featureImage": "/assets/images/treatments/slimshot-plus-feature.jpg"
+        },
+        {
+          "slug": "weight-loss-management",
+          "name": "Metabolize",
+          "description": "A targeted wellness drip from Epsom's weight management range, designed to complement a healthy lifestyle and personalised weight management programme.",
+          "bestSuitedFor": "Individuals focusing on metabolism and overall weight management.",
+          "bannerImage": "/assets/images/treatments/metabolize-banner.jpg",
+          "featureImage": "/assets/images/treatments/metabolize-feature.jpg"
+        },
+        {
+          "slug": "weight-loss-management",
+          "name": "L-Carnitine Shots",
+          "description": "L-Carnitine injections are offered as part of Epsom's wellness and weight management options.",
+          "bestSuitedFor": "People looking to include targeted nutritional support in their personalised wellness plan.",
+          "bannerImage": "/assets/images/treatments/l-carnitine-shots-banner.jpg",
+          "featureImage": "/assets/images/treatments/l-carnitine-shots-feature.jpg"
+        }
+      ],
+      "suitability": {
+        "title": "Is Weight Management Right for You?",
+        "items": [
+          "Want to reduce excess body fat",
+          "Are working towards a healthier body composition",
+          "Have specific areas of stubborn fat you would like to address",
+          "Want professional guidance around your wellness goals",
+          "Are looking for non-invasive body contouring options",
+          "Want to complement your existing nutrition and exercise routine",
+          "Prefer a personalised approach rather than a one-size-fits-all plan"
+        ],
+        "closing": "Our team can assess your goals and recommend treatments based on your individual needs."
+      },
+      "personalisedApproach": {
+        "title": "A Personalised Approach to Weight Management",
+        "paragraphs": [
+          "There is no single treatment that works the same way for everyone. At Epsom, your treatment plan is based on your individual goals, lifestyle, and overall wellness.",
+          "Some treatments focus on targeted body contouring, while others are designed to provide wellness and nutritional support. These therapies are intended to complement healthy habits rather than replace a balanced diet, physical activity, or medical care when required."
+        ]
+      },
+      "cta": {
+        "title": "Start Your Weight Management Journey",
+        "description": "Whether you're working towards overall weight management, targeted fat reduction, or better body composition, Epsom Wellness & Longevity can help you explore a personalised approach.",
+        "descriptionBeforeButton": "Book a consultation to understand which treatment may be suitable for your goals.",
+        "button": "Book Your Consultation"
+      },
+      "faqs": [
+        {
+          "question": "Are Epsom's weight loss treatments safe?",
+          "answer": "The suitability and safety of any weight management treatment depends on your individual health, medical history, medications, and treatment goals. Our team will assess your requirements before recommending a suitable treatment."
+        },
+        {
+          "question": "How should I prepare for a weight loss treatment?",
+          "answer": "Preparation depends on the treatment you choose. During your consultation, our team will explain any specific instructions regarding food, hydration, medication, or other preparations before your session."
+        },
+        {
+          "question": "What should I do after a weight loss treatment?",
+          "answer": "Aftercare depends on the treatment. Generally, maintaining good hydration, following your recommended nutrition and activity routine, and following any specific instructions provided by our team can support your overall wellness plan."
+        },
+        {
+          "question": "What is the fastest way to lose weight?",
+          "answer": "There is no single safe or suitable approach that works for everyone. Sustainable weight management generally involves a combination of appropriate nutrition, physical activity, lifestyle changes, and professional guidance where needed."
+        },
+        {
+          "question": "Can I lose weight without exercise?",
+          "answer": "Exercise is an important part of overall health and can support weight management, but individual weight-loss plans vary. Your nutrition, daily activity, sleep, and other lifestyle factors also play a role."
+        },
+        {
+          "question": "What is the difference between weight loss and fat loss?",
+          "answer": "Weight loss refers to a reduction in overall body weight, which can include changes in fat, muscle, water, and other tissues. Fat loss specifically refers to reducing body fat. For many people, improving body composition is a more useful goal than focusing only on the number on the weighing scale."
+        },
+        {
+          "question": "How do I know which weight loss treatment is right for me?",
+          "answer": "The right treatment depends on your goals and individual circumstances. Cryolipolysis and Emerald Laser Fat Reduction focus on targeted body contouring, while Epsom's weight management drips and L-Carnitine Shots provide different forms of wellness support. A consultation can help determine which options are appropriate for you."
+        }
       ]
     },
     {
-      "slug": "beauty",
-      "name": "Beauty",
-      "href": "beauty/",
-      "footerLabel": "Aesthetic",
+      "slug": "skin-hair-rejuvenation",
+      "name": "Skin & Hair Rejuvenation",
+      "href": "skin-hair-rejuvenation/",
+      "footerLabel": "Skin & Hair",
+      "bannerImage": "/assets/images/imagesEpsom/skin-hair-banner.png",
+      "hero": {
+        "title": "Skin & Hair Rejuvenation in Mumbai"
+      },
+      "introduction": {
+        "title": "Skin & Hair Rejuvenation",
+        "paragraphs": [
+          "Healthy skin and hair are an important part of overall wellbeing. At Epsom Wellness & Longevity, our skin and hair therapies are designed to support healthier-looking skin, improve the appearance and texture of the skin, and support hair and scalp wellness.",
+          "Our approach combines personalised treatments with professional guidance, based on your individual skin or hair concerns. Whether you're looking to refresh your skin, support collagen production, address signs of ageing, improve scalp health, or maintain healthy hair, we help you choose treatments that suit your needs."
+        ],
+        "image": "/assets/images/imagesEpsom/skin-hair-feature.png",
+        "imageAlt": "Skin and hair rejuvenation at Epsom Wellness"
+      },
       "treatments": [
-        { "slug": "circadia-facials", "name": "Circadia® Facials" },
-        { "slug": "cryofacial", "name": "Cryofacial" },
-        { "slug": "cryo-slimming", "name": "Cryo Slimming" },
-        { "slug": "cryo-toning", "name": "Cryo Toning" },
-        { "slug": "glow-getter-iv-drip", "name": "Glow Getter IV Drip" },
-        { "slug": "lymphatic-drainage-body-massage", "name": "Lymphatic Drainage Body Massage" },
-        { "slug": "body-ballancer", "name": "Body Ballancer" },
-        { "slug": "lymphatic-drainage-facial-massage", "name": "Lymphatic Drainage Facial Massage" }
-      ]
-    },
-    {
-      "slug": "sports-recovery-performance",
-      "name": "Sports Recovery & Performance",
-      "href": "sports-recovery-performance/",
-      "footerLabel": "Luxury Spa",
-      "treatments": [
-        { "slug": "cryotherapy", "name": "Whole Body Cryotherapy" },
-        { "slug": "compression-therapy", "name": "Compression Therapy" },
-        { "slug": "red-light-therapy", "name": "Red Light Therapy" },
-         { "slug": "iv-drip-therapy", "name": "IV Drip Therapy" }
-
-       
+        {
+          "slug": "skin-hair-rejuvenation",
+          "name": "HydraFacial",
+          "category": "Skin Rejuvenation",
+          "description": "A multi-step facial treatment designed to cleanse, exfoliate, hydrate, and refresh the skin.",
+          "bannerImage": "/assets/images/treatments/hydrafacial-banner.jpg",
+          "featureImage": "/assets/images/treatments/hydrafacial-feature.jpg"
+        },
+        {
+          "slug": "skin-hair-rejuvenation",
+          "name": "Medi Facial",
+          "category": "Skin Rejuvenation",
+          "description": "A professionally guided facial treatment tailored to specific skin concerns and individual needs.",
+          "bannerImage": "/assets/images/treatments/medi-facial-banner.jpg",
+          "featureImage": "/assets/images/treatments/medi-facial-feature.jpg"
+        },
+        {
+          "slug": "skin-hair-rejuvenation",
+          "name": "Skin Booster",
+          "category": "Skin Rejuvenation",
+          "description": "A treatment designed to improve skin hydration and support smoother, healthier-looking skin.",
+          "bannerImage": "/assets/images/treatments/skin-booster-banner.jpg",
+          "featureImage": "/assets/images/treatments/skin-booster-feature.jpg"
+        },
+        {
+          "slug": "skin-hair-rejuvenation",
+          "name": "Peptide Therapy",
+          "category": "Skin Rejuvenation",
+          "description": "A targeted wellness and aesthetic treatment using peptides as part of a personalised skin rejuvenation approach.",
+          "bannerImage": "/assets/images/treatments/peptide-therapy-banner.jpg",
+          "featureImage": "/assets/images/treatments/peptide-therapy-feature.jpg"
+        },
+        {
+          "slug": "skin-hair-rejuvenation",
+          "name": "Vampire Facial",
+          "category": "Skin Rejuvenation",
+          "description": "A PRP-based aesthetic treatment that uses your own platelet-rich plasma as part of a skin rejuvenation protocol.",
+          "bannerImage": "/assets/images/treatments/vampire-facial-banner.jpg",
+          "featureImage": "/assets/images/treatments/vampire-facial-feature.jpg"
+        },
+        {
+          "slug": "collagen-light-therapy",
+          "name": "Collagen Light Therapy",
+          "category": "Skin Rejuvenation",
+          "description": "A gentle light-based treatment designed to support collagen production and overall skin wellness.",
+          "bannerImage": "/assets/images/treatments/collagen-light-therapy-banner.jpg",
+          "featureImage": "/assets/images/treatments/collagen-light-therapy-feature.jpg"
+        },
+        {
+          "slug": "skin-hair-rejuvenation",
+          "name": "PRP Therapy",
+          "category": "Hair Rejuvenation",
+          "description": "A treatment that uses platelet-rich plasma prepared from your own blood as part of a personalised hair and scalp treatment plan.",
+          "bannerImage": "/assets/images/treatments/prp-therapy-banner.jpg",
+          "featureImage": "/assets/images/treatments/prp-therapy-feature.jpg"
+        },
+        {
+          "slug": "skin-hair-rejuvenation",
+          "name": "Hair Vitality Drip",
+          "category": "Hair Rejuvenation",
+          "description": "An IV wellness therapy from Epsom's hair health range, designed to provide targeted nutritional support.",
+          "bannerImage": "/assets/images/treatments/hair-vitality-drip-banner.jpg",
+          "featureImage": "/assets/images/treatments/hair-vitality-drip-feature.jpg"
+        },
+        {
+          "slug": "skin-hair-rejuvenation",
+          "name": "Hair Vitality Pro",
+          "category": "Hair Rejuvenation",
+          "description": "A specialised option within Epsom's hair wellness range, designed around individual hair and wellness goals.",
+          "bannerImage": "/assets/images/treatments/hair-vitality-pro-banner.jpg",
+          "featureImage": "/assets/images/treatments/hair-vitality-pro-feature.jpg"
+        },
+        {
+          "slug": "skin-hair-rejuvenation",
+          "name": "Japanese Head Spa",
+          "category": "Hair Rejuvenation",
+          "description": "A relaxing scalp and head treatment focused on cleansing, massage, and overall scalp wellness.",
+          "bannerImage": "/assets/images/treatments/japanese-head-spa-banner.jpg",
+          "featureImage": "/assets/images/treatments/japanese-head-spa-feature.jpg"
+        },
+        {
+          "slug": "skin-hair-rejuvenation",
+          "name": "Laser Hair Removal",
+          "category": "Hair Removal",
+          "description": "A laser-based treatment designed to reduce unwanted hair growth over a course of personalised sessions.",
+          "bannerImage": "/assets/images/treatments/laser-hair-removal-banner.jpg",
+          "featureImage": "/assets/images/treatments/laser-hair-removal-feature.jpg"
+        }
+      ],
+      "suitability": {
+        "title": "Is Skin & Hair Rejuvenation Right for You?",
+        "items": [
+          "Want to support healthier-looking skin",
+          "Want to improve skin texture and appearance",
+          "Want to support natural collagen production",
+          "Want to address signs of ageing",
+          "Want to support hair and scalp wellness",
+          "Prefer personalised professional guidance",
+          "Are looking for non-invasive skin and hair treatments"
+        ],
+        "closing": "Our team will assess your individual concerns and help you choose treatments that suit your skin, hair, and wellness goals."
+      },
+      "personalisedApproach": {
+        "title": "Your Skin & Hair, Your Treatment Plan",
+        "paragraphs": [
+          "Skin and hair concerns can have different causes, which is why the same treatment may not be suitable for everyone.",
+          "At Epsom, treatments are selected according to your individual needs and goals. Some therapies focus on hydration and skin quality, while others are designed to support collagen, hair health, scalp wellness, or unwanted hair reduction.",
+          "Our team can help you understand your options and create a personalised approach to your skin and hair wellness."
+        ]
+      },
+      "cta": {
+        "title": "Begin Your Skin & Hair Rejuvenation Journey",
+        "description": "Looking for skin and hair rejuvenation treatments in Mumbai? From skin hydration and rejuvenation to hair and scalp wellness, explore personalised treatments designed around your individual needs.",
+        "descriptionBeforeButton": "Book a consultation with our team to find the right treatment for you.",
+        "button": "Book Your Consultation"
+      },
+      "faqs": [
+        {
+          "question": "Are skin and hair rejuvenation treatments safe?",
+          "answer": "The safety and suitability of each treatment depend on your individual health, skin or hair concerns, medical history, and the treatment being considered. Our team will assess your requirements before recommending a suitable option."
+        },
+        {
+          "question": "How should I prepare for a skin or hair treatment?",
+          "answer": "Preparation varies depending on the treatment. You may need to avoid certain skincare products, hair treatments, or other procedures beforehand. Our team will provide specific preparation instructions during your consultation."
+        },
+        {
+          "question": "What should I do after a skin or hair treatment?",
+          "answer": "Aftercare depends on the treatment you receive. You may be advised to follow specific skincare, haircare, sun-protection, or activity-related instructions. Our team will explain the appropriate aftercare following your session."
+        },
+        {
+          "question": "What treatment is best for glowing skin?",
+          "answer": "There is no single treatment that is best for everyone. Treatments such as HydraFacial, Medi Facial, Skin Booster, and Collagen Light Therapy address different aspects of skin wellness. The appropriate option depends on your skin type, concerns, and goals."
+        },
+        {
+          "question": "Can these treatments help with hair fall?",
+          "answer": "Some treatments, including PRP Therapy and Epsom's hair wellness options, may be considered as part of a personalised approach to hair health. Hair fall can have many possible causes, so identifying the underlying concern is important before choosing a treatment."
+        },
+        {
+          "question": "How long does it take to see results from skin treatments?",
+          "answer": "The timeframe varies depending on the treatment, your skin condition, and your individual response. Some treatments can leave the skin feeling refreshed immediately, while treatments focused on longer-term skin changes may require multiple sessions."
+        },
+        {
+          "question": "How many sessions will I need?",
+          "answer": "The number of sessions depends on the treatment and your individual goals. Some treatments may be used occasionally, while others are recommended as a course of sessions. Your team will discuss the expected treatment schedule during your consultation."
+        }
       ]
     }
   ],
+
+
   "primaryCategory": {
     "cryotherapy": "health-optimisation-longevity",
     "red-light-therapy": "health-optimisation-longevity",

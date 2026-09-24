@@ -16,6 +16,11 @@ type LocationPageProps = {
   location: SiteLocation;
 };
 
+const whyChooseUsWithDescriptions = whyChooseUs as Array<{
+  title: string;
+  description?: string;
+}>;
+
 export function LocationPage({ location }: LocationPageProps) {
   const medicalBusiness = {
     "@context": "https://schema.org",

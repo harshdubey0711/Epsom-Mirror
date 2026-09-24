@@ -6,6 +6,9 @@ import { BookButton } from "@/components/BookButton";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { buildMetadata } from "@/lib/metadata";
 import services from "@/content/services";
+import ServiceBenefits from "@/components/ServiceBenefits";
+
+import RightForYouSection from "@/components/RightForYouSection";
 
 import {
   allDynamicSlugs,
@@ -15,7 +18,8 @@ import {
   isCategorySlug,
 } from "@/lib/site";
 import { FaqSection } from "@/components/FaqSection";
-
+import { faqItems } from "@/content/faq";
+import OurServices from "@/components/OurServices";
 type Props = {
   params: Promise<{ slug: string }>;
 };
@@ -52,151 +56,234 @@ export async function generateMetadata({ params }: Props) {
   return {};
 }
 
-export default async function DynamicSlugPage({ params }: Props) {
+export default async function Page({ params }: Props) {
   const { slug } = await params;
 
-  /*
-   * ============================================================
-   * CATEGORY PAGE
-   * ============================================================
-   */
+/*
+ * ============================================================
+ * CATEGORY PAGE
+ * ============================================================
+ */
 
-  if (isCategorySlug(slug)) {
-    const category = getCategory(slug)!;
+if (isCategorySlug(slug)) {
+  const category = getCategory(slug)!;
 
-    const whyChoose =
-      (category as typeof category & {
-        whyChoose?: string[];
-      }).whyChoose ?? [];
+  const heroTitle = category.hero?.title ?? category.name;
 
-    const whyEpsomWellness =
-      (category as typeof category & {
-        whyEpsomWellness?: string[];
-      }).whyEpsomWellness ?? [];
+  const whyChoose = (category as unknown as { whyChoose?: string[] }).whyChoose ?? [];
+  const whyEpsomWellness =
+    (category as unknown as { whyEpsomWellness?: string[] }).whyEpsomWellness ?? [];
+  const suitability = category.suitability;
+  const personalisedApproach = category.personalisedApproach;
+  const cta = category.cta;
+  const introduction = category.introduction;
+  const faqs = (category as unknown as {
+    faqs?: Array<{ question: string; answer: string }>;
+  }).faqs;
 
-    return (
-      <main className="pt-8 pb-24">
-        <div className="max-w-5xl px-4 mx-auto">
+  return (
+    <main className="pb-24">
 
-          {/* Breadcrumbs */}
-          <Breadcrumbs
-            items={[
-              { label: "Home", href: "/" },
-              { label: category.name },
-            ]}
-          />
+      {/* ==================================================
+          CATEGORY HERO
+         ================================================== */}
+      <section className="relative h-[70vh] md:h-[80vh] w-full flex items-center justify-center overflow-hidden">
 
-          {/* Category Header */}
-          <h1 className="font-display text-4xl md:text-5xl text-epsom-ink">
-            {category.name}
-          </h1>
+        {/* Background Image */}
+        <Image
+  src={category.bannerImage}
+  alt={`${heroTitle} at Epsom Wellness`}
+  fill
+  priority
+  className="object-cover object-[50%_35%]"
+  sizes="100vw"
+/>
 
-          <p className="text-b mt-2 leading-relaxed">
-            Live Better. Feel Better. Stay Healthier.
-          </p>
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black/60" />
+         
 
-          <p className="text-epsom-muted mt-6 leading-relaxed">
-            Your health is your greatest investment. At Epsom, we offer
-            doctor-led therapies that help improve recovery, increase energy,
-            support overall wellness, and promote healthy ageing. Every
-            treatment is tailored to your individual health goals, so you
-            receive care that's right for you.
-          </p>
+        {/* Breadcrumbs */}
+        <div className="absolute top-0 left-0 right-0 z-20">
+          <div className="max-w-6xl mx-auto px-4 pt-8">
+            <Breadcrumbs
+              items={[
+                { label: "Home", href: "/" },
+                { label: category.name },
+              ]}
+            />
+          </div>
+        </div>
 
-          <BookButton className="btn-primary mt-12">
-            Book Consultation
-          </BookButton>
+        {/* H1 INSIDE HERO */}
+        <div className="relative z-10 w-full px-4">
+          <div className="text-center max-w-4xl mx-auto">
+            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-white leading-tight">
+              {heroTitle}
+            </h1>
+          </div>
+        </div> 
 
-          {/* ==================================================
-              WHY CHOOSE CATEGORY
-             ================================================== */}
+      </section>
 
-          <section className="py-20 px-4">
-            <div className="max-w-5xl mx-auto">
 
-              <div className="text-center mb-12">
-                <h2 className="section-heading">
-                  Why Choose {category.name}?
-                </h2>
-              </div>
+      {/* ==================================================
+          INTRODUCTION
+          LEFT TEXT + RIGHT IMAGE
+         ================================================== */}
+      {introduction && (
+        <section className="py-20 px-4">
 
-              <ul className="grid sm:grid-cols-2 gap-x-10 list-none p-0">
-                {whyChoose.map((item: string, i: number) => (
-                  <li
-                    key={item}
-                    className={`flex gap-4 py-5 border-b border-epsom-crystal/35${
-                      i >= 4 ? " sm:border-b-0" : ""
-                    }${i === 5 ? " border-b-0" : ""}`}
-                  >
-                    <span
-                      className="text-epsom-maroon mt-1 shrink-0"
-                      aria-hidden="true"
-                    >
-                      ✓
-                    </span>
+          <div className="max-w-5xl mx-auto">
 
-                    <div>
-                      <p className="text-epsom-muted text-sm mt-1">
-                        {item}
+            <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
+
+              {/* INTRODUCTION CONTENT */}
+              <div>
+
+                <div className="mb-8">
+                  <h2 className="section-heading">
+                    {introduction.title}
+                  </h2>
+                </div>
+
+                <div className="space-y-6">
+                  {introduction.paragraphs.map(
+                    (paragraph: string) => (
+                      <p
+                        key={paragraph}
+                        className="text-epsom-muted leading-relaxed"
+                      >
+                        {paragraph}
                       </p>
-                    </div>
-                  </li>
-                ))}
-              </ul>
+                    )
+                  )}
+                </div>
 
-            </div>
-          </section>
-
-          {/* ==================================================
-              OUR SERVICES
-             ================================================== */}
-
-          <section className="py-20 px-4">
-            <div className="max-w-5xl mx-auto">
-
-              <div className="text-center mb-12">
-                <h2 className="section-heading">
-                  Our Services
-                </h2>
               </div>
 
-              <ul className="mt-10 grid sm:grid-cols-2 gap-4 list-none p-0">
-                {category.treatments.map((t) => (
-                  <li key={t.slug}>
-                    <Link
-                      href={`/${t.slug}/`}
-                      className="glass-card-hover p-4 block text-epsom-ink font-medium hover:text-epsom-maroon"
-                    >
-                      {t.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
 
-            </div>
-          </section>
+              {/* FEATURE IMAGE */}
+              <div className="relative">
 
-          {/* ==================================================
-              WHY EPSOM WELLNESS
-             ================================================== */}
+                <div className="relative aspect-square overflow-hidden rounded-2xl border border-epsom-crystal/35 shadow-soft-lg">
 
-          <section className="py-20 px-4">
-            <div className="max-w-5xl mx-auto">
+                  <Image
+                    src={introduction.image}
+                    alt={introduction.imageAlt}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                  />
 
-              <div className="text-center mb-12">
-                <h2 className="section-heading">
-                  Why Epsom Wellness?
-                </h2>
+                </div>
+
+                {/* Decorative Border */}
+                <div
+                  className="absolute -bottom-3 -left-3 w-24 h-24 border border-epsom-maroon/40 rounded-2xl pointer-events-none hidden md:block"
+                  aria-hidden="true"
+                />
+
               </div>
 
-              <ul className="grid sm:grid-cols-2 gap-x-10 list-none p-0">
-                {whyEpsomWellness.map((item: string, i: number) => (
+            </div>
+
+          </div>
+
+        </section>
+      )}
+
+
+      {/* ==================================================
+          WHY CHOOSE
+         ================================================== */}
+      {whyChoose.length > 0 && (
+        <section className="py-20 px-4">
+
+          <div className="max-w-5xl mx-auto">
+
+            <div className="text-center mb-12">
+              <h2 className="section-heading">
+                Why Choose {category.name}?
+              </h2>
+            </div>
+
+            <ul className="grid sm:grid-cols-2 gap-x-10 list-none p-0">
+
+              {whyChoose.map((item: string, i: number) => (
+                <li
+                  key={item}
+                  className={`flex gap-4 py-5 border-b border-epsom-crystal/35
+                    ${i >= whyChoose.length - 2 ? "sm:border-b-0" : ""}
+                    ${i === whyChoose.length - 1 ? "border-b-0" : ""}
+                  `}
+                >
+
+                  <span
+                    className="text-epsom-maroon mt-1 shrink-0"
+                    aria-hidden="true"
+                  >
+                    ✓
+                  </span>
+
+                  <div>
+                    <p className="text-epsom-muted text-sm mt-1">
+                      {item}
+                    </p>
+                  </div>
+
+                </li>
+              ))}
+
+            </ul>
+
+          </div>
+
+        </section>
+      )}
+
+
+      {/* ==================================================
+          OUR SERVICES
+         ================================================== */}
+      <OurServices treatments={category.treatments} />
+      
+
+
+      {/* ==================================================
+          WHY EPSOM WELLNESS
+         ================================================== */}
+      {whyEpsomWellness.length > 0 && (
+        <section className="py-20 px-4">
+
+          <div className="max-w-5xl mx-auto">
+
+            <div className="text-center mb-12">
+              <h2 className="section-heading">
+                Why Epsom Wellness?
+              </h2>
+            </div>
+
+            <ul className="grid sm:grid-cols-2 gap-x-10 list-none p-0">
+
+              {whyEpsomWellness.map(
+                (item: string, i: number) => (
                   <li
                     key={item}
-                    className={`flex gap-4 py-5 border-b border-epsom-crystal/35${
-                      i >= 4 ? " sm:border-b-0" : ""
-                    }${i === 5 ? " border-b-0" : ""}`}
+                    className={`flex gap-4 py-5 border-b border-epsom-crystal/35
+                      ${
+                        i >= whyEpsomWellness.length - 2
+                          ? "sm:border-b-0"
+                          : ""
+                      }
+                      ${
+                        i === whyEpsomWellness.length - 1
+                          ? "border-b-0"
+                          : ""
+                      }
+                    `}
                   >
+
                     <span
                       className="text-epsom-maroon mt-1 shrink-0"
                       aria-hidden="true"
@@ -209,46 +296,164 @@ export default async function DynamicSlugPage({ params }: Props) {
                         {item}
                       </h3>
                     </div>
+
                   </li>
-                ))}
-              </ul>
+                )
+              )}
+
+            </ul>
+
+          </div>
+
+        </section>
+      )}
+
+
+      {/* ==================================================
+          SUITABILITY
+         ================================================== */}
+      {suitability && (
+        <section className="py-20 px-4">
+
+          <div className="max-w-5xl mx-auto">
+
+            <div className="text-center mb-12">
+
+              <h2 className="section-heading">
+                {suitability.title}
+              </h2>
 
             </div>
-          </section>
 
-          {/* ==================================================
-              CATEGORY CTA
-             ================================================== */}
+            {suitability.items &&
+              suitability.items.length > 0 && (
+                <ul className="grid sm:grid-cols-2 gap-x-10 list-none p-0">
 
-          <section className="py-20 px-4">
-            <div className="max-w-5xl mx-auto">
+                  {suitability.items.map(
+                    (item: string) => (
+                      <li
+                        key={item}
+                        className="flex gap-4 py-5 border-b border-epsom-crystal/35"
+                      >
 
-              <div className="text-center">
+                        <span
+                          className="text-epsom-maroon mt-1 shrink-0"
+                          aria-hidden="true"
+                        >
+                          ✓
+                        </span>
 
-                <h2 className="section-heading">
-                  Ready to Take the Next Step?
-                </h2>
+                        <p className="text-epsom-muted leading-relaxed">
+                          {item}
+                        </p>
 
-                <p className="max-w-3xl mx-auto mt-6 text-epsom-muted">
-                  Whether you're looking to improve your health, recover
-                  better, or simply feel your best, our team is here to help
-                  you choose the therapies that suit your goals.
-                </p>
+                      </li>
+                    )
+                  )}
 
-                <BookButton className="btn-primary mt-12">
-                  Book Consultation
-                </BookButton>
+                </ul>
+              )}
+
+            {suitability.closing && (
+              <p className="max-w-3xl mx-auto mt-10 text-center text-epsom-muted leading-relaxed">
+                {suitability.closing}
+              </p>
+            )}
+
+          </div>
+
+        </section>
+      )}
+
+
+      {/* ==================================================
+          PERSONALISED APPROACH
+         ================================================== */}
+      {personalisedApproach && (
+        <section className="py-20 px-4">
+
+          <div className="max-w-5xl mx-auto">
+
+            <div className="max-w-3xl">
+
+              <h2 className="section-heading mb-8">
+                {personalisedApproach.title}
+              </h2>
+
+              <div className="space-y-6">
+
+                {personalisedApproach.paragraphs?.map(
+                  (paragraph: string) => (
+                    <p
+                      key={paragraph}
+                      className="text-epsom-muted leading-relaxed"
+                    >
+                      {paragraph}
+                    </p>
+                  )
+                )}
 
               </div>
 
             </div>
-          </section>
 
-        </div>
-      </main>
-    );
-  }
+          </div>
 
+        </section>
+      )}
+
+
+      {/* ==================================================
+          FAQ
+         ================================================== */}
+
+
+           <FaqSection
+           
+                 items={faqItems}
+         />
+    
+
+      {/* ==================================================
+          CTA
+         ================================================== */}
+      {cta && (
+        <section className="py-20 px-4">
+
+          <div className="max-w-5xl mx-auto">
+
+            <div className="text-center">
+
+              <h2 className="section-heading">
+                {cta.title ?? "Ready to Take the Next Step?"}
+              </h2>
+
+              {cta.description && (
+                <p className="max-w-3xl mx-auto mt-6 text-epsom-muted leading-relaxed">
+                  {cta.description}
+                </p>
+              )}
+
+              {cta.descriptionBeforeButton && (
+                <p className="max-w-3xl mx-auto mt-4 text-epsom-muted leading-relaxed">
+                  {cta.descriptionBeforeButton}
+                </p>
+              )}
+
+              <BookButton className="btn-primary mt-12">
+                {cta.button ?? "Book Consultation"}
+              </BookButton>
+
+            </div>
+
+          </div>
+
+        </section>
+      )}
+
+    </main>
+  );
+}
   /*
    * ============================================================
    * SERVICE PAGE
@@ -261,7 +466,10 @@ export default async function DynamicSlugPage({ params }: Props) {
   if (!service) {
     notFound();
   }
-return (
+
+
+  
+return ( 
  <main className="pb-24">
 
   {/* ==================================================
@@ -303,7 +511,7 @@ return (
       </div>
     </div>
 
-  </section>
+  </section> 
 
       {/* ==================================================
           FEATURE + INTRODUCTION
@@ -369,47 +577,7 @@ return (
           BENEFITS
          ================================================== */}
 
-      <section className="py-20 px-4">
-        <div className="max-w-5xl mx-auto">
-
-          <div className="text-center mb-12">
-
-            <h2 className="section-heading">
-              {service.benefits.title}
-            </h2>
-
-            <p className="text-epsom-muted mt-4">
-              {service.benefits.intro}
-            </p>
-
-          </div>
-
-          <ul className="grid sm:grid-cols-2 gap-x-10 list-none p-0">
-            {service.benefits.items.map(
-              (item: string, i: number) => (
-                <li
-                  key={item}
-                  className={`flex gap-4 py-5 border-b border-epsom-crystal/35${
-                    i >= 6 ? " sm:border-b-0" : ""
-                  }${i === 7 ? " border-b-0" : ""}`}
-                >
-                  <span
-                    className="text-epsom-maroon mt-1 shrink-0"
-                    aria-hidden="true"
-                  >
-                    ✓
-                  </span>
-
-                  <p className="text-epsom-muted text-sm">
-                    {item}
-                  </p>
-                </li>
-              )
-            )}
-          </ul>
-
-        </div>
-      </section>
+         <ServiceBenefits  service = {service}/>
 
       {/* ==================================================
           IV DRIP RANGE
@@ -483,54 +651,10 @@ return (
       )}
 
       {/* ==================================================
-          SUITABILITY
+          RIGHT FOR YOU SECTION.
          ================================================== */}
 
-      <section className="py-20 px-4">
-        <div className="max-w-5xl mx-auto">
-
-          <div className="text-center mb-12">
-
-            <h2 className="section-heading">
-              {service.suitability.title}
-            </h2>
-
-            <p className="text-epsom-muted mt-4">
-              {service.suitability.intro}
-            </p>
-
-          </div>
-
-          <ul className="grid sm:grid-cols-2 gap-x-10 list-none p-0">
-            {service.suitability.items.map(
-              (item: string, i: number) => (
-                <li
-                  key={item}
-                  className={`flex gap-4 py-5 border-b border-epsom-crystal/35${
-                    i >= 4 ? " sm:border-b-0" : ""
-                  }${i === 5 ? " border-b-0" : ""}`}
-                >
-                  <span
-                    className="text-epsom-maroon mt-1 shrink-0"
-                    aria-hidden="true"
-                  >
-                    ✓
-                  </span>
-
-                  <p className="text-epsom-muted text-sm">
-                    {item}
-                  </p>
-                </li>
-              )
-            )}
-          </ul>
-
-          <p className="max-w-4xl mx-auto mt-8 text-epsom-muted leading-relaxed">
-            {service.suitability.closing}
-          </p>
-
-        </div>
-      </section>
+     <RightForYouSection service={service}/>
 
       {/* ==================================================
           BOOKING CTA

@@ -200,7 +200,7 @@ export function Header() {
                   </Link>
                   <ul className="mt-3 space-y-2 text-xs text-neutral-600">
                     {cat.treatments.map((t) => (
-                      <li key={`${cat.slug}-${t.slug}`}>
+                      <li key={`${cat.slug}-${t.name}`}>
                         <Link href={`/${t.slug}/`} onClick={() => setMegaOpen(false)}>
                           {t.name}
                         </Link>

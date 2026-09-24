@@ -1,9 +1,17 @@
 export type TreatmentRef = {
+  bestSuitedFor: import("react").JSX.Element;
+  description: import("react").JSX.Element;
   slug: string;
   name: string;
 };
 
 export type Category = {
+  bannerImage: string;
+  introduction: any;
+  cta: any;
+  personalisedApproach: any;
+  suitability: any;
+  hero: any;
   slug: string;
   name: string;
   href: string;

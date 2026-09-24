@@ -21,71 +21,71 @@ export default function AboutPage() {
         </div>
       </section> */}
 
-        <section className="relative min-h-[60vh] md:min-h-[70vh] flex items-center justify-center overflow-hidden">
-          <Image
-          src="/assets/images/about/float-img.jpg"  
+      <section className="relative min-h-[60vh] md:min-h-[70vh] flex items-center justify-center overflow-hidden">
+        <Image
+          src="/assets/images/about/float-img.jpg"
           alt="epsom wellness about us banner"
           fill
           priority
           className="object-cover"
           sizes="100vw"
-          />
-          <div className="absolute inset-0 bg-black/50"/>
-          <div className="relative z-10 text-center px-4 max-w-4xl mx-auto pt-16">
+        />
+        <div className="absolute inset-0 bg-black/50" />
+        <div className="relative z-10 text-center px-4 max-w-4xl mx-auto pt-16">
           <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-white leading-tight">
-          About Epsom Wellness
+            About Epsom Wellness
           </h1>
 
           <p className="font-epsom-display text-white/90 mt-4">
-          A premium wellness destination focused on recovery, longevity, pain management, body transformation, rejuvenation and relaxation.
+            A premium wellness destination focused on recovery, longevity, pain management, body transformation, rejuvenation and relaxation.
           </p>
-          </div>
+        </div>
 
-        </section>
+      </section>
 
 
 
-        <section className=" bg-white/40 py-16 md:py-24 px-4">
+      <section className=" bg-white/40 py-16 md:py-24 px-4">
 
         <div className="max-w-6xl mx-auto">
-        <h2 className="section-heading !text-3xl md:!text-4xl">
-          The Epsom Story
-        </h2>
+          <h2 className="section-heading !text-3xl md:!text-4xl">
+            The Epsom Story
+          </h2>
 
 
-        <div className="flex flex-col md:flex-row items-start gap-2 ">
-          <div className="flex flex-col md:flex-col items center gap-4 max-w-[640px]">
-          <h3 className="text-1xl md:text-2xl my-2">
-        Redefining Wellness In Mumbai
-        </h3>
-        <p className="text-epsom-muted ">
-        Epsom Wellness was created with one vision — to bring world-class wellness, recovery, and longevity therapies to India in a luxurious yet medically guided environment. </p>
-        <p className="text-epsom-muted leading-relaxed">
-        Inspired by international wellness clinics and recovery centers used by athletes, celebrities, entrepreneurs, and high performers globally, Epsom Wellness combines advanced biohacking therapies with holistic healing practices to create transformative wellness experiences.
-<br />
-<br />
-What started as a specialized cryotherapy and recovery concept has evolved into one of Mumbai’s most innovative wellness destinations offering cryotherapy, IV drips, infrared therapies, compression recovery, aesthetic rejuvenation, advanced facials, body therapies, and luxury spa experiences under one roof.
-<br />
-<br />
-Today, Epsom Wellness serves clients ranging from fitness enthusiasts and athletes to working professionals, models, entrepreneurs, and individuals seeking better recovery, anti-aging support, stress management, and holistic wellness.
-        </p>
+          <div className="flex flex-col md:flex-row items-start gap-2 ">
+            <div className="flex flex-col md:flex-col items center gap-4 max-w-[640px]">
+              <h3 className="text-1xl md:text-2xl my-2">
+                Redefining Wellness In Mumbai
+              </h3>
+              <p className="text-epsom-muted ">
+                Epsom Wellness was created with one vision — to bring world-class wellness, recovery, and longevity therapies to India in a luxurious yet medically guided environment. </p>
+              <p className="text-epsom-muted leading-relaxed">
+                Inspired by international wellness clinics and recovery centers used by athletes, celebrities, entrepreneurs, and high performers globally, Epsom Wellness combines advanced biohacking therapies with holistic healing practices to create transformative wellness experiences.
+                <br />
+                <br />
+                What started as a specialized cryotherapy and recovery concept has evolved into one of Mumbai’s most innovative wellness destinations offering cryotherapy, IV drips, infrared therapies, compression recovery, aesthetic rejuvenation, advanced facials, body therapies, and luxury spa experiences under one roof.
+                <br />
+                <br />
+                Today, Epsom Wellness serves clients ranging from fitness enthusiasts and athletes to working professionals, models, entrepreneurs, and individuals seeking better recovery, anti-aging support, stress management, and holistic wellness.
+              </p>
+            </div>
+
+
+            <div className="relative w-full md:w-1/2 h-[400px] overflow-hidden">
+              <Image
+                src="/assets/images/about/about-us-feature.jpeg"
+                alt="Ipsum Gyrospa"
+                fill
+                priority
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+            </div>
+
           </div>
-       
-
-      <div className="relative w-full md:w-1/2 h-[400px] overflow-hidden">
-        <Image
-          src="/assets/images/about/about-us-feature.jpeg"
-          alt="Ipsum Gyrospa"
-          fill
-          priority
-          className="object-cover"
-          sizes="(max-width: 768px) 100vw, 50vw"
-        />
-      </div>
-
-    </div>
-  </div>
-</section>
+        </div>
+      </section>
 
 
 
@@ -95,7 +95,7 @@ Today, Epsom Wellness serves clients ranging from fitness enthusiasts and athlet
           aesthetic services in Mumbai. We are designed to revitalize your body, rejuvenate your mind, and
           elevate your well-being through advanced science-led treatments.
         </p>
-        
+
         <p className="text-epsom-deep leading-relaxed mt-6">
           Our state-of-the-art facilities offer a serene, luxury environment where certified professionals
           prioritize safety, comfort, and effectiveness in every session. From whole-body cryotherapy to IV
