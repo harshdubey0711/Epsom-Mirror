@@ -22,9 +22,7 @@ export async function generateStaticParams() {
   }));
 }
 
-export async function generateMetadata({
-  params,
-}: Props) {
+export async function generateMetadata({ params }: Props) {
   const { slug } = await params;
 
   const location = getNavLocation(slug);
@@ -35,26 +33,20 @@ export async function generateMetadata({
 
   return buildMetadata({
     title: `${location.name} | Epsom Cryo Spa Mumbai`,
-
-    description:
-      `Experience premium cryotherapy, wellness, recovery and aesthetic treatments at Epsom Cryo Spa ${location.name}.`,
-
-    path: `/locations/${slug}/`,
+    description: `Experience premium cryotherapy, wellness, recovery and aesthetic treatments at Epsom Cryo Spa ${location.name}.`,
+    path: `/${slug}/`,
   });
 }
 
-export default async function LocationRoute({
-  params,
-}: Props) {
+export default async function LocationRoute({ params }: Props) {
   const { slug } = await params;
 
   const location = getNavLocation(slug);
+  const siteLocation = getSiteLocation(slug);
 
-  if (!location) {
+  if (!location || !siteLocation) {
     notFound();
   }
-
-  const siteLocation = getSiteLocation(slug);
 
   return (
     <LocationPage

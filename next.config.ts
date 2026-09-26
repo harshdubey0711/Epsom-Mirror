@@ -3,10 +3,13 @@ import path from "path";
 
 const nextConfig: NextConfig = {
   trailingSlash: true,
+
   outputFileTracingRoot: path.join(__dirname),
+
   images: {
     formats: ["image/avif", "image/webp"],
   },
+
   async redirects() {
     return [
       { source: "/about.html", destination: "/about/", permanent: true },
@@ -20,7 +23,12 @@ const nextConfig: NextConfig = {
       { source: "/thankyou.html", destination: "/thankyou/", permanent: true },
       { source: "/error.html", destination: "/error/", permanent: true },
       { source: "/contact.php", destination: "/contact/", permanent: true },
-      { source: "/recovery.html", destination: "/health-optimisation-longevity/", permanent: true },
+
+      {
+        source: "/recovery.html",
+        destination: "/health-optimisation-longevity/",
+        permanent: true,
+      },
       {
         source: "/categories/recovery-longevity.html",
         destination: "/health-optimisation-longevity/",
@@ -46,30 +54,124 @@ const nextConfig: NextConfig = {
         destination: "/sports-recovery-performance/",
         permanent: true,
       },
-      { source: "/biohack.html", destination: "/health-optimisation-longevity/", permanent: true },
-      { source: "/iv-drip.html", destination: "/iv-drip-therapy/", permanent: true },
-      { source: "/spa-services.html", destination: "/sports-recovery-performance/", permanent: true },
-      { source: "/aesthetic.html", destination: "/beauty/", permanent: true },
-      { source: "/aesthetic-rejuvenation.html", destination: "/beauty/", permanent: true },
+
+      {
+        source: "/biohack.html",
+        destination: "/health-optimisation-longevity/",
+        permanent: true,
+      },
+      {
+        source: "/iv-drip.html",
+        destination: "/iv-drip-therapy/",
+        permanent: true,
+      },
+      {
+        source: "/spa-services.html",
+        destination: "/sports-recovery-performance/",
+        permanent: true,
+      },
+      {
+        source: "/aesthetic.html",
+        destination: "/beauty/",
+        permanent: true,
+      },
+      {
+        source: "/aesthetic-rejuvenation.html",
+        destination: "/beauty/",
+        permanent: true,
+      },
       {
         source: "/weight-loss-transformation.html",
         destination: "/health-optimisation-longevity/",
         permanent: true,
       },
-      { source: "/cryotherapy-in-mumbai.html", destination: "/cryotherapy/", permanent: true },
-      { source: "/infrared-therapy.html", destination: "/infrared-sauna/", permanent: true },
-      { source: "/services/cryotherapy.html", destination: "/cryotherapy/", permanent: true },
-      { source: "/services/red-light-therapy.html", destination: "/red-light-therapy/", permanent: true },
+
+      {
+        source: "/cryotherapy-in-mumbai.html",
+        destination: "/cryotherapy/",
+        permanent: true,
+      },
+      {
+        source: "/infrared-therapy.html",
+        destination: "/infrared-sauna/",
+        permanent: true,
+      },
+      {
+        source: "/services/cryotherapy.html",
+        destination: "/cryotherapy/",
+        permanent: true,
+      },
+      {
+        source: "/services/red-light-therapy.html",
+        destination: "/red-light-therapy/",
+        permanent: true,
+      },
       {
         source: "/services/compression-therapy.html",
         destination: "/compression-therapy/",
         permanent: true,
       },
-      { source: "/services/infrared-therapy.html", destination: "/infrared-sauna/", permanent: true },
-      { source: "/locations/santacruz.html", destination: "/locations/santacruz/", permanent: true },
-      { source: "/locations/borivali.html", destination: "/locations/borivali/", permanent: true },
-      { source: "/locations/andheri.html", destination: "/locations/andheri/", permanent: true },
+      {
+        source: "/services/infrared-therapy.html",
+        destination: "/infrared-sauna/",
+        permanent: true,
+      },
+
+      // Legacy location URLs → clean location URLs
+      {
+        source: "/locations/santacruz.html",
+        destination: "/santacruz/",
+        permanent: true,
+      },
+      {
+        source: "/locations/borivali.html",
+        destination: "/borivali/",
+        permanent: true,
+      },
+      {
+        source: "/locations/andheri.html",
+        destination: "/andheri/",
+        permanent: true,
+      },
+
+      // Old location routes → clean location URLs
+      {
+        source: "/locations/santacruz/",
+        destination: "/santacruz/",
+        permanent: true,
+      },
+      {
+        source: "/locations/borivali/",
+        destination: "/borivali/",
+        permanent: true,
+      },
+      {
+        source: "/locations/andheri/",
+        destination: "/andheri/",
+        permanent: true,
+      },
     ];
+  },
+
+  async rewrites() {
+    return {
+      beforeFiles: [
+        {
+          source: "/santacruz",
+          destination: "/locations/santacruz",
+        },
+        {
+          source: "/borivali",
+          destination: "/locations/borivali",
+        },
+        {
+          source: "/andheri",
+          destination: "/locations/andheri",
+        },
+      ],
+      afterFiles: [],
+      fallback: [],
+    };
   },
 };
 

@@ -177,7 +177,6 @@ if (isCategorySlug(slug)) {
                   />
 
                 </div>
-
                 {/* Decorative Border */}
                 <div
                   className="absolute -bottom-3 -left-3 w-24 h-24 border border-epsom-maroon/40 rounded-2xl pointer-events-none hidden md:block"
