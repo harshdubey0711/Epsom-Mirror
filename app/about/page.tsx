@@ -1,123 +1,208 @@
 import { BookButton } from "@/components/BookButton";
+import { aboutData } from "@/content/about";
 import { buildMetadata } from "@/lib/metadata";
 import Image from "next/image";
+import Link from "next/link";
 
 export const metadata = buildMetadata({
-  title: "About Us | Epsom Cryo Spa Mumbai",
-  description: "Learn about Epsom Cryo Spa — Mumbai's luxury recovery and biohacking wellness center.",
-  path: "/about/",
+  title: aboutData.metadata.title,
+  description: aboutData.metadata.description,
+  path: aboutData.metadata.path,
 });
 
 export default function AboutPage() {
   return (
     <main>
-      {/* <section className="relative py-24 px-4 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-epsom-accent/10 to-transparent" />
-        <div className="max-w-4xl mx-auto text-center relative z-10">
-          <h1 className="font-display text-4xl md:text-5xl text-epsom-ink">About Epsom Cryo Spa</h1>
-          <p className="text-epsom-maroon mt-4 uppercase tracking-widest text-sm">
-            Luxury Recovery & Biohacking Wellness Center
-          </p>
-        </div>
-      </section> */}
-
+      {/* Hero Section */}
       <section className="relative min-h-[60vh] md:min-h-[70vh] flex items-center justify-center overflow-hidden">
         <Image
-          src="/assets/images/about/float-img.jpg"
-          alt="epsom wellness about us banner"
+          src={aboutData.hero.image}
+          alt={aboutData.hero.imageAlt}
           fill
           priority
           className="object-cover"
           sizes="100vw"
         />
+
         <div className="absolute inset-0 bg-black/50" />
+
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto pt-16">
           <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-white leading-tight">
-            About Epsom Wellness
+            {aboutData.hero.heading}
           </h1>
 
-          <p className="font-epsom-display text-white/90 mt-4">
-            A premium wellness destination focused on recovery, longevity, pain management, body transformation, rejuvenation and relaxation.
+          <p className="font-epsom-display text-white/90 mt-4 leading-relaxed">
+            {aboutData.hero.description}
           </p>
         </div>
-
       </section>
 
-
-
-      <section className=" bg-white/40 py-16 md:py-24 px-4">
-
+      {/* Our Story Section */}
+      <section className="bg-white/40 py-16 md:py-24 px-4">
         <div className="max-w-6xl mx-auto">
           <h2 className="section-heading !text-3xl md:!text-4xl">
-            The Epsom Story
+            {aboutData.story.heading}
           </h2>
 
-
-          <div className="flex flex-col md:flex-row items-start gap-2 ">
-            <div className="flex flex-col md:flex-col items center gap-4 max-w-[640px]">
-              <h3 className="text-1xl md:text-2xl my-2">
-                Redefining Wellness In Mumbai
+          <div className="flex flex-col md:flex-row items-start gap-8 mt-8">
+            {/* Story Content */}
+            <div className="flex flex-col gap-4 w-full md:w-1/2">
+              <h3 className="text-xl md:text-2xl font-display text-epsom-ink">
+                {aboutData.story.subheading}
               </h3>
-              <p className="text-epsom-muted ">
-                Epsom Wellness was created with one vision — to bring world-class wellness, recovery, and longevity therapies to India in a luxurious yet medically guided environment. </p>
-              <p className="text-epsom-muted leading-relaxed">
-                Inspired by international wellness clinics and recovery centers used by athletes, celebrities, entrepreneurs, and high performers globally, Epsom Wellness combines advanced biohacking therapies with holistic healing practices to create transformative wellness experiences.
-                <br />
-                <br />
-                What started as a specialized cryotherapy and recovery concept has evolved into one of Mumbai’s most innovative wellness destinations offering cryotherapy, IV drips, infrared therapies, compression recovery, aesthetic rejuvenation, advanced facials, body therapies, and luxury spa experiences under one roof.
-                <br />
-                <br />
-                Today, Epsom Wellness serves clients ranging from fitness enthusiasts and athletes to working professionals, models, entrepreneurs, and individuals seeking better recovery, anti-aging support, stress management, and holistic wellness.
-              </p>
+
+              {aboutData.story.paragraphs.map((paragraph, index) => (
+                <p
+                  key={index}
+                  className="text-epsom-muted leading-relaxed"
+                >
+                  {paragraph}
+                </p>
+              ))}
             </div>
 
-
-            <div className="relative w-full md:w-1/2 h-[400px] overflow-hidden">
+            {/* Story Image */}
+            <div className="relative w-full md:w-1/2 h-[350px] md:h-[500px] overflow-hidden rounded-2xl">
               <Image
-                src="/assets/images/about/about-us-feature.jpeg"
-                alt="Ipsum Gyrospa"
+                src={aboutData.story.image}
+                alt={aboutData.story.imageAlt}
                 fill
-                priority
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
-
           </div>
         </div>
       </section>
 
+      {/* Philosophy & Promise Section */}
+      <section className="py-16 md:py-20 px-4">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="section-heading !text-3xl md:!text-4xl text-center">
+            {aboutData.philosophy.heading}
+          </h2>
 
+          <div className="grid md:grid-cols-2 gap-6 mt-10">
+            {/* Vision */}
+            <div className="glass-card p-8">
+              <h3 className="font-display text-2xl text-epsom-maroon mb-4">
+                {aboutData.philosophy.vision.title}
+              </h3>
 
-      <section className="py-16 px-4 max-w-4xl mx-auto">
-        <p className="text-epsom-deep leading-relaxed text-lg">
-          Epsom Wellness is a premier destination for cutting-edge cryotherapy, wellness, and
-          aesthetic services in Mumbai. We are designed to revitalize your body, rejuvenate your mind, and
-          elevate your well-being through advanced science-led treatments.
-        </p>
+              <p className="text-epsom-muted leading-relaxed">
+                {aboutData.philosophy.vision.description}
+              </p>
+            </div>
 
-        <p className="text-epsom-deep leading-relaxed mt-6">
-          Our state-of-the-art facilities offer a serene, luxury environment where certified professionals
-          prioritize safety, comfort, and effectiveness in every session. From whole-body cryotherapy to IV
-          cellular wellness and non-invasive aesthetics, we deliver a complete inside-out transformation
-          experience.
-        </p>
-        <div className="grid md:grid-cols-3 gap-6 mt-16">
-          <div className="glass-card p-6 text-center">
-            <p className="text-3xl font-display text-epsom-maroon">3</p>
-            <p className="text-epsom-muted text-sm mt-2">Locations Across Mumbai</p>
-          </div>
-          <div className="glass-card p-6 text-center">
-            <p className="text-3xl font-display text-epsom-maroon">40+</p>
-            <p className="text-epsom-muted text-sm mt-2">Advanced Treatments</p>
-          </div>
-          <div className="glass-card p-6 text-center">
-            <p className="text-3xl font-display text-epsom-maroon">#1</p>
-            <p className="text-epsom-muted text-sm mt-2">Cryotherapy Center in Mumbai</p>
+            {/* Promise */}
+            <div className="glass-card p-8">
+              <h3 className="font-display text-2xl text-epsom-maroon mb-4">
+                {aboutData.philosophy.promise.title}
+              </h3>
+
+              <p className="text-epsom-muted leading-relaxed">
+                {aboutData.philosophy.promise.description}
+              </p>
+            </div>
           </div>
         </div>
-        <div className="text-center mt-16">
-          <BookButton>Book a Consultation</BookButton>
+      </section>
+
+      {/* Service Pillars Section */}
+      <section className="bg-white/40 py-16 md:py-24 px-4">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="section-heading !text-3xl md:!text-4xl text-center">
+            {aboutData.servicePillars.heading}
+          </h2>
+
+          <p className="text-epsom-muted text-center max-w-3xl mx-auto mt-4 leading-relaxed">
+            {aboutData.servicePillars.description}
+          </p>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-10">
+            {aboutData.servicePillars.services.map((service) => (
+              <Link
+                key={service.href}
+                href={service.href}
+                className="glass-card-hover glass-card p-6 flex flex-col h-full group"
+              >
+                {service.category && (
+                  <span className="text-xs tracking-[0.2em] uppercase text-epsom-maroon mb-4">
+                    {service.category}
+                  </span>
+                )}
+
+                <h3 className="font-display text-xl text-epsom-ink leading-snug">
+                  {service.title}
+                </h3>
+
+                <p className="text-epsom-muted text-sm leading-relaxed mt-4">
+                  {service.description}
+                </p>
+
+                <span className="text-sm text-epsom-maroon mt-6 inline-flex items-center gap-2">
+                  Explore Services
+                  <span className="transition-transform duration-300 group-hover:translate-x-1">
+                    →
+                  </span>
+                </span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Locations Section */}
+      <section className="py-16 md:py-20 px-4">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="section-heading !text-3xl md:!text-4xl text-center">
+            {aboutData.locations.heading}
+          </h2>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
+            {aboutData.locations.cities.map((city) => (
+              <div
+                key={city.name}
+                className="glass-card p-6 text-center"
+              >
+                <h3 className="font-display text-xl text-epsom-ink">
+                  {city.name}
+                </h3>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Stats & CTA Section */}
+      <section className="py-16 px-4">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {aboutData.stats.map((stat) => (
+              <div
+                key={stat.label}
+                className="glass-card p-6 text-center"
+              >
+                <p className="text-3xl md:text-4xl font-display text-epsom-maroon">
+                  {stat.value}
+                </p>
+
+                <p className="text-epsom-muted text-sm mt-2">
+                  {stat.label}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center mt-16">
+            <h2 className="font-display text-2xl md:text-3xl text-epsom-ink mb-6">
+              {aboutData.cta.heading}
+            </h2>
+
+            <BookButton>
+              {aboutData.cta.buttonText}
+            </BookButton>
+          </div>
         </div>
       </section>
     </main>

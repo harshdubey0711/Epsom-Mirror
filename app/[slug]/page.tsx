@@ -467,8 +467,15 @@ if (isCategorySlug(slug)) {
     notFound();
   }
 
+const category = allDynamicSlugs()
+  .map((slug) => getCategory(slug))
+  .find((candidate) =>
+    candidate?.treatments.some(
+      (treatment) => treatment.slug === slug
+    )
+  );
 
-  
+
 return ( 
  <main className="pb-24">
 
@@ -491,17 +498,20 @@ return (
     <div className="absolute inset-0 bg-black/60" />
 
     {/* Breadcrumbs */}
-    <div className="absolute top-0 left-0 right-0 z-20">
-      <div className="max-w-6xl mx-auto px-4 pt-8">
-        <Breadcrumbs
-          items={[
-            { label: "Home", href: "/" },
-            { label: service.title },
-          ]}
-        />
-      </div>
-    </div>
-
+<div className="absolute top-0 left-0 right-0 z-20">
+  <div className="max-w-6xl mx-auto px-4 pt-8">
+    <Breadcrumbs
+      items={[
+        { label: "Home", href: "/" },
+        // {
+        //   label: category.name,
+        //   href: `/${category.slug}/`,
+        // },
+        { label: service.title },
+      ]}
+    />
+  </div>
+</div>
     {/* Hero Content */}
     <div className="relative z-10 w-full px-4">
       <div className="text-center max-w-4xl mx-auto">

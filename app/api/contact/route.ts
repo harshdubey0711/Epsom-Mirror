@@ -50,7 +50,7 @@ export async function POST(request: Request) {
     : `New Contact Form Submission from ${name}`;
   const text = `You have received a new message:\n\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\n\nMessage:\n${message}\n`;
 
-  const apiKey = process.env.RESEND_API_KEY;
+  const apiKey = process.env.RESEND_API_KEY; 
   if (!apiKey) {
     if (process.env.NODE_ENV !== "production") {
       console.info("[contact] RESEND_API_KEY not set — logging submission:\n", text);

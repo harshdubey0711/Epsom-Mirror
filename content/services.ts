@@ -174,7 +174,7 @@ export default  {
 
   "iv-drip-therapy": {
     "title": "IV Drip Therapy ",
-     "bannerImage": "/assets/images/imageEpsom/IV-Drip-Therapy-banner.png",
+     "bannerImage": "/assets/images/imagesEpsom/iv-drip-banner.png",
   "featureImage": "/assets/images/imagesEpsom/IV-Drip-Therapy-feature.png",
 
     "introduction": {

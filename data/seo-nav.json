@@ -108,7 +108,7 @@
           "Simple, non-invasive therapies designed to help ease everyday pain, improve mobility, and support a more comfortable, active lifestyle.",
           "At Epsom, our pain management therapies focus on helping you move better and feel better. Whether you're dealing with muscle soreness, joint discomfort, back or neck tension, post-workout aches, or the physical strain of a busy lifestyle, our treatments are designed to support your body's natural recovery process in a safe and comfortable environment."
         ],
-        "image": "/assets/images/categories/pain-management-introduction.jpg",
+        "image": "/assets/images/imagesEpsom/pain-feature.png",
         "imageAlt": "Pain management and recovery treatments at Epsom Wellness"
       },
       "treatments": [
@@ -124,7 +124,7 @@
           "name": "Hyperbaric Oxygen Therapy (HBOT)",
           "description": "Support the body's natural healing process and promote recovery through increased oxygen delivery.",
           "bannerImage": "/assets/images/treatments/hyperbaric-oxygen-therapy-banner.jpg",
-          "featureImage": "/assets/images/treatments/hyperbaric-oxygen-therapy-feature.jpg"
+          "featureImage": "/assets/images/treatments/hyperbaric-oxygen-therapy.feature.jpg"
         },
         {
           "slug": "red-light-therapy",
