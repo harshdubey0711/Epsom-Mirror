@@ -41,7 +41,7 @@ export function LocationPage({ location }: LocationPageProps) {
 
   return (
     <main>
-      <JsonLd data={medicalBusiness} />
+      {/* <JsonLd data={medicalBusiness} /> */}
 
       {/* =========================================================
           HERO
@@ -275,9 +275,9 @@ export function LocationPage({ location }: LocationPageProps) {
                     {item.title}
                   </h3>
 
-                  <p className="text-epsom-muted text-sm mt-1">
+                  {/* <p className="text-epsom-muted text-sm mt-1">
                     {item.description}
-                  </p>
+                  </p> */}
                 </div>
               </RevealLtr>
             ))}

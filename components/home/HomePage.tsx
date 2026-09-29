@@ -17,7 +17,7 @@ export function HomePage() {
     description: "Mumbai's Premier Cryotherapy & Wellness Center",
     url: SITE_URL,
     telephone: "+91-9867670762",
-    email: "info@epsomcryospa.com",
+    email: "info@epsomcryospa.com",  
     address: {
       "@type": "PostalAddress",
       streetAddress: "Kamla Spaces, Shop no.6, S.V Road, Santacruz West",

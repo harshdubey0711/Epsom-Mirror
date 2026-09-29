@@ -4,21 +4,49 @@ export type TreatmentRef = {
   slug: string;
   name: string;
 };
+export type CategoryIntroduction = {
+  title: string;
+  paragraphs: string[];
+  image: string;
+  imageAlt: string;
+};
 
+export type CategoryCTA = {
+  title?: string;
+  description?: string;
+  descriptionBeforeButton?: string;
+  button?: string;
+};
+
+export type CategoryPersonalisedApproach = {
+  title: string;
+  paragraphs?: string[];
+};
+
+export type CategorySuitability = {
+  title: string;
+  items?: string[];
+  closing?: string;
+};
+
+export type CategoryHero = {
+  title?: string;
+};
 export type Category = {
   bannerImage: string;
-  introduction: any;
-  cta: any;
-  personalisedApproach: any;
-  suitability: any;
-  hero: any;
+
+  introduction?: CategoryIntroduction;
+  cta?: CategoryCTA;
+  personalisedApproach?: CategoryPersonalisedApproach;
+  suitability?: CategorySuitability;
+  hero?: CategoryHero;
+
   slug: string;
   name: string;
   href: string;
   footerLabel: string;
   treatments: TreatmentRef[];
 };
-
 export type NavLocation = {
   slug: string;
   name: string;

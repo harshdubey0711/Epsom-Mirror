@@ -6,7 +6,7 @@ import {
   getNavLocation,
   getSiteLocation,
   seoNav,
-} from "@/lib/site";
+} from "@/lib/site"; 
 
 import { buildMetadata } from "@/lib/metadata";
 
@@ -50,8 +50,7 @@ export default async function LocationRoute({ params }: Props) {
 
   return (
     <LocationPage
-      location={location}
-      siteLocation={siteLocation}
+      location={siteLocation}
     />
   );
-}
+} 

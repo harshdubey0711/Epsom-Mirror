@@ -7,7 +7,7 @@ import { PopularSearches } from "@/components/PopularSearches";
 import { StickyCta } from "@/components/StickyCta";
 import { buildMetadata } from "@/lib/metadata";
 import { SITE_URL } from "@/lib/site";
-// @ts-expect-error Global CSS is resolved by Next.js during the build.
+
 import "./globals.css";
 
 const poppins = Poppins({
