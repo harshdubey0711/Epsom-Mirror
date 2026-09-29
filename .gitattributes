@@ -6,3 +6,4 @@
 *.png filter=lfs diff=lfs merge=lfs -text
 *.webp filter=lfs diff=lfs merge=lfs -text
 public/assets/images/banners/home-banner.mp4 filter=lfs diff=lfs merge=lfs -text
+public/assets/images/logo/logo.png -filter -diff -merge !text
