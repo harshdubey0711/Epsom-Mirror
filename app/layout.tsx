@@ -46,13 +46,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body className="salt-texture font-sans">
-        <BookingProvider>
+        {/* <BookingProvider> */}
           <Header />
           {children}
           <PopularSearches/>
           <Footer />
           <StickyCta />
-        </BookingProvider>
+        {/* </BookingProvider> */}
       </body>
     </html>
   );
