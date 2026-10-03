@@ -3,7 +3,7 @@ import siteConfigJson from "@/data/site-config.json";
 import type { Category, SeoNav, SiteConfig, SiteLocation, TreatmentRef } from "@/lib/types";
 import type { ReactElement } from "react";
 
-export const seoNav = seoNavJson as unknown as SeoNav;
+export const seoNav = seoNavJson as unknown as SeoNav;    
 export const siteConfig = siteConfigJson as SiteConfig;
 export const SITE_URL = siteConfig.domain;
 

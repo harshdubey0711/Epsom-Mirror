@@ -28,18 +28,26 @@ export type CategorySuitability = {
   items?: string[];
   closing?: string;
 };
-
+export type Demo = {
+  slug?: string;
+  categorySlug?: string;
+  category?: string;
+};
 export type CategoryHero = {
   title?: string;
 };
 export type Category = {
+  title?: string;
   bannerImage: string;
+  featureImage?: string;
+  mobileBannerImage?: string;
 
   introduction?: CategoryIntroduction;
   cta?: CategoryCTA;
   personalisedApproach?: CategoryPersonalisedApproach;
   suitability?: CategorySuitability;
   hero?: CategoryHero;
+  demo?: Demo;
 
   slug: string;
   name: string;

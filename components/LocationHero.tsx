@@ -154,7 +154,7 @@ export function LocationPage({ location }: LocationPageProps) {
           TREATMENTS
       ========================================================= 
       {homeCategorySections.map((section) => (
-        <section
+        <section  
           key={section.id}
           id={section.id}
           className={section.bandClass}

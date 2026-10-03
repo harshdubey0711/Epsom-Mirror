@@ -63,68 +63,68 @@ export const homeCategorySections: HomeCategorySection[] = [
         slug: "cryotherapy",
         name: "Cryotherapy",
         description: "Whole-body cold therapy for recovery and energy.",
-        image: "/assets/images/bio-hack/cryochamber.png",
+        image: "/assets/images/epsom-final-images/cryo-banner-mobile.png",
       },
       {
         slug: "hyperbaric-oxygen-therapy",
         name: "Oxygen Therapy (HBOT)",
         description: "Enhanced oxygen for clarity and cellular recovery.",
-        image: "/assets/images/bio-hack/Hyperbaric_Oxygen_Therapy.jpg",
+        image: "/assets/images/epsom-final-images/hyperbaric-oxygen-therapy-mobile.webp",
       },
       {
         slug: "iv-drip-therapy",
         name: "IV Drip Therapy",
         description: "Nutrient infusions for immunity, glow, and vitality.",
-        image: "/assets/images/iv-drip/intravenous-therapy-wide-2.jpg",
+        image: "/assets/images/epsom-final-images/iv-drip-therapy-mobile.webp",
       },
       {
         slug: "red-light-therapy",
         name: "Red Light Therapy",
         description: "Cellular repair, collagen, and skin rejuvenation.",
-        image: "/assets/images/bio-hack/Red_light_Collagen_Bed_Therapy.jpg",
+        image: "/assets/images/epsom-final-images/red-light-therapy-mobile.webp",
       },
       {
         slug: "epsom-salt-sauna",
         name: "Epsom Salt Sauna",
         description: "Mineral heat for detox and deep relaxation.",
-        image: "/assets/images/bio-hack/salt-sauna.png",
+        image: "/assets/images/epsom-final-images/epsom-salt-sauna-mobile.webp",
       },
       {
         slug: "compression-therapy",
         name: "Compression Therapy",
         description: "Dynamic pressure for circulation and recovery.",
-        image: "/assets/images/bio-hack/compression.jpg",
+        image: "/assets/images/epsom-final-images/compression-therapy-mobile.webp",
       },
       {
         slug: "infrared-body-wrap",
         name: "Infrared Body Wrap",
         description: "Deep heat wrap for detox and contour support.",
-        image: "/assets/images/bio-hack/Infrared_body_wrap.jpeg",
+        image: "/assets/images/epsom-final-images/infrared-body-wrap-mobile.webp",
       },
       {
         slug: "collagen-light-therapy",
         name: "Collagen Light Therapy",
         description: "Light-based support for skin firmness and glow.",
-        image: "/assets/images/bio-hack/Red_light_Collagen_Bed_Therapy.jpg",
+        image: "/assets/images/epsom-final-images/collagen-light-therapy-mobile.webp",
       },
-      {
-        slug: "health-wellness-blood-test",
-        name: "Health & Wellness Blood Test",
-        description: "Data-led insights for personalised wellness plans.",
-        image: "/assets/images/services/card-1.jpg",
-      },
-      {
-        slug: "medical-consultation",
-        name: "Medical Consultation",
-        description: "Expert guidance before advanced protocols.",
-        image: "/assets/images/services/card-2.jpg",
-      },
-      {
-        slug: "body-composition-analysis",
-        name: "Body Composition Analysis",
-        description: "Track fat, muscle, and metabolic markers.",
-        image: "/assets/images/services/card-3.jpg",
-      },
+      // {
+      //   slug: "health-wellness-blood-test",
+      //   name: "Health & Wellness Blood Test",
+      //   description: "Data-led insights for personalised wellness plans.",
+      //   image: "/assets/images/services/card-1.jpg",
+      // },
+      // {
+      //   slug: "medical-consultation",
+      //   name: "Medical Consultation",
+      //   description: "Expert guidance before advanced protocols.",
+      //   image: "/assets/images/services/card-2.jpg",
+      // },
+      // {
+      //   slug: "body-composition-analysis",
+      //   name: "Body Composition Analysis",
+      //   description: "Track fat, muscle, and metabolic markers.",
+      //   image: "/assets/images/services/card-3.jpg",
+      // },
     ],
   },
   {
@@ -133,125 +133,175 @@ export const homeCategorySections: HomeCategorySection[] = [
     title: "Pain Management",
     bandClass: "category-band bg-epsom-mist",
     treatments: [
-      {
+       {
         slug: "cryotherapy",
-        name: "Whole Body Cryotherapy",
-        description: "Cold exposure to ease inflammation and stiffness.",
-        image: "/assets/images/bio-hack/Spot_Cryo.jpg",
-      },
-      {
-        slug: "infrared-sauna",
-        name: "Infrared Sauna",
-        description: "Deep heat for pain relief and circulation.",
-        image: "/assets/images/infrared-therapy-in-mumbai.jpg",
+        name: "Cryotherapy",
+        description: "Whole-body cold therapy for recovery and energy.",
+        image:  "/assets/images/epsom-final-images/cryo-banner-mobile.png",
       },
       {
         slug: "hyperbaric-oxygen-therapy",
-        name: "Hyperbaric Oxygen Therapy",
-        description: "Oxygen support for recovery and comfort.",
-        image: "/assets/images/bio-hack/Hyperbaric_Oxygen_Therapy.jpg",
+        name: "Oxygen Therapy (HBOT)",
+        description: "Enhanced oxygen for clarity and cellular recovery.",
+        image: "/assets/images/epsom-final-images/hyperbaric-oxygen-therapy-mobile.webp",
       },
+      
       {
         slug: "red-light-therapy",
         name: "Red Light Therapy",
-        description: "Non-invasive support for sore tissues.",
-        image: "/assets/images/red-light-banner.jpg",
-      },
-    ],
-  },
-  {
-    id: "beauty",
-    slug: "beauty",
-    title: "Beauty",
-    bandClass: "category-band bg-epsom-soft/35",
-    slow: true,
-    treatments: [
-      {
-        slug: "circadia-facials",
-        name: "Circadia® Facials",
-        description: "Clinical facial protocols for skin health.",
-        image: "/assets/images/aesthetics/rejuvenating-facial-treatment.jpg",
+        description: "Cellular repair, collagen, and skin rejuvenation.",
+        image: "/assets/images/epsom-final-images/red-light-therapy-mobile.webp",
       },
       {
-        slug: "cryofacial",
-        name: "Cryofacial",
-        description: "Cold facial therapy for glow and firmness.",
-        image: "/assets/images/aesthetics/anti-aging.png",
-      },
-      {
-        slug: "cryo-slimming",
-        name: "Cryo Slimming",
-        description: "Targeted cold contouring support.",
-        image: "/assets/images/aesthetics/body-cont.png",
-      },
-      {
-        slug: "cryo-toning",
-        name: "Cryo Toning",
-        description: "Skin-tightening cold therapy rituals.",
-        image: "/assets/images/aesthetics/rej.png",
-      },
-      {
-        slug: "glow-getter-iv-drip",
-        name: "Glow Getter IV Drip",
-        description: "Beauty-from-within nutrient infusion.",
-        image: "/assets/images/iv-drip/beautydrip.png",
-      },
-      {
-        slug: "lymphatic-drainage-body-massage",
-        name: "Lymphatic Drainage Body Massage",
-        description: "Debloat and sculpt with lymphatic flow.",
-        image: "/assets/images/spa/relaxation.jpg",
-      },
-      {
-        slug: "body-ballancer",
-        name: "Body Ballancer",
-        description: "Advanced compression body contouring.",
-        image: "/assets/images/aesthetics/body-cont.png",
-      },
-      {
-        slug: "lymphatic-drainage-facial-massage",
-        name: "Lymphatic Drainage Facial Massage",
-        description: "Facial lymphatic lift and clarity.",
-        image: "/assets/images/aesthetics/skin.png",
-      },
-    ],
-  },
-  {
-    id: "sports-recovery",
-    slug: "sports-recovery-performance",
-    title: "Sports Recovery & Performance",
-    bandClass: "category-band bg-epsom-salt",
-    treatments: [
-      {
-        slug: "cryotherapy",
-        name: "Whole Body Cryotherapy",
-        description: "Post-training recovery used by athletes.",
-        image: "/assets/images/bio-hack/cryochamber.png",
+        slug: "epsom-salt-sauna",
+        name: "Epsom Salt Sauna",
+        description: "Mineral heat for detox and deep relaxation.",
+        image: "/assets/images/epsom-final-images/epsom-salt-sauna-mobile.webp",
       },
       {
         slug: "compression-therapy",
         name: "Compression Therapy",
-        description: "Flush fatigue and restore circulation.",
-        image: "/assets/images/bio-hack/compression.jpg",
+        description: "Dynamic pressure for circulation and recovery.",
+        image: "/assets/images/epsom-final-images/compression-therapy-mobile.webp",
       },
       {
-        slug: "red-light-therapy",
-        name: "Red Light Therapy",
-        description: "Support muscle repair between sessions.",
-        image: "/assets/images/bio-hack/Red_light_Collagen_Bed_Therapy.jpg",
+        slug: "infrared-body-wrap",
+        name: "Infrared Body Wrap",
+        description: "Deep heat wrap for detox and contour support.",
+        image: "/assets/images/epsom-final-images/infrared-body-wrap-mobile.webp",
+      },
+    ],
+  },
+  {
+    id: "weight-loss-management",
+    slug: "weight-loss-management",
+    title: "Weight Loss Management",
+    bandClass: "category-band bg-epsom-soft/35",
+    slow: true,
+    treatments: [
+      {
+         slug: "weight-loss-management",
+          name: "Cryolipolysis",
+          description: "A non-invasive body contouring treatment that uses controlled cooling to target fat cells in specific areas of the body.",
+        image: "/assets/images/epsom-final-images/cryolipolysis-feature.webp",
       },
       {
-        slug: "infrared-sauna",
-        name: "Infrared Sauna",
-        description: "Heat recovery for mobility and ease.",
-        image: "/assets/images/infrared-therapy-in-mumbai.jpg",
+        slug: "weight-loss-management",
+          name: "Emerald Laser Fat Reduction",
+          description: "A non-invasive laser-based treatment designed to support targeted fat reduction and body contouring.",
+        image: "/assets/images/epsom-final-images/emerald-laser-fat-reduction-feature.webp",
       },
       {
-        slug: "energise-iv-drip",
-        name: "Energise IV Drip Therapy",
-        description: "Recharge nutrients for peak performance.",
-        image: "/assets/images/iv-drip/superchargb.png",
+        slug: "weight-loss-management",
+          name: "SlimShot Drip",
+          description: "A specialised IV wellness therapy offered as part of Epsom's weight management range.",
+        image: "/assets/images/epsom-final-images/slimshot-drip-feature.webp",
       },
+      {
+        slug: "weight-loss-management",
+          name: "SlimShot Plus",
+          description: "A more comprehensive option within Epsom's weight management IV range, designed around individual wellness goals.",
+        image: "/assets/images/epsom-final-images/slimshot-plus-feature.webp",
+      },
+      {
+         slug: "weight-loss-management",
+          name: "Metabolize",
+          description: "A targeted wellness drip from Epsom's weight management range, designed to complement a healthy lifestyle and personalised weight management programme.",
+         image:"/assets/images/epsom-final-images/metabolize-feature.webp"
+      },
+      {
+        slug: "weight-loss-management",
+          name: "L-Carnitine Shots",
+          description: "L-Carnitine injections are offered as part of Epsom's wellness and weight management options.",
+        image: "/assets/images/epsom-final-images/l-carnitine-shots-feature.webp",
+      },
+
+    ],
+  },
+  {
+    id: "skin-hair-rejuvenation",
+    slug: "skin-hair-rejuvenation",
+    title: "Skin & Hair Rejuvenation",
+    bandClass: "category-band bg-epsom-salt",
+    treatments: [
+      {
+        slug: "skin-hair-rejuvenation",
+          name: "HydraFacial",
+          description: "A multi-step facial treatment designed to cleanse, exfoliate, hydrate, and refresh the skin.",
+        image: "/assets/images/epsom-final-images/hydrafacial-feature.webp",
+      },
+      {
+        slug: "skin-hair-rejuvenation",
+          name: "Medi Facial",
+          description: "A professionally guided facial treatment tailored to specific skin concerns and individual needs.",
+          image: "/assets/images/epsom-final-images/medi-facial-feature.webp"
+      },
+      {
+          slug: "skin-hair-rejuvenation",
+          name: "Skin Booster", 
+          description: "A treatment designed to improve skin hydration and support smoother, healthier-looking skin.",     
+          image: "/assets/images/epsom-final-images/skin-booster-feature.webp"
+      },
+      {
+          slug: "skin-hair-rejuvenation",
+          name: "Peptide Therapy",
+         
+          description: "A targeted wellness and aesthetic treatment using peptides as part of a personalised skin rejuvenation approach.",
+          
+          image: "/assets/images/epsom-final-images/peptide-therapy-feature.webp"
+        },
+        {
+          slug: "skin-hair-rejuvenation",
+          name: "Vampire Facial",
+                   
+          description: "A PRP-based aesthetic treatment that uses your own platelet-rich plasma as part of a skin rejuvenation protocol.",
+         
+          image: "/assets/images/epsom-final-images/vampire-facial-feature.webp"
+        },
+        {
+          slug: "collagen-light-therapy",
+          name: "Collagen Light Therapy",     
+          description: "A gentle light-based treatment designed to support collagen production and overall skin wellness."  ,
+          image: "/assets/images/epsom-final-images/collagen-light-therapy-feature.webp"
+        },
+        {
+          slug: "skin-hair-rejuvenation",
+          name: "PRP Therapy",
+                   
+          description: "A treatment that uses platelet-rich plasma prepared from your own blood as part of a personalised hair and scalp treatment plan.",
+         
+          image: "/assets/images/epsom-final-images/prp-therapy-feature.webp"
+        },
+        {
+          slug: "skin-hair-rejuvenation",
+          name: "Hair Vitality Drip",
+                   
+          description: "An IV wellness therapy from Epsom's hair health range, designed to provide targeted nutritional support.",
+          
+          image: "/assets/images/epsom-final-images/hair-vitality-drip-feature.webp"
+        },
+        {
+          slug: "skin-hair-rejuvenation",
+          name: "Hair Vitality Pro",
+                   
+          description: "A specialised option within Epsom's hair wellness range, designed around individual hair and wellness goals.",
+         
+          image: "/assets/images/epsom-final-images/hair-vitality-pro-feature.webp"
+        },
+        {
+          slug: "skin-hair-rejuvenation",
+          name: "Japanese Head Spa",
+                   
+          description: "A relaxing scalp and head treatment focused on cleansing, massage, and overall scalp wellness.",
+          
+          image: "/assets/images/epsom-final-images/japanese-head-spa-feature.webp"
+        },
+        {
+          slug: "skin-hair-rejuvenation",
+          name: "Laser Hair Removal",
+          description: "A laser-based treatment designed to reduce unwanted hair growth over a course of personalised sessions.",
+          image: "/assets/images/epsom-final-images/laser-hair-removal-feature.webp"
+        }
     ],
   },
 ];
@@ -259,7 +309,7 @@ export const homeCategorySections: HomeCategorySection[] = [
 
 export const wellnessNote = {
   "title": "A Note on Your Wellness Journey",
-  "description": "Wellness is personal, and no single therapy is right for everyone. Epsom Wellness & Longevity focuses on helping you make informed choices based on your individual goals, requirements, and suitability."
+  description: "Wellness is personal, and no single therapy is right for everyone. Epsom Wellness & Longevity focuses on helping you make informed choices based on your individual goals, requirements, and suitability."
 }
 
 /** Default image for treatment stub pages */

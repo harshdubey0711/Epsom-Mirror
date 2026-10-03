@@ -117,7 +117,7 @@ export function HomePage() {
     <div className="relative">
       <div className="aspect-square overflow-hidden rounded-2xl border border-epsom-crystal/35 shadow-soft-lg relative">
         <Image
-          src="/assets/images/about/about.png"
+          src="/assets/images/epsom-final-images/home-feature.png"
           alt="Epsom Wellness wellness experience"
           fill
           className="object-cover"
@@ -132,6 +132,7 @@ export function HomePage() {
     </div>
   </div>
 </section>
+
       {homeCategorySections.map((section) => (
         <section key={section.id} id={section.id} className={section.bandClass}>
           <div className="max-w-7xl mx-auto px-4">

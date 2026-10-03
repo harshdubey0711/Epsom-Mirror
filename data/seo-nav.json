@@ -5,7 +5,8 @@
       "name": "Health Optimisation & Longevity",
       "href": "health-optimisation-longevity/",
       "footerLabel": "Bio Hack",
-      "bannerImage": "/assets/images/imagesEpsom/health-banner.png",
+      "bannerImage": "/assets/images/epsom-final-images/health-optimisation-longevity-banner-desktop.webp",
+      "mobileBannerImage": "/assets/images/epsom-final-images/health-optimisation-longevity-mobile.webp",
       "hero": {
         "title": "Health Optimisation & Longevity"
       },
@@ -22,52 +23,51 @@
         {
           "slug": "cryotherapy",
           "name": "Whole Body Cryotherapy",
-          "bannerImage": "/assets/images/imagesEpsom/banner-cryo.png",
-          "featureImage": "/assets/images/imagesEpsom/feature-cryo.png"
+          "bannerImage": "/assets/images/epsom-final-images/cryo-banner-pc.png",
+          "featureImage": "/assets/images/epsom-final-images/cryotherapy-feature.png"
         },
         {
           "slug": "hyperbaric-oxygen-therapy",
           "name": "Hyperbaric Oxygen Therapy (HBOT)",
-          "bannerImage": "/assets/images/treatments/hyperbaric-oxygen-therapy-banner.jpg",
-          "featureImage": "/assets/images/treatments/hyperbaric-oxygen-therapy-feature.jpg"
+          "bannerImage": "/assets/images/epsom-final-images/hyperbaric-oxygen-therapy-banner-desktop.webp",
+          "featureImage": "/assets/images/epsom-final-images/hyperbaric-oxygen-therapy-feature.webp"
         },
         {
           "slug": "iv-drip-therapy",
           "name": "IV Drip Therapy",
-          "bannerImage": "/assets/images/treatments/iv-drip-therapy-banner.jpg",
-          "featureImage": "/assets/images/treatments/iv-drip-therapy-feature.jpg"
+          "bannerImage": "/assets/images/epsom-final-images/iv-drip-therapy-banner-desktop.webp",
+          "featureImage": "/assets/images/epsom-final-images/iv-drip-therapy-feature.webp"
         },
         {
           "slug": "red-light-therapy",
           "name": "Red Light Therapy",
-          "bannerImage": "/assets/images/treatments/red-light-therapy-banner.jpg",
-          "featureImage": "/assets/images/treatments/red-light-therapy-feature.jpg"
+          "bannerImage": "/assets/images/epsom-final-images/red-light-therapy-banner-desktop.webp",
+          "featureImage": "/assets/images/epsom-final-images/red-light-therapy-feature.webp"
         },
         {
           "slug": "epsom-salt-sauna",
           "name": "Epsom Salt Sauna",
-          "bannerImage": "/assets/images/treatments/epsom-salt-sauna-banner.jpg",
-          "featureImage": "/assets/images/treatments/epsom-salt-sauna-feature.jpg"
+          "bannerImage": "/assets/images/epsom-final-images/epsom-salt-sauna-banner-desktop.webp",
+          "featureImage": "/assets/images/epsom-final-images/epsom-salt-sauna-feature.webp"
         },
         {
           "slug": "compression-therapy",
           "name": "Compression Therapy",
-          "bannerImage": "/assets/images/treatments/compression-therapy-banner.jpg",
-          "featureImage": "/assets/images/treatments/compression-therapy-feature.jpg"
+          "bannerImage": "/assets/images/epsom-final-images/compression-therapy-banner-desktop.webp",
+          "featureImage": "/assets/images/epsom-final-images/compression-therapy-feature.webp"
         },
         {
           "slug": "infrared-body-wrap",
           "name": "Infrared Body Wrap",
-          "bannerImage": "/assets/images/infrared-body-wrap.png",
-          "featureImage": "/assets/images/treatments/infrared-body-wrap-feature.jpg"
+          "bannerImage": "/assets/images/epsom-final-images/infrared-body-wrap-banner-desktop.webp",
+          "featureImage": "/assets/images/epsom-final-images/infrared-body-wrap-feature.webp"
         },
         {
           "slug": "collagen-light-therapy",
           "name": "Collagen Light Therapy",
-          "bannerImage": "/assets/images/treatments/collagen-light-therapy-banner.jpg",
-          "featureImage": "/assets/images/treatments/collagen-light-therapy-feature.jpg"
+          "bannerImage": "/assets/images/epsom-final-images/collagen-light-therapy-banner-desktop.webp",
+          "featureImage": "/assets/images/epsom-final-images/collagen-light-therapy-feature.webp"
         }
-
       ],
       "whyChoose": [
         "Recover faster after exercise or a busy lifestyle",
@@ -98,7 +98,8 @@
       "name": "Pain Management",
       "href": "pain-management/",
       "footerLabel": "Pain Management",
-      "bannerImage": "/assets/images/imagesEpsom/pain-banner.png",
+      "bannerImage": "/assets/images/epsom-final-images/pain-management-banner-desktop.webp",
+      "mobileBannerImage": "/assets/images/epsom-final-images/pain-management-mobile.webp",
       "hero": {
         "title": "Pain Management"
       },
@@ -108,7 +109,7 @@
           "Simple, non-invasive therapies designed to help ease everyday pain, improve mobility, and support a more comfortable, active lifestyle.",
           "At Epsom, our pain management therapies focus on helping you move better and feel better. Whether you're dealing with muscle soreness, joint discomfort, back or neck tension, post-workout aches, or the physical strain of a busy lifestyle, our treatments are designed to support your body's natural recovery process in a safe and comfortable environment."
         ],
-        "image": "/assets/images/imagesEpsom/pain-feature.png",
+        "image": "/assets/images/epsom-final-images/pain-feature.png",
         "imageAlt": "Pain management and recovery treatments at Epsom Wellness"
       },
       "treatments": [
@@ -116,43 +117,43 @@
           "slug": "cryotherapy",
           "name": "Whole Body Cryotherapy",
           "description": "Support recovery, reduce inflammation, and help ease everyday muscle and joint discomfort.",
-          "bannerImage": "/assets/images/treatments/cryotherapy-banner.jpg",
-          "featureImage": "/assets/images/treatments/cryotherapy-feature.jpg"
+          "bannerImage": "/assets/images/epsom-final-images/cryotherapy-banner-desktop.webp",
+          "featureImage": "/assets/images/epsom-final-images/cryotherapy-feature.webp"
         },
         {
           "slug": "hyperbaric-oxygen-therapy",
           "name": "Hyperbaric Oxygen Therapy (HBOT)",
           "description": "Support the body's natural healing process and promote recovery through increased oxygen delivery.",
-          "bannerImage": "/assets/images/treatments/hyperbaric-oxygen-therapy-banner.jpg",
-          "featureImage": "/assets/images/treatments/hyperbaric-oxygen-therapy.feature.jpg"
+          "bannerImage": "/assets/images/epsom-final-images/hyperbaric-oxygen-therapy-banner-desktop.webp",
+          "featureImage": "/assets/images/epsom-final-images/hyperbaric-oxygen-therapy-feature.webp"
         },
         {
           "slug": "red-light-therapy",
           "name": "Red Light Therapy",
           "description": "A gentle, non-invasive treatment that may help ease temporary muscle and joint discomfort.",
-          "bannerImage": "/assets/images/treatments/red-light-therapy-banner.jpg",
-          "featureImage": "/assets/images/treatments/red-light-therapy-feature.jpg"
+          "bannerImage": "/assets/images/epsom-final-images/red-light-therapy-banner-desktop.webp",
+          "featureImage": "/assets/images/epsom-final-images/red-light-therapy-feature.webp"
         },
         {
           "slug": "compression-therapy",
           "name": "Compression Therapy",
           "description": "Support circulation, reduce the feeling of tired or heavy legs, and promote post-exercise recovery.",
-          "bannerImage": "/assets/images/treatments/compression-therapy-banner.jpg",
-          "featureImage": "/assets/images/treatments/compression-therapy-feature.jpg"
+          "bannerImage": "/assets/images/epsom-final-images/compression-therapy-banner-desktop.webp",
+          "featureImage": "/assets/images/epsom-final-images/compression-therapy-feature.webp"
         },
         {
           "slug": "epsom-salt-sauna",
           "name": "Epsom Salt Sauna",
           "description": "Relax tight muscles, unwind, and support recovery through soothing heat and magnesium-rich Epsom salt.",
-          "bannerImage": "/assets/images/treatments/epsom-salt-sauna-banner.jpg",
-          "featureImage": "/assets/images/treatments/epsom-salt-sauna-feature.jpg"
+          "bannerImage": "/assets/images/epsom-final-images/epsom-salt-sauna-banner-desktop.webp",
+          "featureImage": "/assets/images/epsom-final-images/epsom-salt-sauna-feature.webp"
         },
         {
           "slug": "infrared-body-wrap",
           "name": "Infrared Body Wrap",
           "description": "A calming heat-based treatment designed to help ease tension and promote overall comfort.",
-          "bannerImage": "/assets/images/infrared/infrared-body-wrap.png",
-          "featureImage": "/assets/images/treatments/infrared-body-wrap-feature.jpg"
+          "bannerImage": "/assets/images/epsom-final-images/infrared-body-wrap-banner-desktop.webp",
+          "featureImage": "/assets/images/epsom-final-images/infrared-body-wrap-feature.webp"
         }
       ],
       "cta": {
@@ -166,7 +167,8 @@
       "name": "Weight Loss & Body Management",
       "href": "weight-loss-management/",
       "footerLabel": "Weight Loss",
-      "bannerImage": "/assets/images/imagesEpsom/weight-banner.png",
+      "bannerImage": "/assets/images/epsom-final-images/weight-loss-management-banner-desktop.png",
+      "mobileBannerImage": "/assets/images/epsom-final-images/weight-loss-management-mobile.png",
       "hero": {
         "title": "Weight Loss & Body Management in Mumbai"
       },
@@ -176,7 +178,7 @@
           "At Epsom Wellness & Longevity, we understand that weight management is different for everyone. Your goals, lifestyle, body composition, and overall wellness all play a role.",
           "Our weight management therapies are designed to complement healthy nutrition, regular physical activity, and sustainable lifestyle habits. Whether your goal is to reduce excess body fat, support your metabolism, or work towards a healthier body composition, our team can help you understand which treatments may be suitable for you."
         ],
-        "image": "/assets/images/imagesEpsom/weight-feature.png",
+        "image": "/assets/images/epsom-final-images/weight-feature.webp",
         "imageAlt": "Weight loss and body management treatments at Epsom Wellness"
       },
       "treatments": [
@@ -185,16 +187,16 @@
           "name": "Cryolipolysis",
           "description": "A non-invasive body contouring treatment that uses controlled cooling to target fat cells in specific areas of the body.",
           "bestSuitedFor": "Targeted body fat reduction and body contouring.",
-          "bannerImage": "/assets/images/treatments/cryolipolysis-banner.jpg",
-          "featureImage": "/assets/images/treatments/cryolipolysis-feature.jpg"
+          "bannerImage": "/assets/images/epsom-final-images/cryolipolysis-banner-desktop.webp",
+          "featureImage": "/assets/images/epsom-final-images/cryolipolysis-feature.webp"
         },
         {
           "slug": "weight-loss-management",
           "name": "Emerald Laser Fat Reduction",
           "description": "A non-invasive laser-based treatment designed to support targeted fat reduction and body contouring.",
           "bestSuitedFor": "People looking to address specific areas of stubborn body fat.",
-          "bannerImage": "/assets/images/treatments/emerald-laser-fat-reduction-banner.jpg",
-          "featureImage": "/assets/images/treatments/emerald-laser-fat-reduction-feature.jpg"
+          "bannerImage": "/assets/images/epsom-final-images/emerald-laser-fat-reduction-banner-desktop.webp",
+          "featureImage": "/assets/images/epsom-final-images/emerald-laser-fat-reduction-feature.webp"
         },
         {
           "slug": "weight-loss-management",
@@ -291,7 +293,8 @@
       "name": "Skin & Hair Rejuvenation",
       "href": "skin-hair-rejuvenation/",
       "footerLabel": "Skin & Hair",
-      "bannerImage": "/assets/images/imagesEpsom/skin-hair-banner.png",
+      "bannerImage": "/assets/images/epsom-final-images/skin-hair-rejuvenation-banner-desktop.webp",
+      "mobileBannerImage": "/assets/images/epsom-final-images/skin-hair-rejuvenation-mobile.webp",
       "hero": {
         "title": "Skin & Hair Rejuvenation in Mumbai"
       },
@@ -301,7 +304,7 @@
           "Healthy skin and hair are an important part of overall wellbeing. At Epsom Wellness & Longevity, our skin and hair therapies are designed to support healthier-looking skin, improve the appearance and texture of the skin, and support hair and scalp wellness.",
           "Our approach combines personalised treatments with professional guidance, based on your individual skin or hair concerns. Whether you're looking to refresh your skin, support collagen production, address signs of ageing, improve scalp health, or maintain healthy hair, we help you choose treatments that suit your needs."
         ],
-        "image": "/assets/images/imagesEpsom/skin-hair-feature.png",
+        "image": "/assets/images/epsom-final-images/skin-hair-feature.webp",
         "imageAlt": "Skin and hair rejuvenation at Epsom Wellness"
       },
       "treatments": [
@@ -310,88 +313,88 @@
           "name": "HydraFacial",
           "category": "Skin Rejuvenation",
           "description": "A multi-step facial treatment designed to cleanse, exfoliate, hydrate, and refresh the skin.",
-          "bannerImage": "/assets/images/treatments/hydrafacial-banner.jpg",
-          "featureImage": "/assets/images/treatments/hydrafacial-feature.jpg"
+          "bannerImage": "/assets/images/epsom-final-images/hydrafacial-banner-desktop.webp",
+          "featureImage": "/assets/images/epsom-final-images/hydrafacial-feature.webp"
         },
         {
           "slug": "skin-hair-rejuvenation",
           "name": "Medi Facial",
           "category": "Skin Rejuvenation",
           "description": "A professionally guided facial treatment tailored to specific skin concerns and individual needs.",
-          "bannerImage": "/assets/images/treatments/medi-facial-banner.jpg",
-          "featureImage": "/assets/images/treatments/medi-facial-feature.jpg"
+          "bannerImage": "/assets/images/epsom-final-images/medi-facial-banner-desktop.webp",
+          "featureImage": "/assets/images/epsom-final-images/medi-facial-feature.webp"
         },
         {
           "slug": "skin-hair-rejuvenation",
           "name": "Skin Booster",
           "category": "Skin Rejuvenation",
           "description": "A treatment designed to improve skin hydration and support smoother, healthier-looking skin.",
-          "bannerImage": "/assets/images/treatments/skin-booster-banner.jpg",
-          "featureImage": "/assets/images/treatments/skin-booster-feature.jpg"
+          "bannerImage": "/assets/images/epsom-final-images/skin-booster-banner-desktop.webp",
+          "featureImage": "/assets/images/epsom-final-images/skin-booster-feature.webp"
         },
         {
           "slug": "skin-hair-rejuvenation",
           "name": "Peptide Therapy",
           "category": "Skin Rejuvenation",
           "description": "A targeted wellness and aesthetic treatment using peptides as part of a personalised skin rejuvenation approach.",
-          "bannerImage": "/assets/images/treatments/peptide-therapy-banner.jpg",
-          "featureImage": "/assets/images/treatments/peptide-therapy-feature.jpg"
+          "bannerImage": "/assets/images/epsom-final-images/peptide-therapy-banner-desktop.webp",
+          "featureImage": "/assets/images/epsom-final-images/peptide-therapy-feature.webp"
         },
         {
           "slug": "skin-hair-rejuvenation",
           "name": "Vampire Facial",
           "category": "Skin Rejuvenation",
           "description": "A PRP-based aesthetic treatment that uses your own platelet-rich plasma as part of a skin rejuvenation protocol.",
-          "bannerImage": "/assets/images/treatments/vampire-facial-banner.jpg",
-          "featureImage": "/assets/images/treatments/vampire-facial-feature.jpg"
+          "bannerImage": "/assets/images/epsom-final-images/vampire-facial-banner-desktop.webp",
+          "featureImage": "/assets/images/epsom-final-images/vampire-facial-feature.webp"
         },
         {
           "slug": "collagen-light-therapy",
           "name": "Collagen Light Therapy",
           "category": "Skin Rejuvenation",
           "description": "A gentle light-based treatment designed to support collagen production and overall skin wellness.",
-          "bannerImage": "/assets/images/treatments/collagen-light-therapy-banner.jpg",
-          "featureImage": "/assets/images/treatments/collagen-light-therapy-feature.jpg"
+          "bannerImage": "/assets/images/epsom-final-images/collagen-light-therapy-banner-desktop.webp",
+          "featureImage": "/assets/images/epsom-final-images/collagen-light-therapy-feature.webp"
         },
         {
           "slug": "skin-hair-rejuvenation",
           "name": "PRP Therapy",
           "category": "Hair Rejuvenation",
           "description": "A treatment that uses platelet-rich plasma prepared from your own blood as part of a personalised hair and scalp treatment plan.",
-          "bannerImage": "/assets/images/treatments/prp-therapy-banner.jpg",
-          "featureImage": "/assets/images/treatments/prp-therapy-feature.jpg"
+          "bannerImage": "/assets/images/epsom-final-images/prp-therapy-banner-desktop.webp",
+          "featureImage": "/assets/images/epsom-final-images/prp-therapy-feature.webp"
         },
         {
           "slug": "skin-hair-rejuvenation",
           "name": "Hair Vitality Drip",
           "category": "Hair Rejuvenation",
           "description": "An IV wellness therapy from Epsom's hair health range, designed to provide targeted nutritional support.",
-          "bannerImage": "/assets/images/treatments/hair-vitality-drip-banner.jpg",
-          "featureImage": "/assets/images/treatments/hair-vitality-drip-feature.jpg"
+          "bannerImage": "/assets/images/epsom-final-images/hair-vitality-drip-banner-desktop.webp",
+          "featureImage": "/assets/images/epsom-final-images/hair-vitality-drip-feature.webp"
         },
         {
           "slug": "skin-hair-rejuvenation",
           "name": "Hair Vitality Pro",
           "category": "Hair Rejuvenation",
           "description": "A specialised option within Epsom's hair wellness range, designed around individual hair and wellness goals.",
-          "bannerImage": "/assets/images/treatments/hair-vitality-pro-banner.jpg",
-          "featureImage": "/assets/images/treatments/hair-vitality-pro-feature.jpg"
+          "bannerImage": "/assets/images/epsom-final-images/hair-vitality-pro-banner-desktop.webp",
+          "featureImage": "/assets/images/epsom-final-images/hair-vitality-pro-feature.webp"
         },
         {
           "slug": "skin-hair-rejuvenation",
           "name": "Japanese Head Spa",
           "category": "Hair Rejuvenation",
           "description": "A relaxing scalp and head treatment focused on cleansing, massage, and overall scalp wellness.",
-          "bannerImage": "/assets/images/treatments/japanese-head-spa-banner.jpg",
-          "featureImage": "/assets/images/treatments/japanese-head-spa-feature.jpg"
+          "bannerImage": "/assets/images/epsom-final-images/japanese-head-spa-banner-desktop.webp",
+          "featureImage": "/assets/images/epsom-final-images/japanese-head-spa-feature.webp"
         },
         {
           "slug": "skin-hair-rejuvenation",
           "name": "Laser Hair Removal",
           "category": "Hair Removal",
           "description": "A laser-based treatment designed to reduce unwanted hair growth over a course of personalised sessions.",
-          "bannerImage": "/assets/images/treatments/laser-hair-removal-banner.jpg",
-          "featureImage": "/assets/images/treatments/laser-hair-removal-feature.jpg"
+          "bannerImage": "/assets/images/epsom-final-images/laser-hair-removal-banner-desktop.webp",
+          "featureImage": "/assets/images/epsom-final-images/laser-hair-removal-feature.webp"
         }
       ],
       "suitability": {
@@ -453,30 +456,76 @@
       ]
     }
   ],
-
-
   "primaryCategory": {
-    "cryotherapy": "health-optimisation-longevity",
-    "red-light-therapy": "health-optimisation-longevity",
-    "compression-therapy": "health-optimisation-longevity",
-    "hyperbaric-oxygen-therapy": "health-optimisation-longevity",
-    "infrared-sauna": "pain-management",
-    "iv-drip-therapy": "health-optimisation-longevity",
-    "epsom-salt-sauna": "health-optimisation-longevity",
-    "infrared-body-wrap": "health-optimisation-longevity",
-    "collagen-light-therapy": "health-optimisation-longevity",
-    "health-wellness-blood-test": "health-optimisation-longevity",
-    "medical-consultation": "health-optimisation-longevity",
-    "body-composition-analysis": "health-optimisation-longevity",
-    "circadia-facials": "beauty",
-    "cryofacial": "beauty",
-    "cryo-slimming": "beauty",
-    "cryo-toning": "beauty",
-    "glow-getter-iv-drip": "beauty",
-    "lymphatic-drainage-body-massage": "beauty",
-    "body-ballancer": "beauty",
-    "lymphatic-drainage-facial-massage": "beauty",
-    "energise-iv-drip": "sports-recovery-performance"
+    "cryotherapy": [
+      "health-optimisation-longevity",
+      "pain-management"
+    ],
+    "red-light-therapy": [
+      "health-optimisation-longevity",
+      "pain-management"
+    ],
+    "compression-therapy": [
+      "health-optimisation-longevity",
+      "pain-management"
+    ],
+    "hyperbaric-oxygen-therapy": [
+      "health-optimisation-longevity",
+      "pain-management"
+    ],
+    "infrared-sauna": [
+      "pain-management"
+    ],
+    "iv-drip-therapy": [
+      "health-optimisation-longevity"
+    ],
+    "epsom-salt-sauna": [
+      "health-optimisation-longevity",
+      "pain-management"
+    ],
+    "infrared-body-wrap": [
+      "health-optimisation-longevity",
+      "pain-management"
+    ],
+    "collagen-light-therapy": [
+      "health-optimisation-longevity"
+    ],
+    "health-wellness-blood-test": [
+      "health-optimisation-longevity"
+    ],
+    "medical-consultation": [
+      "health-optimisation-longevity"
+    ],
+    "body-composition-analysis": [
+      "health-optimisation-longevity"
+    ],
+    "circadia-facials": [
+      "beauty"
+    ],
+    "cryofacial": [
+      "beauty"
+    ],
+    "cryo-slimming": [
+      "beauty"
+    ],
+    "cryo-toning": [
+      "beauty"
+    ],
+    "glow-getter-iv-drip": [
+      "beauty"
+    ],
+    "lymphatic-drainage-body-massage": [
+      "beauty"
+    ],
+    "body-ballancer": [
+      "beauty"
+    ],
+    "lymphatic-drainage-facial-massage": [
+      "beauty"
+    ],
+    "energise-iv-drip": [
+      "sports-recovery-performance"
+    ]
   },
   "locations": [
     {
@@ -502,52 +551,65 @@
     }
   ],
   "footerServices": [
-    { "label": "Health Optimisation & Longevity", "href": "health-optimisation-longevity/" },
-    { "label": "Pain Management", "href": "pain-management/" },
-    { "label": "Sports Recovery & Performance", "href": "sports-recovery-performance/" },
-    { "label": "Beauty", "href": "beauty/" },
-    { "label": "Salon", "href": "salon/" }
+    {
+      "label": "Health Optimisation & Longevity",
+      "href": "health-optimisation-longevity/"
+    },
+    {
+      "label": "Pain Management",
+      "href": "pain-management/"
+    },
+    {
+      "label": "Weight Loss & Body Management",
+      "href": "weight-loss-management/"
+    },
+    {
+      "label": "Skin & Hair Rejuvenation",
+      "href": "skin-hair-rejuvenation/"
+    }
+    
   ],
   "popularSearches": [
-    { "label": "Cryotherapy", "href": "cryotherapy/" },
-    { "label": "IV Drip", "href": "iv-drip-therapy/" },
-    { "label": "Compression Therapy", "href": "compression-therapy/" },
-    { "label": "Hyperbaric Oxygen", "href": "hyperbaric-oxygen-therapy/" },
-    { "label": "Infrared Therapy", "href": "infrared-sauna/" },
-    { "label": "Red Light Therapy", "href": "red-light-therapy/" },
-    { "label": "Glow Getter IV", "href": "glow-getter-iv-drip/" },
-    { "label": "Circadia Facials", "href": "circadia-facials/" },
-    { "label": "Body Ballancer", "href": "body-ballancer/" },
-    { "label": "Beauty Treatments Mumbai", "href": "beauty/" }
+    {
+      "label": "Cryotherapy",
+      "href": "cryotherapy/"
+    },
+    {
+      "label": "IV Drip",
+      "href": "iv-drip-therapy/"
+    },
+    {
+      "label": "Compression Therapy",
+      "href": "compression-therapy/"
+    },
+    {
+      "label": "Hyperbaric Oxygen",
+      "href": "hyperbaric-oxygen-therapy/"
+    },
+    {
+      "label": "Infrared Therapy",
+      "href": "infrared-sauna/"
+    },
+    {
+      "label": "Red Light Therapy",
+      "href": "red-light-therapy/"
+    },
+    {
+      "label": "Glow Getter IV",
+      "href": "glow-getter-iv-drip/"
+    },
+    {
+      "label": "Circadia Facials",
+      "href": "circadia-facials/"
+    },
+    {
+      "label": "Body Ballancer",
+      "href": "body-ballancer/"
+    },
+    {
+      "label": "Beauty Treatments Mumbai",
+      "href": "beauty/"
+    }
   ]
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ 
