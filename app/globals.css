@@ -5,9 +5,12 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
   }
+
   body {
     @apply bg-epsom-salt text-epsom-ink font-sans antialiased;
+    overflow-x: hidden;
   }
 }
 

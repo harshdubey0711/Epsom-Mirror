@@ -283,7 +283,6 @@ import Link from "next/link";
             ================================================== */}
 
           
-
 <section className="py-20 px-4">
   <div className="max-w-5xl mx-auto">
 
@@ -294,8 +293,8 @@ import Link from "next/link";
     </div>
 
     <ul className="mt-10 grid sm:grid-cols-2 gap-4 list-none p-0">
-      {category.treatments.map((treatment) => (
-        <li key={treatment.slug}>
+      {category.treatments.map((treatment, index) => (
+        <li key={`${treatment.slug}-${index}`}>
           <Link
             href={`/${treatment.slug}/?from=${category.slug}`}
             className="glass-card-hover p-5 block text-epsom-ink hover:text-epsom-maroon transition-colors"

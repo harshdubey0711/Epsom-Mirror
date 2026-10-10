@@ -568,48 +568,49 @@
       "href": "skin-hair-rejuvenation/"
     }
     
-  ],
+  ] , 
+  
+
   "popularSearches": [
     {
       "label": "Cryotherapy",
       "href": "cryotherapy/"
     },
     {
-      "label": "IV Drip",
-      "href": "iv-drip-therapy/"
+      "label": "Red Light Therapy",
+      "href": "red-light-therapy/"
     },
     {
       "label": "Compression Therapy",
       "href": "compression-therapy/"
     },
     {
-      "label": "Hyperbaric Oxygen",
+      "label": "Hyperbaric Oxygen Therapy",
       "href": "hyperbaric-oxygen-therapy/"
     },
     {
-      "label": "Infrared Therapy",
+      "label": "Infrared Sauna",
       "href": "infrared-sauna/"
     },
     {
-      "label": "Red Light Therapy",
-      "href": "red-light-therapy/"
+      "label": "IV Drip Therapy",
+      "href": "iv-drip-therapy/"
     },
     {
-      "label": "Glow Getter IV",
-      "href": "glow-getter-iv-drip/"
+      "label": "Epsom Salt Sauna",
+      "href": "epsom-salt-sauna/"
     },
     {
-      "label": "Circadia Facials",
-      "href": "circadia-facials/"
+      "label": "Infrared Body Wrap",
+      "href": "infrared-body-wrap/"
     },
     {
-      "label": "Body Ballancer",
-      "href": "body-ballancer/"
-    },
-    {
-      "label": "Beauty Treatments Mumbai",
-      "href": "beauty/"
+      "label": "Collagen Light Therapy",
+      "href": "collagen-light-therapy/"
     }
   ]
 }
+
+ 
+
  
