@@ -1,7 +1,7 @@
 export default {
   "cryotherapy": {
     "title": "Whole Body Cryotherapy ",
-    "bannerImage": "/assets/images/epsom-final-images/cryo-banner-pc.png",
+    "bannerImage": "/assets/images/epsom-final-images/cryo-banner.png",
     "featureImage": "/assets/images/epsom-final-images/cryo-feature.png",
     "mobileBannerImage": "/assets/images/epsom-final-images/cryo-banner-mobile.png",
 
@@ -190,9 +190,9 @@ export default {
     },
 
     "title": "IV Drip Therapy ",
-    "bannerImage": "/assets/images/epsom-final-images/iv-drip-therapy-banner-desktop.webp",
+    "bannerImage": "/assets/images/epsom-final-images/iv-drip-banner-pc.png",
     "featureImage": "/assets/images/epsom-final-images/iv-drip-therapy-feature.webp",
-    "mobileBannerImage": "/assets/images/epsom-final-images/iv-drip-therapy-mobile.webp",
+    "mobileBannerImage": "/assets/images/epsom-final-images/iv-drip-mobile.png",
 
     "introduction": {
       "title": "What is IV Drip Therapy?",
@@ -422,9 +422,9 @@ export default {
     },
 
     "title": "Epsom Salt Sauna ",
-    "bannerImage": "/assets/images/epsom-final-images/epsom-salt-sauna-banner-desktop.webp",
+    "bannerImage": "/assets/images/epsom-final-images/salt-pc-banner.png",
     "featureImage": "/assets/images/epsom-final-images/epsom-salt-sauna-feature.webp",
-    "mobileBannerImage": "/assets/images/epsom-final-images/epsom-salt-sauna-mobile.webp",
+    "mobileBannerImage": "/assets/images/epsom-final-images/salt-banner-mobile.png",
 
     "introduction": {
       "title": "What is Epsom Salt Sauna?",
@@ -514,9 +514,9 @@ export default {
     },
 
     "title": "Compression Therapy",
-    "bannerImage": "/assets/images/epsom-final-images/compression-therapy-banner-desktop.webp",
+    "bannerImage": "/assets/images/epsom-final-images/compression-banner-pc.png",
     "featureImage": "/assets/images/epsom-final-images/compression-therapy-feature.webp",
-    "mobileBannerImage": "/assets/images/epsom-final-images/compression-therapy-mobile.webp",
+    "mobileBannerImage": "/assets/images/epsom-final-images/compression-banner-mobile.png",
 
     "introduction": {
       "title": "What is Compression Therapy?",
@@ -605,9 +605,9 @@ export default {
     },
 
     "title": "Collagen Light Therapy ",
-    "bannerImage": "/assets/images/epsom-final-images/collagen-light-therapy-banner-desktop.webp",
+    "bannerImage": "/assets/images/epsom-final-images/collagen-banner-pc.png",
     "featureImage": "/assets/images/epsom-final-images/collagen-light-therapy-feature.webp",
-    "mobileBannerImage": "/assets/images/epsom-final-images/collagen-light-therapy-mobile.webp",
+    "mobileBannerImage": "/assets/images/epsom-final-images/collagen-banner-mobile.png",
 
     "introduction": {
       "title": "What is Collagen Light Therapy?",

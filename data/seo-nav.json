@@ -23,8 +23,8 @@
         {
           "slug": "cryotherapy",
           "name": "Whole Body Cryotherapy",
-          "bannerImage": "/assets/images/epsom-final-images/cryo-banner-pc.png",
-          "featureImage": "/assets/images/epsom-final-images/cryotherapy-feature.png"
+          "bannerImage": "/assets/images/epsom-final-images/cryo-banner.png",
+          "featureImage": "/assets/images/epsom-final-images/cryo-feature.png"
         },
         {
           "slug": "hyperbaric-oxygen-therapy",

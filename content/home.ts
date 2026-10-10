@@ -75,7 +75,7 @@ export const homeCategorySections: HomeCategorySection[] = [
         slug: "iv-drip-therapy",
         name: "IV Drip Therapy",
         description: "Nutrient infusions for immunity, glow, and vitality.",
-        image: "/assets/images/epsom-final-images/iv-drip-therapy-mobile.webp",
+        image: "/assets/images/epsom-final-images/iv-drip-mobile.png",
       },
       {
         slug: "red-light-therapy",
@@ -87,7 +87,7 @@ export const homeCategorySections: HomeCategorySection[] = [
         slug: "epsom-salt-sauna",
         name: "Epsom Salt Sauna",
         description: "Mineral heat for detox and deep relaxation.",
-        image: "/assets/images/epsom-final-images/epsom-salt-sauna-mobile.webp",
+        image: "/assets/images/epsom-final-images/salt-banner-mobile.png",
       },
       {
         slug: "compression-therapy",

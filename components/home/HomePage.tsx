@@ -117,7 +117,7 @@ export function HomePage() {
     <div className="relative">
       <div className="aspect-square overflow-hidden rounded-2xl border border-epsom-crystal/35 shadow-soft-lg relative">
         <Image
-          src="/assets/images/epsom-final-images/home-feature.png"
+          src="/assets/images/imagesEpsom/home-feature.png"
           alt="Epsom Wellness wellness experience"
           fill
           className="object-cover"

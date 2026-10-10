@@ -120,42 +120,33 @@ export type popularSearches =  {
 };
 
 export type LocationPageContent = {
+  meta: { title: string; description: string };
   hero: {
-    eyebrow: string;
     title: string;
-    description: string;
-    image: string;
+    subtitle: string;
+    imageDesktop: string;
+    imageMobile: string;
+    imageAlt: string;
   };
-
-  intro: {
-    eyebrow: string;
+  contact: { phone: string; whatsappUrl: string };
+  intro: { heading: string; paragraphs: string[] };
+  therapies: {
     heading: string;
-    paragraphs: string[];
-    image: string;
+    items: { name: string; description: string }[];
   };
-
-  treatments: TreatmentCard[];
-
-  offer: {
-    eyebrow: string;
+  findUs: {
     heading: string;
-    description: string;
+    address: string;
+    directions: { title: string; text: string }[];
+    parking: string;
   };
-
-  whyEpsom: {
-    eyebrow: string;
+  reviews: {
+    items: { quote: string; author: string; detail: string }[];
+  };
+  faq: {
     heading: string;
-    items: {
-      title: string;
-      description: string;
-    }[];
+    items: { question: string; answer: string }[];
   };
-
-  faq: FaqItem[];
-
-  cta: {
-    eyebrow: string;
-    heading: string;
-    description: string;
-  };
+  visit: { heading: string; mapEmbedUrl?: string };
+  cta: { heading: string; description: string };
 };

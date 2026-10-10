@@ -21,6 +21,7 @@ const config: Config = {
           dark: "#FAF0D9",
           darker: "#F3E6C4",
           accent: "#D39645",
+          
           accent2: "#F5B64E",
           mint: "#BDA587",
           teal: "#1F6B63",

@@ -15,7 +15,7 @@ export default function ContactPage() {
     <main className="bg-epsom-salt" >
 <section className="relative min-h-[60vh] md:min-h-[70vh] flex items-center justify-center overflow-hidden">
           <Image
-          src="/assets/images/contact/contact-banner.png"
+          src="/assets/images/epsom-final-images/contact-banner-pc.png"
           alt="epsom wellness about us banner"
           fill
           priority
