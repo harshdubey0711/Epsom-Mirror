@@ -230,19 +230,19 @@ export const homeCategorySections: HomeCategorySection[] = [
         slug: "skin-hair-rejuvenation",
           name: "HydraFacial",
           description: "A multi-step facial treatment designed to cleanse, exfoliate, hydrate, and refresh the skin.",
-        image: "/assets/images/epsom-final-images/hydrafacial-feature.webp",
+        image: "/assets/images/epsom-final-images/hydro-facial.png",
       },
       {
         slug: "skin-hair-rejuvenation",
           name: "Medi Facial",
           description: "A professionally guided facial treatment tailored to specific skin concerns and individual needs.",
-          image: "/assets/images/epsom-final-images/medi-facial-feature.webp"
+          image: "/assets/images/epsom-final-images/medi-facial.png"
       },
       {
           slug: "skin-hair-rejuvenation",
           name: "Skin Booster", 
           description: "A treatment designed to improve skin hydration and support smoother, healthier-looking skin.",     
-          image: "/assets/images/epsom-final-images/skin-booster-feature.webp"
+          image: "/assets/images/epsom-final-images/skin-booster.png"
       },
       {
           slug: "skin-hair-rejuvenation",
@@ -250,7 +250,7 @@ export const homeCategorySections: HomeCategorySection[] = [
          
           description: "A targeted wellness and aesthetic treatment using peptides as part of a personalised skin rejuvenation approach.",
           
-          image: "/assets/images/epsom-final-images/peptide-therapy-feature.webp"
+          image: "/assets/images/epsom-final-images/peptide.jpeg"
         },
         {
           slug: "skin-hair-rejuvenation",
@@ -258,7 +258,7 @@ export const homeCategorySections: HomeCategorySection[] = [
                    
           description: "A PRP-based aesthetic treatment that uses your own platelet-rich plasma as part of a skin rejuvenation protocol.",
          
-          image: "/assets/images/epsom-final-images/vampire-facial-feature.webp"
+          image: "/assets/images/epsom-final-images/vampire-facial.png"
         },
         {
           slug: "collagen-light-therapy",
@@ -272,7 +272,7 @@ export const homeCategorySections: HomeCategorySection[] = [
                    
           description: "A treatment that uses platelet-rich plasma prepared from your own blood as part of a personalised hair and scalp treatment plan.",
          
-          image: "/assets/images/epsom-final-images/prp-therapy-feature.webp"
+          image: "/assets/images/epsom-final-images/prp-therapy.png"
         },
         {
           slug: "skin-hair-rejuvenation",
@@ -280,7 +280,7 @@ export const homeCategorySections: HomeCategorySection[] = [
                    
           description: "An IV wellness therapy from Epsom's hair health range, designed to provide targeted nutritional support.",
           
-          image: "/assets/images/epsom-final-images/hair-vitality-drip-feature.webp"
+          image: "/assets/images/epsom-final-images/hair-vitality.png"
         },
         {
           slug: "skin-hair-rejuvenation",
@@ -288,7 +288,7 @@ export const homeCategorySections: HomeCategorySection[] = [
                    
           description: "A specialised option within Epsom's hair wellness range, designed around individual hair and wellness goals.",
          
-          image: "/assets/images/epsom-final-images/hair-vitality-pro-feature.webp"
+          image: "/assets/images/epsom-final-images/hair2.png"
         },
         {
           slug: "skin-hair-rejuvenation",
@@ -296,13 +296,13 @@ export const homeCategorySections: HomeCategorySection[] = [
                    
           description: "A relaxing scalp and head treatment focused on cleansing, massage, and overall scalp wellness.",
           
-          image: "/assets/images/epsom-final-images/japanese-head-spa-feature.webp"
+          image: "/assets/images/epsom-final-images/japanese-head-spa.png"
         },
         {
           slug: "skin-hair-rejuvenation",
           name: "Laser Hair Removal",
           description: "A laser-based treatment designed to reduce unwanted hair growth over a course of personalised sessions.",
-          image: "/assets/images/epsom-final-images/laser-hair-removal-feature.webp"
+          image: "/assets/images/epsom-final-images/hair-removal.png"
         }
     ],
   },
