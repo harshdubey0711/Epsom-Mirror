@@ -50,8 +50,8 @@ export const locationPageContent: Record<string, LocationPageContent> = {
     hero: {
       title: "Advanced Wellness Clinic in Santacruz for Longevity & Recovery",
       subtitle: heroSubtitle,
-      imageDesktop: "/assets/images/locations/santacruz-hero-desktop.jpg",
-      imageMobile: "/assets/images/locations/santacruz-hero-mobile.jpg",
+      imageDesktop: "/assets/images/epsom-final-images/santacruz-banner-pc.png",
+      imageMobile: "/assets/images/epsom-final-images/santacruz-banner-mobile.png",
       imageAlt: "Epsom Wellness clinic in Santacruz West",
     },
     // TODO: replace with the real Santacruz number (digits only after 91 in the WhatsApp link)
@@ -147,8 +147,8 @@ export const locationPageContent: Record<string, LocationPageContent> = {
     hero: {
       title: "Advanced Wellness Clinic in Andheri for Longevity & Recovery",
       subtitle: heroSubtitle,
-      imageDesktop: "/assets/images/locations/andheri-hero-desktop.jpg",
-      imageMobile: "/assets/images/locations/andheri-hero-mobile.jpg",
+      imageDesktop: "/assets/images/epsom-final-images/andheri-banner-pc.png",
+      imageMobile: "/assets/images/epsom-final-images/andheri-banner-mobile.png",
       imageAlt: "Epsom Wellness clinic in Andheri West",
     },
     // TODO: replace with the real Andheri number
@@ -242,8 +242,8 @@ export const locationPageContent: Record<string, LocationPageContent> = {
     hero: {
       title: "Advanced Wellness Clinic in Borivali for Longevity & Recovery",
       subtitle: heroSubtitle,
-      imageDesktop: "/assets/images/locations/borivali-hero-desktop.jpg",
-      imageMobile: "/assets/images/locations/borivali-hero-mobile.jpg",
+      imageDesktop: "/assets/images/epsom-final-images/borivali-banner-pc.png",
+      imageMobile: "/assets/images/epsom-final-images/borivali-banner-mobile.png",
       imageAlt: "Epsom Wellness clinic in Borivali West",
     },
     // TODO: replace with the real Borivali number

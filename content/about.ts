@@ -13,7 +13,7 @@ export const aboutData = {
     description:
       "Mumbai’s Premier Destination for Scientific Longevity, Advanced Aesthetics, & Total Body Optimization. Experience the standard of care at the premier wellness clinic in Mumbai, engineered entirely around your vitality.",
 
-    image: "/assets/images/about/float-img.jpg",
+    image: "/assets/images/epsom-final-images/about-banner-pc.png",
     imageAlt: "Epsom Wellness about us banner",
   },
 
@@ -22,7 +22,7 @@ export const aboutData = {
 
     subheading: "Redefining Wellness in Mumbai",
 
-    image: "/assets/images/about/about-us-feature.jpeg",
+    image: "/assets/images/epsom-final-images/about-feature.jpg",
     imageAlt: "Epsom Wellness recovery and wellness experience",
 
     paragraphs: [

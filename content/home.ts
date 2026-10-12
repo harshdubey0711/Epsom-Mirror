@@ -93,7 +93,7 @@ export const homeCategorySections: HomeCategorySection[] = [
         slug: "compression-therapy",
         name: "Compression Therapy",
         description: "Dynamic pressure for circulation and recovery.",
-        image: "/assets/images/epsom-final-images/compression-therapy-mobile.webp",
+        image: "/assets/images/epsom-final-images/compression-banner-mobile.png",
       },
       {
         slug: "infrared-body-wrap",
@@ -128,51 +128,6 @@ export const homeCategorySections: HomeCategorySection[] = [
     ],
   },
   {
-    id: "pain-management",
-    slug: "pain-management",
-    title: "Pain Management",
-    bandClass: "category-band bg-epsom-mist",
-    treatments: [
-       {
-        slug: "cryotherapy",
-        name: "Cryotherapy",
-        description: "Whole-body cold therapy for recovery and energy.",
-        image:  "/assets/images/epsom-final-images/cryo-banner-mobile.png",
-      },
-      {
-        slug: "hyperbaric-oxygen-therapy",
-        name: "Oxygen Therapy (HBOT)",
-        description: "Enhanced oxygen for clarity and cellular recovery.",
-        image: "/assets/images/epsom-final-images/hyperbaric-oxygen-therapy-mobile.webp",
-      },
-      
-      {
-        slug: "red-light-therapy",
-        name: "Red Light Therapy",
-        description: "Cellular repair, collagen, and skin rejuvenation.",
-        image: "/assets/images/epsom-final-images/red-light-therapy-mobile.webp",
-      },
-      {
-        slug: "epsom-salt-sauna",
-        name: "Epsom Salt Sauna",
-        description: "Mineral heat for detox and deep relaxation.",
-        image: "/assets/images/epsom-final-images/epsom-salt-sauna-mobile.webp",
-      },
-      {
-        slug: "compression-therapy",
-        name: "Compression Therapy",
-        description: "Dynamic pressure for circulation and recovery.",
-        image: "/assets/images/epsom-final-images/compression-therapy-mobile.webp",
-      },
-      {
-        slug: "infrared-body-wrap",
-        name: "Infrared Body Wrap",
-        description: "Deep heat wrap for detox and contour support.",
-        image: "/assets/images/epsom-final-images/infrared-body-wrap-mobile.webp",
-      },
-    ],
-  },
-  {
     id: "weight-loss-management",
     slug: "weight-loss-management",
     title: "Weight Loss Management",
@@ -183,32 +138,32 @@ export const homeCategorySections: HomeCategorySection[] = [
          slug: "weight-loss-management",
           name: "Cryolipolysis",
           description: "A non-invasive body contouring treatment that uses controlled cooling to target fat cells in specific areas of the body.",
-        image: "/assets/images/epsom-final-images/cryolipolysis-feature.webp",
+        image: "/assets/images/epsom-final-images/cryolipolysis.png",
       },
       {
         slug: "weight-loss-management",
           name: "Emerald Laser Fat Reduction",
           description: "A non-invasive laser-based treatment designed to support targeted fat reduction and body contouring.",
-        image: "/assets/images/epsom-final-images/emerald-laser-fat-reduction-feature.webp",
+        image: "/assets/images/epsom-final-images/emerald-laser-fat-reduction.png",
       },
       {
         slug: "weight-loss-management",
           name: "SlimShot Drip",
           description: "A specialised IV wellness therapy offered as part of Epsom's weight management range.",
-        image: "/assets/images/epsom-final-images/slimshot-drip-feature.webp",
+        image: "/assets/images/epsom-final-images/slimshot-drip-feature.png",
       },
       {
         slug: "weight-loss-management",
           name: "SlimShot Plus",
           description: "A more comprehensive option within Epsom's weight management IV range, designed around individual wellness goals.",
-        image: "/assets/images/epsom-final-images/slimshot-plus-feature.webp",
+        image: "/assets/images/epsom-final-images/slimshot-plus-feature.png",
       },
-      {
-         slug: "weight-loss-management",
-          name: "Metabolize",
-          description: "A targeted wellness drip from Epsom's weight management range, designed to complement a healthy lifestyle and personalised weight management programme.",
-         image:"/assets/images/epsom-final-images/metabolize-feature.webp"
-      },
+      // {
+      //    slug: "weight-loss-management",
+      //     name: "Metabolize",
+      //     description: "A targeted wellness drip from Epsom's weight management range, designed to complement a healthy lifestyle and personalised weight management programme.",
+      //    image:"/assets/images/epsom-final-images/metabolize-feature.webp"
+      // },
       {
         slug: "weight-loss-management",
           name: "L-Carnitine Shots",
@@ -218,6 +173,53 @@ export const homeCategorySections: HomeCategorySection[] = [
 
     ],
   },
+
+  {
+    id: "pain-management",
+    slug: "pain-management",
+    title: "Pain Management",
+    bandClass: "category-band bg-epsom-mist",
+    treatments: [
+       {
+        slug: "cryotherapy",
+        name: "Cryotherapy",
+        description: "Whole-body cold therapy for recovery and energy.",
+        image: "/assets/images/epsom-final-images/cryo-banner-mobile.png",
+      },
+      {
+        slug: "hyperbaric-oxygen-therapy",
+        name: "Oxygen Therapy (HBOT)",
+        description: "Enhanced oxygen for clarity and cellular recovery.",
+        image: "/assets/images/epsom-final-images/hyperbaric-oxygen-therapy-mobile.webp",
+      },
+     
+      {
+        slug: "red-light-therapy",
+        name: "Red Light Therapy",
+        description: "Cellular repair, collagen, and skin rejuvenation.",
+        image: "/assets/images/epsom-final-images/red-light-therapy-mobile.webp",
+      },
+      {
+        slug: "epsom-salt-sauna",
+        name: "Epsom Salt Sauna",
+        description: "Mineral heat for detox and deep relaxation.",
+        image: "/assets/images/epsom-final-images/salt-banner-mobile.png",
+      },
+      {
+        slug: "compression-therapy",
+        name: "Compression Therapy",
+        description: "Dynamic pressure for circulation and recovery.",
+        image: "/assets/images/epsom-final-images/compression-banner-mobile.png",
+      },
+      {
+        slug: "infrared-body-wrap",
+        name: "Infrared Body Wrap",
+        description: "Deep heat wrap for detox and contour support.",
+        image: "/assets/images/epsom-final-images/infrared-body-wrap-mobile.webp",
+      },
+    ],
+  },
+
   {
     id: "skin-hair-rejuvenation",
     slug: "skin-hair-rejuvenation",

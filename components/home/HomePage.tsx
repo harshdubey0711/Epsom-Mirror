@@ -52,7 +52,7 @@ export function HomePage() {
       muted 
       loop 
       playsInline 
-      poster="/assets/images/biohack-banner-2.jpg" 
+      poster="/assets/images/epsom-final-images/home-banner.jpeg" 
       className="w-full h-full object-cover" 
     > 
       <source src="/assets/videos/services-page/home-banner.mp4" type="video/mp4" /> 
