@@ -93,13 +93,13 @@ export const homeCategorySections: HomeCategorySection[] = [
         slug: "compression-therapy",
         name: "Compression Therapy",
         description: "Dynamic pressure for circulation and recovery.",
-        image: "/assets/images/epsom-final-images/compression-banner-mobile.png",
+        image: "/assets/images/epsom-final-images/comp2.png",
       },
       {
         slug: "infrared-body-wrap",
         name: "Infrared Body Wrap",
         description: "Deep heat wrap for detox and contour support.",
-        image: "/assets/images/epsom-final-images/infrared-body-wrap-mobile.webp",
+        image: "/assets/images/epsom-final-images/infrared.png",
       },
       {
         slug: "collagen-light-therapy",
@@ -142,22 +142,26 @@ export const homeCategorySections: HomeCategorySection[] = [
       },
       {
         slug: "weight-loss-management",
+          name: "SlimShot Drip",
+          description: "A specialised IV wellness therapy offered as part of Epsom's weight management range.",
+        image: "/assets/images/epsom-final-images/slimshot-drip.png",
+      },
+
+
+      
+      {
+        slug: "weight-loss-management",
           name: "Emerald Laser Fat Reduction",
           description: "A non-invasive laser-based treatment designed to support targeted fat reduction and body contouring.",
         image: "/assets/images/epsom-final-images/emerald.png",
       },
       {
         slug: "weight-loss-management",
-          name: "SlimShot Drip",
-          description: "A specialised IV wellness therapy offered as part of Epsom's weight management range.",
-        image: "/assets/images/epsom-final-images/slimshot-drip.png",
-      },
-      {
-        slug: "weight-loss-management",
           name: "SlimShot Plus",
           description: "A more comprehensive option within Epsom's weight management IV range, designed around individual wellness goals.",
-        image: "/assets/images/epsom-final-images/slimshot-plus-feature.png",
+        image: "/assets/images/epsom-final-images/slim-shot-plus.png",
       },
+      
       // {
       //    slug: "weight-loss-management",
       //     name: "Metabolize",
@@ -170,6 +174,8 @@ export const homeCategorySections: HomeCategorySection[] = [
           description: "L-Carnitine injections are offered as part of Epsom's wellness and weight management options.",
         image: "/assets/images/epsom-final-images/l-carnitine-shots.png",
       },
+
+      
 
     ],
   },
@@ -209,13 +215,13 @@ export const homeCategorySections: HomeCategorySection[] = [
         slug: "compression-therapy",
         name: "Compression Therapy",
         description: "Dynamic pressure for circulation and recovery.",
-        image: "/assets/images/epsom-final-images/compression-banner-mobile.png",
+        image: "/assets/images/epsom-final-images/comp2.png",
       },
       {
         slug: "infrared-body-wrap",
         name: "Infrared Body Wrap",
         description: "Deep heat wrap for detox and contour support.",
-        image: "/assets/images/epsom-final-images/infrared-body-wrap-mobile.webp",
+        image: "/assets/images/epsom-final-images/infrared.png",
       },
     ],
   },
@@ -258,7 +264,7 @@ export const homeCategorySections: HomeCategorySection[] = [
                    
           description: "A PRP-based aesthetic treatment that uses your own platelet-rich plasma as part of a skin rejuvenation protocol.",
          
-          image: "/assets/images/epsom-final-images/vampire-facial.png"
+          image: "/assets/images/epsom-final-images/vamp5.png"
         },
         {
           slug: "collagen-light-therapy",
@@ -272,7 +278,7 @@ export const homeCategorySections: HomeCategorySection[] = [
                    
           description: "A treatment that uses platelet-rich plasma prepared from your own blood as part of a personalised hair and scalp treatment plan.",
          
-          image: "/assets/images/epsom-final-images/prp-therapy.png"
+          image: "/assets/images/epsom-final-images/prp.png"
         },
         {
           slug: "skin-hair-rejuvenation",
@@ -302,7 +308,7 @@ export const homeCategorySections: HomeCategorySection[] = [
           slug: "skin-hair-rejuvenation",
           name: "Laser Hair Removal",
           description: "A laser-based treatment designed to reduce unwanted hair growth over a course of personalised sessions.",
-          image: "/assets/images/epsom-final-images/hair-removal.png"
+          image: "/assets/images/epsom-final-images/laser-hair.png"
         }
     ],
   },

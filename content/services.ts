@@ -422,7 +422,7 @@ export default {
     },
 
     "title": "Epsom Salt Sauna ",
-    "bannerImage": "/assets/images/epsom-final-images/salt-pc-banner.png",
+    "bannerImage": "/assets/images/epsom-final-images/salt-banner-pc.png",
     "featureImage": "/assets/images/epsom-final-images/epsom-salt-sauna-feature.webp",
     "mobileBannerImage": "/assets/images/epsom-final-images/salt-banner-mobile.png",
 
@@ -514,8 +514,8 @@ export default {
     },
 
     "title": "Compression Therapy",
-    "bannerImage": "/assets/images/epsom-final-images/compression-banner-pc.png",
-    "featureImage": "/assets/images/epsom-final-images/compression-therapy-feature.webp",
+    "bannerImage": "/assets/images/epsom-final-images/comp-banner.png",
+    "featureImage": "/assets/images/epsom-final-images/comp-feature.png",
     "mobileBannerImage": "/assets/images/epsom-final-images/compression-banner-mobile.png",
 
     "introduction": {
@@ -697,7 +697,7 @@ export default {
     },
 
     "title": "Infrared Body Wrap",
-    "bannerImage": "/assets/images/epsom-final-images/infrared-body-wrap-banner-desktop.webp",
+    "bannerImage": "/assets/images/epsom-final-images/body-wrap.png",
     "featureImage": "/assets/images/epsom-final-images/infrared-body-wrap-feature.webp",
     "mobileBannerImage": "/assets/images/epsom-final-images/infrared-body-wrap-mobile.webp",
 
