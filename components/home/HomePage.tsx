@@ -5,9 +5,14 @@ import { FaqSection } from "@/components/FaqSection";
 import { JsonLd } from "@/components/JsonLd";
 import { RevealLtr } from "@/components/RevealLtr";
 import { TreatmentMarquee } from "@/components/TreatmentMarquee";
-import { benefits, homeCategorySections, whyChooseUs , wellnessNote } from "@/content/home";
+import {
+  benefits,
+  homeCategorySections,
+  whyChooseUs,
+  wellnessNote,
+} from "@/content/home";
 import { faqItems, faqSchemaAnswers } from "@/content/faq";
-import { normalizeHref, seoNav, SITE_URL } from "@/lib/site";
+import { SITE_URL } from "@/lib/site";
 
 export function HomePage() {
   const medicalBusiness = {
@@ -17,7 +22,7 @@ export function HomePage() {
     description: "Mumbai's Premier Cryotherapy & Wellness Center",
     url: SITE_URL,
     telephone: "+91-9867670762",
-    email: "info@epsomcryospa.com",  
+    email: "info@epsomcryospa.com",
     address: {
       "@type": "PostalAddress",
       streetAddress: "Kamla Spaces, Shop no.6, S.V Road, Santacruz West",
@@ -43,125 +48,125 @@ export function HomePage() {
       <JsonLd data={medicalBusiness} />
       <JsonLd data={faqSchema} />
 
+      <section className="relative min-h-[88vh] flex items-center justify-center overflow-hidden">
+        <div className="hero-video-wrap absolute inset-0">
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            poster="/assets/images/epsom-final-images/home-banner.jpeg"
+            className="w-full h-full object-cover"
+          >
+            <source
+              src="/assets/videos/services-page/home-banner.mp4"
+              type="video/mp4"
+            />
+          </video>
+        </div>
 
+        <div className="absolute inset-0 bg-salt-hero" />
 
-    <section className="relative min-h-[88vh] flex items-center justify-center overflow-hidden"> 
-  <div className="hero-video-wrap absolute inset-0"> 
-    <video 
-      autoPlay 
-      muted 
-      loop 
-      playsInline 
-      poster="/assets/images/epsom-final-images/home-banner.jpeg" 
-      className="w-full h-full object-cover" 
-    > 
-      <source src="/assets/videos/services-page/home-banner.mp4" type="video/mp4" /> 
-    </video> 
-  </div> 
+        <div className="relative z-10 text-center px-4 max-w-4xl mx-auto pt-10">
+          <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-white leading-tight">
+            Advanced Wellness Clinic in Mumbai for Longevity &amp; Recovery.
+          </h1>
 
-  <div className="absolute inset-0 bg-salt-hero" /> 
+          <p className="text-white text-s md:text-xl mt-4">
+            Experience Advanced Biohacking &amp; Science-Backed Therapies to
+            Reclaim Your Health
+          </p>
 
-  <div className="relative z-10 text-center px-4 max-w-4xl mx-auto pt-10"> 
-    <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-white leading-tight"> 
-      Advanced Wellness Clinic in Mumbai for Longevity &amp; Recovery. 
-    </h1> 
-
-    <p className="text-white text-s md:text-xl mt-4">
-      Experience Advanced Biohacking &amp; Science-Backed Therapies to Reclaim Your Health
-    </p>
-
-    
-
-    <div className="flex flex-wrap gap-4 justify-center mt-10"> 
-      <BookButton /> 
-      <a 
-        href="tel:+919867670762" 
-        className="btn-outline !border-white/70 !text-white hover:!bg-white/10" 
-      > 
-        Call Now 
-      </a> 
-    </div> 
-  </div> 
-</section>
+          <div className="flex flex-wrap gap-4 justify-center mt-10">
+            <BookButton />
+            <a
+              href="tel:+919867670762"
+              className="btn-outline !border-white/70 !text-white hover:!bg-white/10"
+            >
+              Call Now
+            </a>
+          </div>
+        </div>
+      </section>
 
       <section className="py-16 md:py-24 px-4">
-  <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 md:gap-16 items-center">
-    <div>
-      <p className="text-epsom-maroon text-sm uppercase tracking-[0.18em] font-medium mb-3">
-        About Epsom Wellness
-      </p>
+        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 md:gap-16 items-center">
+          <div>
+            <p className="text-epsom-maroon text-sm uppercase tracking-[0.18em] font-medium mb-3">
+              About Epsom Wellness
+            </p>
 
-      {/* <h2 className="section-heading !text-3xl md:!text-4xl">
-        Transforming Your Health from the Cellular Level
-      </h2> */}
+            {/* <h2 className="section-heading !text-3xl md:!text-4xl">
+              Transforming Your Health from the Cellular Level
+            </h2> */}
 
-      <p className="text-epsom-muted leading-relaxed mt-6 text-base md:text-lg">
-        Welcome to Epsom Wellness, the leading wellness clinic in Mumbai
-        dedicated to transforming your health from the cellular level. As a
-        premier wellness &amp; longevity clinic in Mumbai, we combine advanced
-        biohacking technology with personalized, science-backed therapies.
-      </p>
+            <p className="text-epsom-muted leading-relaxed mt-6 text-base md:text-lg">
+              Welcome to Epsom Wellness, the leading wellness clinic in Mumbai
+              dedicated to transforming your health from the cellular level. As
+              a premier wellness &amp; longevity clinic in Mumbai, we combine
+              advanced biohacking technology with personalized, science-backed
+              therapies.
+            </p>
 
-      <p className="text-epsom-muted leading-relaxed mt-4 text-base md:text-lg">
-        Whether your goal is cellular regeneration, chronic pain relief,
-        aesthetic rejuvenation, or athletic performance, our integrated
-        medical-wellness approach helps you achieve peak vitality and
-        long-term well-being.
-      </p>
+            <p className="text-epsom-muted leading-relaxed mt-4 text-base md:text-lg">
+              Whether your goal is cellular regeneration, chronic pain relief,
+              aesthetic rejuvenation, or athletic performance, our integrated
+              medical-wellness approach helps you achieve peak vitality and
+              long-term well-being.
+            </p>
 
-      <Link href="/about/" className="btn-outline mt-8">
-        Read more
-      </Link>
-    </div>
+            <Link href="/about/" className="btn-outline mt-8">
+              Read more
+            </Link>
+          </div>
 
-    <div className="relative">
-      <div className="aspect-square overflow-hidden rounded-2xl border border-epsom-crystal/35 shadow-soft-lg relative">
-        <Image
-          src="/assets/images/imagesEpsom/home-feature.png"
-          alt="Epsom Wellness wellness experience"
-          fill
-          className="object-cover"
-          sizes="(max-width: 768px) 100vw, 50vw"
-        />
-      </div>
+          <div className="relative">
+            <div className="aspect-square overflow-hidden rounded-2xl border border-epsom-crystal/35 shadow-soft-lg relative">
+              <Image
+                src="/assets/images/imagesEpsom/home-feature.png"
+                alt="Epsom Wellness wellness experience"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+            </div>
 
-      <div
-        className="absolute -bottom-3 -left-3 w-24 h-24 border border-epsom-maroon/40 rounded-2xl pointer-events-none hidden md:block"
-        aria-hidden="true"
-      />
-    </div>
-  </div>
-</section>
+            <div
+              className="absolute -bottom-3 -left-3 w-24 h-24 border border-epsom-maroon/40 rounded-2xl pointer-events-none hidden md:block"
+              aria-hidden="true"
+            />
+          </div>
+        </div>
+      </section>
 
-     {homeCategorySections.map((section) => (
-  <section key={section.id} id={section.id} className={section.bandClass}>
-    <div className="max-w-7xl mx-auto px-4">
-      <div className="flex items-center justify-between gap-4 mt-12 mb-8">
-        <h2 className="section-heading !text-3xl md:!text-4xl min-w-0 flex-1">
-          {section.title}
-        </h2>
-        <Link
-          href={`/${section.slug}/`}
-          className="btn-ghost shrink-0 whitespace-nowrap ml-auto"
-        >
-          View All Treatments →
-        </Link>
-      </div>
-    </div>
+      {homeCategorySections.map((section) => (
+        <section key={section.id} id={section.id} className={section.bandClass}>
+          <div className="max-w-7xl mx-auto px-4">
+            <div className="flex items-center justify-between gap-4 mt-12 mb-8">
+              <h2 className="section-heading !text-3xl md:!text-4xl min-w-0 flex-1">
+                {section.title}
+              </h2>
+              <Link
+                href={`/${section.slug}/`}
+                className="btn-ghost shrink-0 whitespace-nowrap ml-auto"
+              >
+                View All Treatments →
+              </Link>
+            </div>
+          </div>
 
-    <TreatmentMarquee
-      treatments={section.treatments}
-      label={`${section.title} treatments`}
-      slow={section.slow}
-    />
-  </section>
-))}
+          <TreatmentMarquee
+            treatments={section.treatments}
+            label={`${section.title} treatments`}
+            slow={section.slow}
+          />
+        </section>
+      ))}
+
       <section className="py-20 px-4">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="section-heading">
-              Why Choose Us?
-            </h2>
+            <h2 className="section-heading">Why Choose Us?</h2>
           </div>
           <ul className="grid sm:grid-cols-2 gap-x-10 list-none p-0">
             {whyChooseUs.map((item, i) => (
@@ -172,7 +177,10 @@ export function HomePage() {
                   i >= 4 ? " sm:border-b-0" : ""
                 }${i === 5 ? " border-b-0" : ""}`}
               >
-                <span className="text-epsom-maroon mt-1 shrink-0" aria-hidden="true">
+                <span
+                  className="text-epsom-maroon mt-1 shrink-0"
+                  aria-hidden="true"
+                >
                   ✓
                 </span>
                 <div>
@@ -186,7 +194,9 @@ export function HomePage() {
 
       <section className="benefits-band">
         <div className="max-w-7xl mx-auto text-center">
-          <h2 className="section-heading">Benefits of Therapies &amp; Treatments</h2>
+          <h2 className="section-heading">
+            Benefits of Therapies &amp; Treatments
+          </h2>
           <div className="benefits-heading-rule" aria-hidden="true" />
         </div>
         <div className="max-w-5xl mx-auto grid sm:grid-cols-2 gap-x-12">
@@ -198,49 +208,24 @@ export function HomePage() {
           ))}
         </div>
       </section>
-      
 
-      <FaqSection
-  title="Epsom Wellness & Longevity FAQs"
-        items={faqItems}
-/>
+      <FaqSection title="Epsom Wellness & Longevity FAQs" items={faqItems} />
 
+      <section className="py-12">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="font-display text-2xl md:text-3xl text-epsom-ink">
+            {wellnessNote.title}
+          </h2>
 
-<section className="py-12">
-  <div className="max-w-4xl mx-auto text-center">
-    <h2 className="font-display text-2xl md:text-3xl text-epsom-ink">
-      {wellnessNote.title}
-    </h2>
-
-    <p className="text-epsom-muted mt-4 leading-relaxed">
-      {wellnessNote.description}
-    </p>
-  </div>
-</section>
-
-
-
-      {/* <section className="py-12 px-4 border-t border-epsom-crystal/40 bg-epsom-teal">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-sm uppercase tracking-widest text-epsom-muted mb-4">Popular Searches</h2>
-          <p className="text-sm text-epsom-muted leading-relaxed flex flex-wrap gap-x-2 gap-y-1">
-            {seoNav.popularSearches.map((s, i) => (
-              <span key={s.href} className="inline-flex items-center gap-2">
-                <Link href={normalizeHref(s.href)} className="hover:text-epsom-maroon">
-                  {s.label}
-                </Link>
-                {i < seoNav.popularSearches.length - 1 ? <span>|</span> : null}
-              </span>
-            ))}
-            <span className="inline-flex items-center gap-2">
-              <span>|</span>
-              <Link href="/beauty/" className="hover:text-epsom-maroon">
-                Beauty Treatments Mumbai
-              </Link>
-            </span>
+          <p className="text-epsom-muted mt-4 leading-relaxed">
+            {wellnessNote.description}
           </p>
         </div>
-      </section> */}
+      </section>
+
+      {/* Popular Searches section removed for now.
+          To re-enable, import { normalizeHref, seoNav } from "@/lib/site"
+          and restore the block. */}
     </main>
   );
 }

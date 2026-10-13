@@ -21,7 +21,6 @@ export function ResponsiveHeroImage({ desktopSrc, mobileSrc, alt }: Props) {
     <picture>
       <source media="(min-width: 768px)" srcSet={desktopSet} />
       <source media="(max-width: 767px)" srcSet={mobileSet} />
-      {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         {...img}
         alt={alt}

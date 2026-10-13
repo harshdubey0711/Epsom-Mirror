@@ -4,7 +4,7 @@ import { useEffect, useRef } from "react";
 import Link from "next/link";
 
 type Props = {
-  treatments: any[];
+  treatments: readonly object[];
   label?: string;
   slow?: boolean;
   viewAllHref?: string;
@@ -12,27 +12,46 @@ type Props = {
 
 const COPIES = 3;
 
-function getTitle(t: any): string {
-  return t?.title ?? t?.name ?? t?.label ?? "";
-}
-
-function getDescription(t: any): string {
-  return t?.description ?? t?.desc ?? t?.shortDescription ?? t?.excerpt ?? "";
-}
-
-function getImage(t: any): string {
-  const img = t?.image ?? t?.img ?? t?.imageSrc ?? t?.thumbnail ?? t?.src ?? "";
-  return typeof img === "string" ? img : img?.src ?? "";
-}
-
-function getHref(t: any): string {
-  if (typeof t?.href === "string" && t.href) return t.href;
-  if (typeof t?.url === "string" && t.url) return t.url;
-  if (typeof t?.link === "string" && t.link) return t.link;
-  if (typeof t?.path === "string" && t.path) return t.path;
-  if (typeof t?.slug === "string" && t.slug) {
-    return `/${t.slug.replace(/^\/|\/$/g, "")}/`;
+// Returns the first non-null value among the given keys
+function pick(t: object, keys: string[]): unknown {
+  const rec = t as Record<string, unknown>;
+  for (const k of keys) {
+    const v = rec?.[k];
+    if (v !== undefined && v !== null) return v;
   }
+  return undefined;
+}
+
+function asString(v: unknown): string {
+  return typeof v === "string" ? v : "";
+}
+
+function getTitle(t: object): string {
+  return asString(pick(t, ["title", "name", "label"]));
+}
+
+function getDescription(t: object): string {
+  return asString(
+    pick(t, ["description", "desc", "shortDescription", "excerpt"])
+  );
+}
+
+function getImage(t: object): string {
+  const img = pick(t, ["image", "img", "imageSrc", "thumbnail", "src"]);
+  if (typeof img === "string") return img;
+  if (img && typeof img === "object" && "src" in img) {
+    return asString((img as { src?: unknown }).src);
+  }
+  return "";
+}
+
+function getHref(t: object): string {
+  const direct = asString(pick(t, ["href", "url", "link", "path"]));
+  if (direct) return direct;
+
+  const slug = asString(pick(t, ["slug"]));
+  if (slug) return `/${slug.replace(/^\/|\/$/g, "")}/`;
+
   return "#";
 }
 
@@ -48,13 +67,6 @@ export function TreatmentMarquee({
   const pending = useRef(0);
 
   const speed = slow ? 25 : 45;
-
-  useEffect(() => {
-    // Shows the real field names of your data in the browser console
-    if (treatments?.[0]) {
-      console.log("Treatment fields:", Object.keys(treatments[0]), treatments[0]);
-    }
-  }, [treatments]);
 
   useEffect(() => {
     const reduceMotion = window.matchMedia(
@@ -104,7 +116,7 @@ export function TreatmentMarquee({
     pending.current += direction * 320;
   };
 
-  const items = Array.isArray(treatments) ? treatments : [];
+  const items: readonly object[] = Array.isArray(treatments) ? treatments : [];
 
   const renderSet = (copy: number) => [
     ...items.map((t, i) => (
@@ -119,6 +131,7 @@ export function TreatmentMarquee({
           tabIndex={copy > 0 ? -1 : 0}
         >
           <div className="treatment-card-media">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src={getImage(t)} alt={getTitle(t)} loading="lazy" />
           </div>
           <div className="treatment-card-body">
