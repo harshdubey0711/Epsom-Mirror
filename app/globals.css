@@ -104,11 +104,16 @@
     overflow: hidden;
   }
   .treatment-marquee-track {
-    @apply flex items-stretch gap-5;
+    @apply flex items-stretch;
     touch-action: pan-y pinch-zoom;
   }
   .treatment-marquee-slide {
     @apply flex shrink-0 w-72;
+    margin-right: 1.25rem; /* replaces gap-5 so the last card also has spacing at the loop seam */
+  }
+  /* Pause the scroll while hovering, resume when the mouse leaves */
+  .treatment-marquee:hover .treatment-marquee-track {
+    animation-play-state: paused;
   }
   .marquee-nav {
     @apply flex items-center justify-center gap-3 mt-8 mb-2;

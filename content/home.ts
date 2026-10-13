@@ -69,13 +69,13 @@ export const homeCategorySections: HomeCategorySection[] = [
         slug: "hyperbaric-oxygen-therapy",
         name: "Oxygen Therapy (HBOT)",
         description: "Enhanced oxygen for clarity and cellular recovery.",
-        image: "/assets/images/epsom-final-images/hyperbaric-oxygen-therapy-mobile.webp",
+        image: "/assets/images/epsom-final-images/hbot.png",
       },
       {
         slug: "iv-drip-therapy",
         name: "IV Drip Therapy",
         description: "Nutrient infusions for immunity, glow, and vitality.",
-        image: "/assets/images/epsom-final-images/iv-drip-mobile.png",
+        image: "/assets/images/epsom-final-images/iv-drip.png",
       },
       {
         slug: "red-light-therapy",
@@ -144,13 +144,13 @@ export const homeCategorySections: HomeCategorySection[] = [
         slug: "weight-loss-management",
           name: "Emerald Laser Fat Reduction",
           description: "A non-invasive laser-based treatment designed to support targeted fat reduction and body contouring.",
-        image: "/assets/images/epsom-final-images/emerald-laser-fat-reduction.png",
+        image: "/assets/images/epsom-final-images/emerald.png",
       },
       {
         slug: "weight-loss-management",
           name: "SlimShot Drip",
           description: "A specialised IV wellness therapy offered as part of Epsom's weight management range.",
-        image: "/assets/images/epsom-final-images/slimshot-drip-feature.png",
+        image: "/assets/images/epsom-final-images/slimshot-drip.png",
       },
       {
         slug: "weight-loss-management",
@@ -165,10 +165,10 @@ export const homeCategorySections: HomeCategorySection[] = [
       //    image:"/assets/images/epsom-final-images/metabolize-feature.webp"
       // },
       {
-        slug: "weight-loss-management",
+        slug: "weight-loss-management", 
           name: "L-Carnitine Shots",
           description: "L-Carnitine injections are offered as part of Epsom's wellness and weight management options.",
-        image: "/assets/images/epsom-final-images/l-carnitine-shots-feature.webp",
+        image: "/assets/images/epsom-final-images/l-carnitine-shots.png",
       },
 
     ],
@@ -190,7 +190,7 @@ export const homeCategorySections: HomeCategorySection[] = [
         slug: "hyperbaric-oxygen-therapy",
         name: "Oxygen Therapy (HBOT)",
         description: "Enhanced oxygen for clarity and cellular recovery.",
-        image: "/assets/images/epsom-final-images/hyperbaric-oxygen-therapy-mobile.webp",
+        image: "/assets/images/epsom-final-images/hbot.png",
       },
      
       {
@@ -233,7 +233,7 @@ export const homeCategorySections: HomeCategorySection[] = [
         image: "/assets/images/epsom-final-images/hydro-facial.png",
       },
       {
-        slug: "skin-hair-rejuvenation",
+        slug: "skin-hair-rejuvenation", 
           name: "Medi Facial",
           description: "A professionally guided facial treatment tailored to specific skin concerns and individual needs.",
           image: "/assets/images/epsom-final-images/medi-facial.png"
@@ -280,7 +280,7 @@ export const homeCategorySections: HomeCategorySection[] = [
                    
           description: "An IV wellness therapy from Epsom's hair health range, designed to provide targeted nutritional support.",
           
-          image: "/assets/images/epsom-final-images/hair-vitality.png"
+          image: "/assets/images/epsom-final-images/hair-drip.png"
         },
         {
           slug: "skin-hair-rejuvenation",
@@ -288,7 +288,7 @@ export const homeCategorySections: HomeCategorySection[] = [
                    
           description: "A specialised option within Epsom's hair wellness range, designed around individual hair and wellness goals.",
          
-          image: "/assets/images/epsom-final-images/hair2.png"
+          image: "/assets/images/epsom-final-images/hair-pro.png"
         },
         {
           slug: "skin-hair-rejuvenation",

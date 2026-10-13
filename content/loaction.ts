@@ -56,8 +56,8 @@ export const locationPageContent: Record<string, LocationPageContent> = {
     },
     // TODO: replace with the real Santacruz number (digits only after 91 in the WhatsApp link)
     contact: {
-      phone: "+910000000000",
-      whatsappUrl: "https://wa.me/910000000000",
+      phone: "+919867670764",
+      whatsappUrl: "https://wa.me/919867670764",
     },
     intro: {
       heading: "Welcome to Epsom Wellness in Santacruz West",

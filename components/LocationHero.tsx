@@ -95,42 +95,55 @@ export function LocationPage({ location, content }: LocationPageProps) {
         </div>
       </section>
 
-      {/* HOW TO FIND US */}
-      <section className="py-16 px-4">
-        <div className="max-w-5xl mx-auto">
-          <h2 className="section-heading text-center mb-8">
-            {content.findUs.heading}
-          </h2>
+  
+{/* HOW TO FIND US */}
+<section className="py-16 px-4">
+  <div className="max-w-5xl mx-auto">
+    <h2 className="section-heading text-center mb-8">
+      {content.findUs.heading}
+    </h2>
 
-          <div className="glass-card rounded-2xl p-7">
-            <p className="text-xs uppercase tracking-widest text-epsom-maroon">
-              Address
-            </p>
-            <p className="text-epsom-ink font-medium mt-2">
-              {content.findUs.address}
-            </p>
+    <div className="glass-card rounded-2xl p-7">
+      {/* ADDRESS */}
+      <p className="text-xs uppercase tracking-widest text-epsom-maroon">
+        Address
+      </p>
 
-            <div className="grid md:grid-cols-2 gap-6 mt-6">
-               <p className="text-xs uppercase tracking-widest text-epsom-maroon">
-              Directions
-            </p>
-              {content.findUs.directions.map((d) => (
-                <div key={d.title}>
-                  <h3 className="font-semibold text-epsom-ink">{d.title}</h3>
-                  <p className="text-epsom-muted mt-2 leading-relaxed">
-                    {d.text}
-                  </p>
-                </div>
-              ))}
+      <p className="text-epsom-ink font-medium mt-2">
+        {content.findUs.address}
+      </p>
+
+      {/* DIRECTIONS */}
+      <div className="mt-6">
+        <p className="text-xs uppercase tracking-widest text-epsom-maroon mb-4">
+          Directions
+        </p>
+
+        <div className="flex flex-col gap-6">
+          {content.findUs.directions.map((d) => (
+            <div key={d.title}>
+              <h3 className="font-semibold text-epsom-ink">
+                {d.title}
+              </h3>
+
+              <p className="text-epsom-muted mt-2 leading-relaxed">
+                {d.text}
+              </p>
             </div>
-
-            <p className="text-epsom-muted mt-6 leading-relaxed">
-              <span className="font-semibold text-epsom-ink">Parking: </span>
-              {content.findUs.parking}
-            </p>
-          </div>
+          ))}
         </div>
-      </section>
+      </div>
+
+      {/* PARKING */}
+      <p className="text-epsom-muted mt-6 leading-relaxed">
+        <span className="font-semibold text-epsom-ink">
+          Parking:
+        </span>{" "}
+        {content.findUs.parking}
+      </p>
+    </div>
+  </div>
+</section>
 
       {/* REVIEWS */}
       <section className="py-16 px-4">

@@ -133,27 +133,29 @@ export function HomePage() {
   </div>
 </section>
 
-      {homeCategorySections.map((section) => (
-        <section key={section.id} id={section.id} className={section.bandClass}>
-          <div className="max-w-7xl mx-auto px-4">
-            <div className="flex items-center mt-12 justify-between  gap-4 mb-8">
-              <h2 className="section-heading !text-3xl md:!text-4xl min-w-0 flex-1">{section.title}</h2>
-              <Link
-                href={`/${section.slug}/`}
-                className="btn-ghost shrink-0 whitespace-nowrap ml-auto"
-              >
-                View All Treatments →
-              </Link>
-            </div>
-          </div>
-          <TreatmentMarquee
-            treatments={section.treatments}
-            label={`${section.title} treatments`}
-            slow={section.slow}
-          />
-        </section>
-      ))}
+     {homeCategorySections.map((section) => (
+  <section key={section.id} id={section.id} className={section.bandClass}>
+    <div className="max-w-7xl mx-auto px-4">
+      <div className="flex items-center justify-between gap-4 mt-12 mb-8">
+        <h2 className="section-heading !text-3xl md:!text-4xl min-w-0 flex-1">
+          {section.title}
+        </h2>
+        <Link
+          href={`/${section.slug}/`}
+          className="btn-ghost shrink-0 whitespace-nowrap ml-auto"
+        >
+          View All Treatments →
+        </Link>
+      </div>
+    </div>
 
+    <TreatmentMarquee
+      treatments={section.treatments}
+      label={`${section.title} treatments`}
+      slow={section.slow}
+    />
+  </section>
+))}
       <section className="py-20 px-4">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
