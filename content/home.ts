@@ -105,7 +105,7 @@ export const homeCategorySections: HomeCategorySection[] = [
         slug: "collagen-light-therapy",
         name: "Collagen Light Therapy",
         description: "Light-based support for skin firmness and glow.",
-        image: "/assets/images/epsom-final-images/collagen-light-therapy-mobile.webp",
+        image: "/assets/images/epsom-final-images/collagen-bed.png",
       },
       // {
       //   slug: "health-wellness-blood-test",
@@ -270,7 +270,7 @@ export const homeCategorySections: HomeCategorySection[] = [
           slug: "collagen-light-therapy",
           name: "Collagen Light Therapy",     
           description: "A gentle light-based treatment designed to support collagen production and overall skin wellness."  ,
-          image: "/assets/images/epsom-final-images/collagen-light-therapy-feature.webp"
+          image: "/assets/images/epsom-final-images/collagen-bed.png"
         },
         {
           slug: "skin-hair-rejuvenation",
