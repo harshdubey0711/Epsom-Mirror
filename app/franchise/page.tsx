@@ -27,10 +27,10 @@ export default function FranchisePage() {
       <section className="relative min-h-[60vh] md:min-h-[70vh] flex items-center justify-center overflow-hidden">
         {/* TODO: replace franchise-banner.svg with franchise-banner.png when final art is ready */}
         <Image
-          src="/assets/images/franchise/franchise-banner.png"
+          src="/assets/images/epsom-final-images/franchise.png"
           alt="Franchise and pan-India expansion at Epsom Cryo Spa"
           fill
-          priority
+          priority 
           unoptimized
           className="object-cover object-[50%_35%]"
           sizes="100vw"
@@ -193,7 +193,7 @@ export default function FranchisePage() {
       <section id="enquire" className="py-16 md:py-24 px-4">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-start">
           <div>
-            <p className="text-epsom-maroon text-sm uppercase tracking-[0.18em] font-medium mb-3">
+            <p className="text-epsom-maroon text -sm uppercase tracking-[0.18em] font-medium mb-3">
               Get In Touch
             </p>
             <h2 className="section-heading !text-3xl md:!text-4xl">
