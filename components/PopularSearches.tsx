@@ -11,18 +11,15 @@ export function PopularSearches() {
 
         <p className="text-sm text-epsom-muted leading-relaxed flex flex-wrap gap-x-2 gap-y-1">
           {seoNav.popularSearches.map((search, index) => (
-            <span key={search.href}>
+            <span key={`${search.href}-${index}`}>
               <Link
                 href={`/${search.href}`}
                 className="hover:text-epsom-maroon"
               >
-                
                 {search.label}
               </Link>
 
               {index < seoNav.popularSearches.length - 1 && " | "}
-
-              
             </span>
           ))}
         </p>
@@ -30,5 +27,3 @@ export function PopularSearches() {
     </section>
   );
 }
-
-

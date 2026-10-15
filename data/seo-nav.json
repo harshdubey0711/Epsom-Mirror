@@ -589,26 +589,40 @@
       "href": "hyperbaric-oxygen-therapy/"
     },
     {
-      "label": "Infrared Sauna",
-      "href": "infrared-sauna/"
+      "label": "Cryolipolysis",
+      "href": "weight-loss-management/"
     },
     {
-      "label": "IV Drip Therapy",
-      "href": "iv-drip-therapy/"
+      "label": "Emrald Laser Fat Reduction",
+      "href": "weight-loss-management/"
     },
     {
-      "label": "Epsom Salt Sauna",
-      "href": "epsom-salt-sauna/"
+      "label": "Slim-Shot Drip",
+      "href": "weight-loss-management/"
     },
     {
-      "label": "Infrared Body Wrap",
-      "href": "infrared-body-wrap/"
+      "label": "L-Carnitine Shots",
+      "href": "weight-loss-management/"
     },
     {
-      "label": "Collagen Light Therapy",
-      "href": "collagen-light-therapy/"
+      "label": "HydraFacial",
+      "href": "skin-hair-rejuvenation/"
+    },
+    {
+      "label": "Vampire Facial",
+      "href": "skin-hair-rejuvenation/"
+    },
+    {
+      "label": "Japanese Head Spa",
+      "href": "skin-hair-rejuvenation/"
+    },
+    {
+      "label": "PRP Therapy",
+      "href": "skin-hair-rejuvenation/"
     }
   ]
+
+  
 }
 
  

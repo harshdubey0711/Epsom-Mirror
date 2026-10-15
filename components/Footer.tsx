@@ -82,7 +82,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="text-epsom-ink font-semibold mb-4">Services</h4>
+            <h4 className="text-epsom-ink font-semibold mb-4">Category</h4>
             <ul className="space-y-2 text-sm text-epsom-muted">
               {seoNav.footerServices.map((s) => (
                 <li key={s.href}>
