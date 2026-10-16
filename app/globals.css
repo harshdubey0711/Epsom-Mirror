@@ -69,12 +69,17 @@
   .treatment-card-media {
     @apply relative aspect-[4/5] overflow-hidden bg-epsom-soft shrink-0;
   }
-  .treatment-card-media img {
-    @apply w-full h-full object-cover transition-transform duration-500;
-  }
-  .treatment-card:hover .treatment-card-media img {
-    transform: scale(1.05);
-  }
+ 
+.treatment-card-media img,
+.treatment-card-media video {
+  @apply w-full h-full object-cover transition-transform duration-500;
+}
+
+.treatment-card:hover .treatment-card-media img,
+.treatment-card:hover .treatment-card-media video {
+  transform: scale(1.05);
+}
+
   .treatment-card-body {
     @apply p-5 flex flex-col flex-1 min-h-[7.5rem];
   }
