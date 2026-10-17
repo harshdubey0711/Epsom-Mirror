@@ -1,3 +1,6 @@
+"use client";
+
+import { useCallback, useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { FaqSection } from "@/components/FaqSection";
@@ -24,6 +27,13 @@ const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent
 /* Same size/shape as the "Read more" button (btn-outline), gold fill */
 const BOOK_BTN_CLASS =
   "btn-outline whitespace-nowrap !border-[#D4A24C] !bg-[#D4A24C] !text-white shadow-[0_10px_24px_-8px_rgba(60,35,20,0.6)] transition duration-300 hover:-translate-y-0.5 hover:!border-[#C2903B] hover:!bg-[#C2903B] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white";
+
+/* < > arrow buttons: visible on small devices only (hidden at xl and up) */
+const ARROW_BTN_CLASS =
+  "absolute z-20 grid h-11 w-11 -translate-y-1/2 place-items-center rounded-full border border-white/80 bg-white/85 text-epsom-ink shadow-[0_8px_20px_-6px_rgba(60,35,20,0.55)] backdrop-blur-md transition duration-200 hover:bg-white active:scale-95 disabled:pointer-events-none disabled:opacity-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#D4A24C] xl:hidden";
+
+/* Vertical centre of the card (cards are clamp(600px,84vh,760px) tall) */
+const ARROW_TOP = "calc(clamp(600px, 84vh, 760px) / 2 + 0.25rem)";
 
 /* ------------------------------------------------------------------ */
 /*  Hero cards (hardcoded). Replace video / poster paths with yours.   */
@@ -52,7 +62,7 @@ const heroCards: HeroCard[] = [
     tagline: "Recover. Reset. Recharge.",
     description:
       "Advanced cold therapy for recovery, revitalisation, and total-body wellness.",
-    video: "/assets/images/epsom-final-images/reel-web-2.mp4",
+    video: "/assets/images/epsom-final-images/cryotherapy-vid.mp4",
     poster: "/assets/images/epsom-final-images/hero-card-1.jpg",
   },
   {
@@ -64,7 +74,7 @@ const heroCards: HeroCard[] = [
     tagline: "Breathe better. Recover smarter.",
     description:
       "Discover advanced oxygen therapy designed to support recovery and overall wellness.",
-    video: "/assets/images/epsom-final-images/reel-web-4.mp4",
+    video: "/assets/images/epsom-final-images/hbot-vid.mp4",
     poster: "/assets/images/epsom-final-images/hero-card-2.jpg",
   },
   {
@@ -76,7 +86,7 @@ const heroCards: HeroCard[] = [
     tagline: "Sculpt your body. Elevate your confidence.",
     description:
       "Advanced body-contouring solutions tailored to your aesthetic goals.",
-    video: "/assets/images/epsom-final-images/reel-web.mp4",
+    video: "/assets/images/epsom-final-images/cryolipolysis-vid.mp4",
     poster: "/assets/images/home-banner/card-3.jpg",
   },
   {
@@ -88,19 +98,19 @@ const heroCards: HeroCard[] = [
     tagline: "Replenish within. Feel revitalised.",
     description:
       "Personalised IV wellness solutions designed around your individual needs.",
-    video: "/assets/images/epsom-final-images/reel-web.mp4",
+    video: "/assets/images/epsom-final-images/IV-Drip-Vid.mp4",
     poster: "/assets/images/home-banner/card-4.jpg",
   },
   {
     id: "skin-lift",
-    pill: "Advanced skin treatments",                  
+    pill: "Advanced skin treatments",
     pillIcon: "skin",
     title: "Skin Lift",
     panelIcon: "skin",
     tagline: "Lift your glow. Reveal your radiance.",
     description:
       "Advanced skin treatments for a firmer, smoother-looking complexion.",
-    video: "/assets/images/epsom-final-images/reel-web.mp4",
+    video: "/assets/images/epsom-final-images/skin-lift.mp4",
     poster: "/assets/images/home-banner/card-5.jpg",
   },
 ];
@@ -138,7 +148,59 @@ function HeroIcon({
   );
 }
 
+function Chevron({ direction }: { direction: "left" | "right" }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="h-5 w-5"
+      aria-hidden="true"
+    >
+      <path d={direction === "left" ? "m15 18-6-6 6-6" : "m9 18 6-6-6-6"} />
+    </svg>
+  );
+}
+
 export function HomePage() {
+  /* ---- Banner < > controls ---- */
+  const heroListRef = useRef<HTMLUListElement>(null);
+  const [canPrev, setCanPrev] = useState(false);
+  const [canNext, setCanNext] = useState(true);
+
+  const updateHeroButtons = useCallback(() => {
+    const el = heroListRef.current;
+    if (!el) return;
+    setCanPrev(el.scrollLeft > 4);
+    setCanNext(el.scrollLeft + el.clientWidth < el.scrollWidth - 4);
+  }, []);
+
+  useEffect(() => {
+    const el = heroListRef.current;
+    if (!el) return;
+    updateHeroButtons();
+    el.addEventListener("scroll", updateHeroButtons, { passive: true });
+    window.addEventListener("resize", updateHeroButtons);
+    return () => {
+      el.removeEventListener("scroll", updateHeroButtons);
+      window.removeEventListener("resize", updateHeroButtons);
+    };
+  }, [updateHeroButtons]);
+
+  const scrollHeroByCard = (direction: 1 | -1) => {
+    const el = heroListRef.current;
+    if (!el) return;
+    const firstCard = el.querySelector("li");
+    const gap = parseFloat(getComputedStyle(el).columnGap) || 12;
+    const step = firstCard
+      ? firstCard.getBoundingClientRect().width + gap
+      : el.clientWidth * 0.8;
+    el.scrollBy({ left: direction * step, behavior: "smooth" });
+  };
+
   const medicalBusiness = {
     "@context": "https://schema.org",
     "@type": "MedicalBusiness",
@@ -185,90 +247,117 @@ export function HomePage() {
             Advanced Wellness Clinic in Mumbai for Longevity &amp; Recovery
           </h1>
 
-          {/* Below xl: swipeable row. xl and up: 5-column grid. */}
-          <ul
-            className="-mx-4 flex list-none snap-x snap-mandatory scroll-px-4 gap-3 overflow-x-auto px-4 pb-3 m-0 md:-mx-6 md:scroll-px-6 md:gap-4 md:px-6 xl:mx-0 xl:grid xl:grid-cols-5 xl:gap-4 xl:overflow-visible xl:px-0 xl:pb-0 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
-            aria-label="Featured services"
-          >
-            {heroCards.map((card) => (
-              <li
-                key={card.id}
-                className="flex shrink-0 snap-start basis-[84%] flex-col items-center gap-5 sm:basis-[50%] md:basis-[40%] lg:basis-[31%] xl:min-w-0 xl:basis-auto"
-              >
-                {/* ---- Card ---- */}
-                <article className="relative h-[clamp(600px,84vh,760px)] w-full overflow-hidden rounded-[2rem] border border-white/80 bg-[#8f7565] shadow-[0_18px_40px_-18px_rgba(60,35,20,0.55)]">
-                  <video
-                    autoPlay
-                    muted
-                    loop
-                    playsInline
-                    preload="auto"
-                    poster={card.poster}
-                    aria-hidden="true"
-                    className="absolute inset-0 h-full w-full object-cover object-top"
-                  >
-                    <source src={card.video} type="video/mp4" />
-                  </video>
+          <div className="relative">
+            {/* ---- Previous ( < ) : small devices only ---- */}
+            <button
+              type="button"
+              onClick={() => scrollHeroByCard(-1)}
+              disabled={!canPrev}
+              aria-label="Previous service"
+              className={`${ARROW_BTN_CLASS} left-1 md:left-2`}
+              style={{ top: ARROW_TOP }}
+            >
+              <Chevron direction="left" />
+            </button>
 
-                  {/* Soft fade from the media into the panel */}
-                  <div
-                    className="pointer-events-none absolute inset-x-0 bottom-0 h-[40%] bg-gradient-to-t from-[#E9DCCF]/95 via-[#E9DCCF]/40 to-transparent"
-                    aria-hidden="true"
-                  />
+            {/* ---- Next ( > ) : small devices only ---- */}
+            <button
+              type="button"
+              onClick={() => scrollHeroByCard(1)}
+              disabled={!canNext}
+              aria-label="Next service"
+              className={`${ARROW_BTN_CLASS} right-1 md:right-2`}
+              style={{ top: ARROW_TOP }}
+            >
+              <Chevron direction="right" />
+            </button>
 
-                  {/* Top pill */}
-                  <div className="absolute inset-x-4 top-5 md:inset-x-5">
-                    <span className="inline-flex max-w-full items-center gap-2.5 rounded-full border border-white/60 bg-white/55 py-1.5 pl-1.5 pr-4 text-[0.9rem] font-medium leading-tight text-epsom-ink backdrop-blur-md">
-                      <span className="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-white text-epsom-ink">
-                        <HeroIcon name={card.pillIcon} className="h-5 w-5" />
-                      </span>
-                      <span className="min-w-0 max-w-[9.5rem] [text-wrap:balance]">
-                        {card.pill}
-                      </span>
-                    </span>
-                  </div>
+            {/* Below xl: swipeable row. xl and up: 5-column grid. */}
+            <ul
+              ref={heroListRef}
+              className="-mx-4 flex list-none snap-x snap-mandatory scroll-px-4 gap-3 overflow-x-auto px-4 pb-3 m-0 md:-mx-6 md:scroll-px-6 md:gap-4 md:px-6 xl:mx-0 xl:grid xl:grid-cols-5 xl:gap-4 xl:overflow-visible xl:px-0 xl:pb-0 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+              aria-label="Featured services"
+            >
+              {heroCards.map((card) => (
+                <li
+                  key={card.id}
+                  className="flex shrink-0 snap-start basis-[84%] flex-col items-center gap-5 sm:basis-[50%] md:basis-[40%] lg:basis-[31%] xl:min-w-0 xl:basis-auto"
+                >
+                  {/* ---- Card ---- */}
+                  <article className="relative h-[clamp(600px,84vh,760px)] w-full overflow-hidden rounded-[2rem] border border-white/80 bg-[#8f7565] shadow-[0_18px_40px_-18px_rgba(60,35,20,0.55)]">
+                    <video
+                      autoPlay
+                      muted
+                      loop
+                      playsInline
+                      preload="auto"
+                      poster={card.poster}
+                      aria-hidden="true"
+                      className="absolute inset-0 h-full w-full object-cover object-top"
+                    >
+                      <source src={card.video} type="video/mp4" />
+                    </video>
 
-                  {/* Frosted info panel: compact, flush with the card edges */}
-                  <div className="absolute inset-x-0 bottom-0 h-[13rem] overflow-hidden rounded-t-[1.75rem] border-t border-white/70 bg-gradient-to-b from-white/55 to-white/35 px-4 pb-4 pt-4 backdrop-blur-xl md:px-5">
-                    {/* Small min height just keeps the dividers level across cards */}
-                    <div className="flex min-h-[4.25rem] items-start gap-3">
-                      <span className="grid h-12 w-12 shrink-0 place-items-center rounded-full bg-white text-epsom-ink">
-                        <HeroIcon name={card.panelIcon} className="h-6 w-6" />
-                      </span>
-                      <div className="min-w-0 flex-1">
-                        <h2 className="font-display text-[clamp(1rem,1.15vw,1.3rem)] font-semibold uppercase leading-[1.1] text-epsom-ink [overflow-wrap:normal] [word-break:normal]">
-                          {card.title}
-                        </h2>
-                        <p className="mt-1 text-[0.72rem] uppercase leading-snug tracking-[0.02em] text-epsom-ink/80">
-                          {card.tagline}
-                        </p>
-                      </div>
-                    </div>
-
-                    <span
-                      className="block h-0.5 w-9 bg-epsom-ink/80"
+                    {/* Soft fade from the media into the panel */}
+                    <div
+                      className="pointer-events-none absolute inset-x-0 bottom-0 h-[40%] bg-gradient-to-t from-[#E9DCCF]/95 via-[#E9DCCF]/40 to-transparent"
                       aria-hidden="true"
                     />
 
-                    <p className="mt-2.5 text-[0.875rem] leading-relaxed text-epsom-ink/85">
-                      {card.description}
-                    </p>
-                  </div>
-                </article>
+                    {/* Top pill */}
+                    <div className="absolute inset-x-4 top-5 md:inset-x-5">
+                      <span className="inline-flex max-w-full items-center gap-2.5 rounded-full border border-white/60 bg-white/55 py-1.5 pl-1.5 pr-4 text-[0.9rem] font-medium leading-tight text-epsom-ink backdrop-blur-md">
+                        <span className="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-white text-epsom-ink">
+                          <HeroIcon name={card.pillIcon} className="h-5 w-5" />
+                        </span>
+                        <span className="min-w-0 max-w-[9.5rem] [text-wrap:balance]">
+                          {card.pill}
+                        </span>
+                      </span>
+                    </div>
 
-                {/* ---- Book Now (WhatsApp) ---- */}
-                <a
-                  href={WHATSAPP_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={`Book ${card.title} on WhatsApp`}
-                  className={BOOK_BTN_CLASS}
-                >
-                  Book Now
-                </a>
-              </li>
-            ))}
-          </ul>
+                    {/* Frosted info panel: compact, flush with the card edges */}
+                    <div className="absolute inset-x-0 bottom-0 h-[13rem] overflow-hidden rounded-t-[1.75rem] border-t border-white/70 bg-gradient-to-b from-white/55 to-white/35 px-4 pb-4 pt-4 backdrop-blur-xl md:px-5">
+                      {/* Small min height just keeps the dividers level across cards */}
+                      <div className="flex min-h-[4.25rem] items-start gap-3">
+                        <span className="grid h-12 w-12 shrink-0 place-items-center rounded-full bg-white text-epsom-ink">
+                          <HeroIcon name={card.panelIcon} className="h-6 w-6" />
+                        </span>
+                        <div className="min-w-0 flex-1">
+                          <h2 className="font-display text-[clamp(1rem,1.15vw,1.3rem)] font-semibold uppercase leading-[1.1] text-epsom-ink [overflow-wrap:normal] [word-break:normal]">
+                            {card.title}
+                          </h2>
+                          <p className="mt-1 text-[0.72rem] uppercase leading-snug tracking-[0.02em] text-epsom-ink/80">
+                            {card.tagline}
+                          </p>
+                        </div>
+                      </div>
+
+                      <span
+                        className="block h-0.5 w-9 bg-epsom-ink/80"
+                        aria-hidden="true"
+                      />
+
+                      <p className="mt-2.5 text-[0.875rem] leading-relaxed text-epsom-ink/85">
+                        {card.description}
+                      </p>
+                    </div>
+                  </article>
+
+                  {/* ---- Book Now (WhatsApp) ---- */}
+                  <a
+                    href={WHATSAPP_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`Book ${card.title} on WhatsApp`}
+                    className={BOOK_BTN_CLASS}
+                  >
+                    Book Now
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </section>
 
