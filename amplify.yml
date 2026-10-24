@@ -9,8 +9,8 @@ frontend:
             tar -xzf /tmp/git-lfs.tar.gz -C /tmp
             sudo /tmp/git-lfs-3.6.1/install.sh
           fi
-        - git lfs install
-        - git lfs pull
+        - git lfs install || true
+        - git lfs pull || true
         - npm ci
     build:
       commands:
