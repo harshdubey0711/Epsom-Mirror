@@ -34,7 +34,7 @@ npm start
 1. Open the file in the table below.
 2. Change text / images / metadata.
 3. Save, check in the browser at `npm run dev`.
-4. Commit and push (see [Publish to GitHub](#publish-to-github)).
+4. Commit and deploy (see [docs/DEPLOY.md](docs/DEPLOY.md)).
 
 | URL | Where to go | What to edit |
 |---|---|---|
@@ -73,49 +73,19 @@ npm run dev
 # 4. Publish (see below)
 ```
 
-## Publish to GitHub
+## Publish (AWS Amplify)
 
-Remote:
+Live site: [https://www.epsomwellnessandlongevity.com](https://www.epsomwellnessandlongevity.com)
 
-```text
-https://github.com/rishabhworkspace77-lab/epsom_revamp.git
-```
-
-After you finish edits:
+Push `main` to **CodeCommit** (not GitHub). Amplify auto-builds.
 
 ```bash
-git status
 git add .
 git commit -m "Describe what you changed"
-git push -u origin main
+npm run deploy
 ```
 
-Examples:
-
-```bash
-git add app/franchise/page.tsx content/franchise.ts components/FranchiseEnquiryForm.tsx public/assets/images/franchise/
-git commit -m "Update franchise page content and banner"
-git push origin main
-```
-
-```bash
-git add app/about/page.tsx public/assets/images/about/
-git commit -m "Update about page story and hero image"
-git push origin main
-```
-
-```bash
-git add content/home.ts data/seo-nav.json
-git commit -m "Update home treatment copy and popular searches"
-git push origin main
-```
-
-If the remote is not set yet:
- 
-```bash
-git remote add origin https://github.com/rishabhworkspace77-lab/epsom_revamp.git
-git push -u origin main
-```
+Full notes, env vars, and DNS: [docs/DEPLOY.md](docs/DEPLOY.md).
 
 Do **not** commit `.env.local` (secrets). `.env.example` is safe to keep in the repo.
 
@@ -128,6 +98,7 @@ npm run build
 npm start
 npm run typecheck
 npm run lint
+npm run deploy
 ```
 
 ## Folder structure
