@@ -16,16 +16,9 @@ import {
 } from "@/content/home";
 import { faqItems, faqSchemaAnswers } from "@/content/faq";
 import { asset } from "@/lib/assets";
-import { SITE_URL } from "@/lib/site";
+import { SITE_URL, whatsappChatUrl } from "@/lib/site";
 
-/* WhatsApp booking link */
-const WHATSAPP_NUMBER = "919004056251";
-const WHATSAPP_MESSAGE =
-  "Hi Epsom Wellness, I would like to book an appointment.";
-
-const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
-  WHATSAPP_MESSAGE
-)}`;
+const WHATSAPP_URL = whatsappChatUrl();
 
 const BOOK_BTN_CLASS =
   "btn-outline whitespace-nowrap !border-[#D4A24C] !bg-[#D4A24C] !text-white shadow-[0_10px_24px_-8px_rgba(60,35,20,0.6)] transition duration-300 hover:-translate-y-0.5 hover:!border-[#C2903B] hover:!bg-[#C2903B] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white";

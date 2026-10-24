@@ -2,6 +2,7 @@ import Image from "next/image";
 import { BookButton } from "@/components/BookButton";
 import { FaqSection } from "@/components/FaqSection";
 import { TherapyAccordion } from "@/components/TherapyAccordion";
+import { whatsappChatUrl } from "@/lib/site";
 import type { SiteLocation, LocationPageContent } from "@/lib/types";
 
 type LocationPageProps = {
@@ -55,7 +56,7 @@ export function LocationPage({ location, content }: LocationPageProps) {
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center items-center">
             <BookButton>Book an Appointment</BookButton>
             <a
-              href={contact.whatsappUrl}
+              href={whatsappChatUrl()}
               target="_blank"
               rel="noopener noreferrer"
               className="btn-outline"
@@ -227,7 +228,7 @@ export function LocationPage({ location, content }: LocationPageProps) {
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center items-center">
             <BookButton>Book an Appointment</BookButton>
             <a
-              href={contact.whatsappUrl}
+              href={whatsappChatUrl()}
               target="_blank"
               rel="noopener noreferrer"
               className="btn-outline"

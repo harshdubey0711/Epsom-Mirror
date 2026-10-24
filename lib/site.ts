@@ -7,6 +7,12 @@ export const seoNav = seoNavJson as unknown as SeoNav;
 export const siteConfig = siteConfigJson as SiteConfig;
 export const SITE_URL = siteConfig.domain;
 
+export function whatsappChatUrl(): string {
+  return `https://wa.me/${siteConfig.whatsapp.number}?text=${encodeURIComponent(
+    siteConfig.whatsapp.defaultMessage
+  )}`;
+}
+
 export const SALON_CATEGORY: Category = {
   slug: "salon",
   name: "Salon",

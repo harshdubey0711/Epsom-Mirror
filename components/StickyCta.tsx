@@ -1,11 +1,9 @@
 "use client";
 
-import { siteConfig } from "@/lib/site";
+import { siteConfig, whatsappChatUrl } from "@/lib/site";
 
-export function StickyCta({ pageContext }: { pageContext?: string }) {
-  let msg = siteConfig.whatsapp.defaultMessage;
-  if (pageContext) msg += ` Interested in: ${pageContext}`;
-  const waUrl = `https://wa.me/${siteConfig.whatsapp.number}?text=${encodeURIComponent(msg)}`;
+export function StickyCta() {
+  const waUrl = whatsappChatUrl();
   const phone = siteConfig.contact.phones[1] || siteConfig.contact.phones[0];
 
   return (

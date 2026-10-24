@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { seoNav } from "@/lib/site";
+import { seoNav, whatsappChatUrl } from "@/lib/site";
 
 export function Header() {
   const [megaOpen, setMegaOpen] = useState(false);
@@ -58,7 +58,7 @@ export function Header() {
           </div>
           <div className="flex items-center gap-3">
             <a
-              href="https://wa.me/919004056251"
+              href={whatsappChatUrl()}
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-white/80 transition inline-flex items-center gap-2"
