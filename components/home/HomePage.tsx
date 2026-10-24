@@ -349,10 +349,7 @@ export function HomePage() {
             </p>
 
             <p className="mt-4 text-base leading-relaxed text-epsom-muted md:text-lg">
-              Whether your goal is cellular regeneration, chronic pain relief,
-              aesthetic rejuvenation, or athletic performance, our integrated
-              medical-wellness approach helps you achieve peak vitality and
-              long-term well-being.
+             Whether you want to improve your overall health, manage pain, refresh your appearance, or boost athletic performance, our wellness treatments help you feel better, look your best, and stay healthy for longer.
             </p>
 
             <Link href="/about/" className="btn-outline mt-8 inline-flex">
