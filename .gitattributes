@@ -1,9 +1,2 @@
-*.mp4 filter=lfs diff=lfs merge=lfs -text
-*.mov filter=lfs diff=lfs merge=lfs -text
-*.psd filter=lfs diff=lfs merge=lfs -text
-
-public/assets/images/epsom-final-images/cryotherapy-vid.mp4 -filter -diff -merge -text
-public/assets/images/epsom-final-images/hbot-vid.mp4 -filter -diff -merge -text
-public/assets/images/epsom-final-images/cryolipolysis-vid.mp4 -filter -diff -merge -text
-public/assets/images/epsom-final-images/IV-Drip-Vid.mp4 -filter -diff -merge -text
-public/assets/images/epsom-final-images/skin-lift.mp4 -filter -diff -merge -text
+# Videos and Photoshop files are stored on S3, not in git.
+# See docs/DEPLOY.md and scripts/sync-assets.sh.

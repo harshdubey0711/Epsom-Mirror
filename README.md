@@ -56,7 +56,8 @@ npm start
 | `/locations/santacruz/` etc. | [`app/locations/[slug]/page.tsx`](app/locations/[slug]/page.tsx) + [`data/seo-nav.json`](data/seo-nav.json) + [`data/site-config.json`](data/site-config.json) | Nav labels/addresses in `seo-nav.json` `locations`; booking/maps/GMB in `site-config.json` `locations` |
 | Header / Footer / nav | [`components/Header.tsx`](components/Header.tsx), [`components/Footer.tsx`](components/Footer.tsx), [`data/seo-nav.json`](data/seo-nav.json) | Menu links, footer columns, phones, social |
 | Site-wide brand, phones, WhatsApp, social | [`data/site-config.json`](data/site-config.json) | Domain, contact, locations, WhatsApp, social URLs |
-| Images / videos | [`public/assets/`](public/assets/) | Add files here; reference as `/assets/images/...` or `/assets/videos/...` |
+| Images | [`public/assets/`](public/assets/) | Add files here; reference as `/assets/images/...` |
+| Videos | S3 (`npm run sync-assets`) | Use `asset("/assets/...")` from [`lib/assets.ts`](lib/assets.ts). See [docs/DEPLOY.md](docs/DEPLOY.md) |
 | SEO title & description | Same `app/.../page.tsx` as the page (or `generateMetadata` in `[slug]` / locations) | See [docs/SEO.md](docs/SEO.md) |
 
 ### Typical content-edit workflow
@@ -99,6 +100,7 @@ npm start
 npm run typecheck
 npm run lint
 npm run deploy
+npm run sync-assets
 ```
 
 ## Folder structure

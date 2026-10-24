@@ -3,14 +3,6 @@ frontend:
   phases:
     preBuild:
       commands:
-        - |
-          if ! command -v git-lfs >/dev/null 2>&1; then
-            curl -sL https://github.com/git-lfs/git-lfs/releases/download/v3.6.1/git-lfs-linux-amd64-v3.6.1.tar.gz -o /tmp/git-lfs.tar.gz
-            tar -xzf /tmp/git-lfs.tar.gz -C /tmp
-            sudo /tmp/git-lfs-3.6.1/install.sh
-          fi
-        - git lfs install || true
-        - git lfs pull || true
         - npm ci
     build:
       commands:

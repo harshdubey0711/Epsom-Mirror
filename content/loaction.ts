@@ -57,7 +57,7 @@ export const locationPageContent: Record<string, LocationPageContent> = {
     // TODO: replace with the real Santacruz number (digits only after 91 in the WhatsApp link)
     contact: {
       phone: "+919867670764",
-      whatsappUrl: "https://wa.me/919867670764",
+      whatsappUrl: "https://wa.me/919004056251",
     },
     intro: {
       heading: "Welcome to Epsom Wellness in Santacruz West",
@@ -154,7 +154,7 @@ export const locationPageContent: Record<string, LocationPageContent> = {
     // TODO: replace with the real Andheri number
     contact: {
       phone: "+917400401306",
-      whatsappUrl: "https://wa.me/917400401306",
+      whatsappUrl: "https://wa.me/919004056251",
     },
     intro: {
       heading: "Welcome to Epsom Wellness Andheri West.",
@@ -249,7 +249,7 @@ export const locationPageContent: Record<string, LocationPageContent> = {
     // TODO: replace with the real Borivali number
     contact: {
       phone: "+917400401306",
-      whatsappUrl: "https://wa.me/917400401306",
+      whatsappUrl: "https://wa.me/919004056251",
     },
     intro: {
       heading: "Welcome to Epsom Wellness Borivali West.",

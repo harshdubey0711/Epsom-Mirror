@@ -6,3 +6,8 @@ out/
 .env.local
 .env*.local
 *.tsbuildinfo
+
+# Videos live on S3 (scripts/sync-assets.sh)
+*.mp4
+*.mov
+*.psd

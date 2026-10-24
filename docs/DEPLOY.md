@@ -42,7 +42,8 @@ aws login --profile epsom --region ap-south-1
 Manual push (same as the script):
 
 ```bash
-GIT_LFS_SKIP_PUSH=1 git \
+git \
+  -c credential.helper= \
   -c 'credential.helper=!aws --profile epsom --region ap-south-1 codecommit credential-helper $@' \
   -c credential.UseHttpPath=true \
   push codecommit main
@@ -50,7 +51,7 @@ GIT_LFS_SKIP_PUSH=1 git \
 
 ## What Amplify runs
 
-`amplify.yml`: install Git LFS if needed (pull is allowed to fail), `npm ci`, `npm run build`. Artifacts come from `.next` (Next.js SSR).
+`amplify.yml`: `npm ci`, `npm run build`. Artifacts come from `.next` (Next.js SSR). Videos are loaded from S3, not the git clone.
 
 Watch a job:
 
@@ -74,6 +75,7 @@ Set on the `main` branch in Amplify:
 | `CONTACT_FROM_EMAIL` | Verified Resend from-address |
 | `RESEND_API_KEY` | Required in production or `/api/contact` returns 503 |
 | `_BUILD_TIMEOUT` | `90` (minutes) |
+| `NEXT_PUBLIC_ASSET_BASE_URL` | S3 media base (`https://epsom-wellness-media-279425763584.s3.ap-south-1.amazonaws.com`) |
 
 Copy values from `.env.example`. Do not put secrets in the repo.
 
@@ -97,6 +99,17 @@ Apex `epsomwellnessandlongevity.com` uses GoDaddy **Forwarding** (302) to `https
 
 Local `main` tracks `codecommit/main`.
 
-## Videos / Git LFS
+## Videos (S3, not Git LFS)
 
-Large `.mp4` files are Git LFS on GitHub. CodeCommit does not host those LFS objects, so Amplify may ship LFS pointer files instead of real videos. `GIT_LFS_SKIP_PUSH=1` avoids a failed LFS upload on deploy. To fix missing videos later, put them on S3/CloudFront or reconnect Amplify to a GitHub repo with LFS.
+Videos are **not** in git. They live in S3 bucket `epsom-wellness-media-279425763584` (public read).
+
+| Item | Value |
+|---|---|
+| Bucket | `epsom-wellness-media-279425763584` |
+| Base URL | `https://epsom-wellness-media-279425763584.s3.ap-south-1.amazonaws.com` |
+| Helper | [`lib/assets.ts`](../lib/assets.ts) `asset("/assets/...")` |
+| Upload | `npm run sync-assets` |
+
+Hero videos on the home page use `asset(...)`. After adding a new `.mp4` under `public/`, run `npm run sync-assets` and reference it with `asset("/assets/...")`. Do not commit video files.
+
+`amplify.yml` no longer installs Git LFS.

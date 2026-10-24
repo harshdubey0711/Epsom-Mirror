@@ -15,10 +15,11 @@ import {
   wellnessNote,
 } from "@/content/home";
 import { faqItems, faqSchemaAnswers } from "@/content/faq";
+import { asset } from "@/lib/assets";
 import { SITE_URL } from "@/lib/site";
 
 /* WhatsApp booking link */
-const WHATSAPP_NUMBER = "919867670762";
+const WHATSAPP_NUMBER = "919004056251";
 const WHATSAPP_MESSAGE =
   "Hi Epsom Wellness, I would like to book an appointment.";
 
@@ -54,7 +55,7 @@ const heroCards: HeroCard[] = [
     tagline: "Recover. Reset. Recharge.",
     description:
       "Advanced cold therapy for recovery, revitalisation, and total-body wellness.",
-    video: "/assets/images/epsom-final-images/cryotherapy-vid.mp4",
+    video: asset("/assets/images/epsom-final-images/cryotherapy-vid.mp4"),
   },
   {
     id: "hbot",
@@ -65,7 +66,7 @@ const heroCards: HeroCard[] = [
     tagline: "Breathe better. Recover smarter.",
     description:
       "Discover advanced oxygen therapy designed to support recovery and overall wellness.",
-    video: "/assets/images/epsom-final-images/hbot-vid.mp4",
+    video: asset("/assets/images/epsom-final-images/hbot-vid.mp4"),
   },
   {
     id: "fat-loss-laser",
@@ -76,7 +77,7 @@ const heroCards: HeroCard[] = [
     tagline: "Sculpt your body. Elevate your confidence.",
     description:
       "Advanced body-contouring solutions tailored to your aesthetic goals.",
-    video: "/assets/images/epsom-final-images/cryolipolysis-vid.mp4",
+    video: asset("/assets/images/epsom-final-images/cryolipolysis-vid.mp4"),
   },
   {
     id: "iv-drip",
@@ -87,7 +88,7 @@ const heroCards: HeroCard[] = [
     tagline: "Replenish within. Feel revitalised.",
     description:
       "Personalised IV wellness solutions designed around your individual needs.",
-    video: "/assets/images/epsom-final-images/IV-Drip-Vid.mp4",
+    video: asset("/assets/images/epsom-final-images/IV-Drip-Vid.mp4"),
   },
   {
     id: "skin-lift",
@@ -98,7 +99,7 @@ const heroCards: HeroCard[] = [
     tagline: "Lift your glow. Reveal your radiance.",
     description:
       "Advanced skin treatments for a firmer, smoother-looking complexion.",
-    video: "/assets/images/epsom-final-images/skin-lift.mp4",
+    video: asset("/assets/images/epsom-final-images/skin-lift.mp4"),
   },
 ];
 

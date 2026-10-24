@@ -58,7 +58,7 @@ export function Header() {
           </div>
           <div className="flex items-center gap-3">
             <a
-              href="https://wa.me/919867670762"
+              href="https://wa.me/919004056251"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-white/80 transition inline-flex items-center gap-2"

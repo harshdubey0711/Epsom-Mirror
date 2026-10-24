@@ -33,7 +33,8 @@ if ! git remote get-url "$REMOTE" >/dev/null 2>&1; then
 fi
 
 echo "Pushing $BRANCH to $REMOTE..."
-GIT_LFS_SKIP_PUSH=1 AWS_PROFILE="$AWS_PROFILE" git \
+AWS_PROFILE="$AWS_PROFILE" git \
+  -c credential.helper= \
   -c "credential.helper=!aws --profile $AWS_PROFILE --region $AWS_REGION codecommit credential-helper \$@" \
   -c credential.UseHttpPath=true \
   push "$REMOTE" "$BRANCH"
