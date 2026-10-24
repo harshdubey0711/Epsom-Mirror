@@ -1,6 +1,7 @@
+
 "use client";
 
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { FaqSection } from "@/components/FaqSection";
@@ -16,28 +17,20 @@ import {
 import { faqItems, faqSchemaAnswers } from "@/content/faq";
 import { SITE_URL } from "@/lib/site";
 
-/* WhatsApp booking link (country code + number, no + or spaces) */
+/* WhatsApp booking link */
 const WHATSAPP_NUMBER = "919867670762";
 const WHATSAPP_MESSAGE =
   "Hi Epsom Wellness, I would like to book an appointment.";
+
 const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
-  WHATSAPP_MESSAGE,
+  WHATSAPP_MESSAGE
 )}`;
 
-/* Same size/shape as the "Read more" button (btn-outline), gold fill */
 const BOOK_BTN_CLASS =
   "btn-outline whitespace-nowrap !border-[#D4A24C] !bg-[#D4A24C] !text-white shadow-[0_10px_24px_-8px_rgba(60,35,20,0.6)] transition duration-300 hover:-translate-y-0.5 hover:!border-[#C2903B] hover:!bg-[#C2903B] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white";
 
-/* < > arrow buttons: visible on small devices only (hidden at xl and up) */
-const ARROW_BTN_CLASS =
-  "absolute z-20 grid h-11 w-11 -translate-y-1/2 place-items-center rounded-full border border-white/80 bg-white/85 text-epsom-ink shadow-[0_8px_20px_-6px_rgba(60,35,20,0.55)] backdrop-blur-md transition duration-200 hover:bg-white active:scale-95 disabled:pointer-events-none disabled:opacity-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#D4A24C] xl:hidden";
+const HERO_DESIGN_WIDTH = 1280;
 
-/* Vertical centre of the card (cards are clamp(600px,84vh,760px) tall) */
-const ARROW_TOP = "calc(clamp(600px, 84vh, 760px) / 2 + 0.25rem)";
-
-/* ------------------------------------------------------------------ */
-/*  Hero cards (hardcoded). Replace video / poster paths with yours.   */
-/* ------------------------------------------------------------------ */
 type HeroIconName = "snow" | "drop" | "body" | "pulse" | "drip" | "skin";
 
 type HeroCard = {
@@ -49,7 +42,6 @@ type HeroCard = {
   tagline: string;
   description: string;
   video: string;
-  poster: string;
 };
 
 const heroCards: HeroCard[] = [
@@ -63,7 +55,6 @@ const heroCards: HeroCard[] = [
     description:
       "Advanced cold therapy for recovery, revitalisation, and total-body wellness.",
     video: "/assets/images/epsom-final-images/cryotherapy-vid.mp4",
-    poster: "/assets/images/epsom-final-images/hero-card-1.jpg",
   },
   {
     id: "hbot",
@@ -75,7 +66,6 @@ const heroCards: HeroCard[] = [
     description:
       "Discover advanced oxygen therapy designed to support recovery and overall wellness.",
     video: "/assets/images/epsom-final-images/hbot-vid.mp4",
-    poster: "/assets/images/epsom-final-images/hero-card-2.jpg",
   },
   {
     id: "fat-loss-laser",
@@ -87,7 +77,6 @@ const heroCards: HeroCard[] = [
     description:
       "Advanced body-contouring solutions tailored to your aesthetic goals.",
     video: "/assets/images/epsom-final-images/cryolipolysis-vid.mp4",
-    poster: "/assets/images/home-banner/card-3.jpg",
   },
   {
     id: "iv-drip",
@@ -99,7 +88,6 @@ const heroCards: HeroCard[] = [
     description:
       "Personalised IV wellness solutions designed around your individual needs.",
     video: "/assets/images/epsom-final-images/IV-Drip-Vid.mp4",
-    poster: "/assets/images/home-banner/card-4.jpg",
   },
   {
     id: "skin-lift",
@@ -111,7 +99,6 @@ const heroCards: HeroCard[] = [
     description:
       "Advanced skin treatments for a firmer, smoother-looking complexion.",
     video: "/assets/images/epsom-final-images/skin-lift.mp4",
-    poster: "/assets/images/home-banner/card-5.jpg",
   },
 ];
 
@@ -148,58 +135,48 @@ function HeroIcon({
   );
 }
 
-function Chevron({ direction }: { direction: "left" | "right" }) {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className="h-5 w-5"
-      aria-hidden="true"
-    >
-      <path d={direction === "left" ? "m15 18-6-6 6-6" : "m9 18 6-6-6-6"} />
-    </svg>
-  );
-}
-
 export function HomePage() {
-  /* ---- Banner < > controls ---- */
-  const heroListRef = useRef<HTMLUListElement>(null);
-  const [canPrev, setCanPrev] = useState(false);
-  const [canNext, setCanNext] = useState(true);
+  const heroWrapRef = useRef<HTMLDivElement>(null);
+  const heroInnerRef = useRef<HTMLUListElement>(null);
 
-  const updateHeroButtons = useCallback(() => {
-    const el = heroListRef.current;
-    if (!el) return;
-    setCanPrev(el.scrollLeft > 4);
-    setCanNext(el.scrollLeft + el.clientWidth < el.scrollWidth - 4);
-  }, []);
+  const [heroFit, setHeroFit] = useState<{
+    scale: number;
+    height: number | null;
+  }>({ scale: 1, height: null });
 
   useEffect(() => {
-    const el = heroListRef.current;
-    if (!el) return;
-    updateHeroButtons();
-    el.addEventListener("scroll", updateHeroButtons, { passive: true });
-    window.addEventListener("resize", updateHeroButtons);
-    return () => {
-      el.removeEventListener("scroll", updateHeroButtons);
-      window.removeEventListener("resize", updateHeroButtons);
-    };
-  }, [updateHeroButtons]);
+    const wrap = heroWrapRef.current;
+    const inner = heroInnerRef.current;
 
-  const scrollHeroByCard = (direction: 1 | -1) => {
-    const el = heroListRef.current;
-    if (!el) return;
-    const firstCard = el.querySelector("li");
-    const gap = parseFloat(getComputedStyle(el).columnGap) || 12;
-    const step = firstCard
-      ? firstCard.getBoundingClientRect().width + gap
-      : el.clientWidth * 0.8;
-    el.scrollBy({ left: direction * step, behavior: "smooth" });
-  };
+    if (!wrap || !inner) return;
+
+    const update = () => {
+      if (window.innerWidth >= HERO_DESIGN_WIDTH) {
+        setHeroFit({ scale: 1, height: null });
+        return;
+      }
+
+      const scale = wrap.clientWidth / HERO_DESIGN_WIDTH;
+
+      setHeroFit({
+        scale,
+        height: inner.offsetHeight * scale,
+      });
+    };
+
+    update();
+
+    const ro = new ResizeObserver(update);
+    ro.observe(wrap);
+    ro.observe(inner);
+
+    window.addEventListener("resize", update);
+
+    return () => {
+      ro.disconnect();
+      window.removeEventListener("resize", update);
+    };
+  }, []);
 
   const medicalBusiness = {
     "@context": "https://schema.org",
@@ -225,7 +202,10 @@ export function HomePage() {
     mainEntity: faqSchemaAnswers.map((f) => ({
       "@type": "Question",
       name: f.question,
-      acceptedAnswer: { "@type": "Answer", text: f.answer },
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: f.answer,
+      },
     })),
   };
 
@@ -241,74 +221,58 @@ export function HomePage() {
           aria-hidden="true"
         />
 
-        <div className="relative mx-auto w-full max-w-[96rem] px-4 py-8 md:px-6 md:py-12 xl:px-4">
-          {/* Keeps one H1 on the page for SEO without showing text on the banner */}
+        <div className="relative mx-auto w-full max-w-[96rem] px-2 pt-4 pb-10 md:px-4 md:pt-8 md:pb-12 xl:px-4 xl:pt-12 xl:pb-14">
           <h1 className="sr-only">
             Advanced Wellness Clinic in Mumbai for Longevity &amp; Recovery
           </h1>
 
-          <div className="relative">
-            {/* ---- Previous ( < ) : small devices only ---- */}
-            <button
-              type="button"
-              onClick={() => scrollHeroByCard(-1)}
-              disabled={!canPrev}
-              aria-label="Previous service"
-              className={`${ARROW_BTN_CLASS} left-1 md:left-2`}
-              style={{ top: ARROW_TOP }}
-            >
-              <Chevron direction="left" />
-            </button>
-
-            {/* ---- Next ( > ) : small devices only ---- */}
-            <button
-              type="button"
-              onClick={() => scrollHeroByCard(1)}
-              disabled={!canNext}
-              aria-label="Next service"
-              className={`${ARROW_BTN_CLASS} right-1 md:right-2`}
-              style={{ top: ARROW_TOP }}
-            >
-              <Chevron direction="right" />
-            </button>
-
-            {/* Below xl: swipeable row. xl and up: 5-column grid. */}
+          <div
+            ref={heroWrapRef}
+            className="relative w-full overflow-hidden xl:overflow-visible"
+            style={
+              heroFit.height != null ? { height: heroFit.height } : undefined
+            }
+          >
             <ul
-              ref={heroListRef}
-              className="-mx-4 flex list-none snap-x snap-mandatory scroll-px-4 gap-3 overflow-x-auto px-4 pb-3 m-0 md:-mx-6 md:scroll-px-6 md:gap-4 md:px-6 xl:mx-0 xl:grid xl:grid-cols-5 xl:gap-4 xl:overflow-visible xl:px-0 xl:pb-0 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+              ref={heroInnerRef}
+              className="m-0 grid w-[1280px] list-none grid-cols-5 gap-4 p-0 px-4 pb-4 origin-top-left xl:w-full xl:px-0 xl:pb-0"
+              style={
+                heroFit.scale !== 1
+                  ? { transform: `scale(${heroFit.scale})` }
+                  : undefined
+              }
               aria-label="Featured services"
             >
               {heroCards.map((card) => (
                 <li
                   key={card.id}
-                  className="flex shrink-0 snap-start basis-[84%] flex-col items-center gap-5 sm:basis-[50%] md:basis-[40%] lg:basis-[31%] xl:min-w-0 xl:basis-auto"
+                  className="flex min-w-0 flex-col items-center gap-5"
                 >
-                  {/* ---- Card ---- */}
                   <article className="relative h-[clamp(600px,84vh,760px)] w-full overflow-hidden rounded-[2rem] border border-white/80 bg-[#8f7565] shadow-[0_18px_40px_-18px_rgba(60,35,20,0.55)]">
                     <video
                       autoPlay
                       muted
                       loop
                       playsInline
-                      preload="auto"
-                      poster={card.poster}
+                      preload="metadata"
                       aria-hidden="true"
                       className="absolute inset-0 h-full w-full object-cover object-top"
                     >
                       <source src={card.video} type="video/mp4" />
                     </video>
 
-                    {/* Soft fade from the media into the panel */}
                     <div
                       className="pointer-events-none absolute inset-x-0 bottom-0 h-[40%] bg-gradient-to-t from-[#E9DCCF]/95 via-[#E9DCCF]/40 to-transparent"
                       aria-hidden="true"
                     />
 
-                    {/* Top pill */}
                     <div className="absolute inset-x-4 top-5 md:inset-x-5">
                       <span className="inline-flex max-w-full items-center gap-2.5 rounded-full border border-white/60 bg-white/55 py-1.5 pl-1.5 pr-4 text-[0.9rem] font-medium leading-tight text-epsom-ink backdrop-blur-md">
                         <span className="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-white text-epsom-ink">
-                          <HeroIcon name={card.pillIcon} className="h-5 w-5" />
+                          <HeroIcon
+                            name={card.pillIcon}
+                            className="h-5 w-5"
+                          />
                         </span>
                         <span className="min-w-0 max-w-[9.5rem] [text-wrap:balance]">
                           {card.pill}
@@ -316,17 +280,20 @@ export function HomePage() {
                       </span>
                     </div>
 
-                    {/* Frosted info panel: compact, flush with the card edges */}
                     <div className="absolute inset-x-0 bottom-0 h-[13rem] overflow-hidden rounded-t-[1.75rem] border-t border-white/70 bg-gradient-to-b from-white/55 to-white/35 px-4 pb-4 pt-4 backdrop-blur-xl md:px-5">
-                      {/* Small min height just keeps the dividers level across cards */}
                       <div className="flex min-h-[4.25rem] items-start gap-3">
                         <span className="grid h-12 w-12 shrink-0 place-items-center rounded-full bg-white text-epsom-ink">
-                          <HeroIcon name={card.panelIcon} className="h-6 w-6" />
+                          <HeroIcon
+                            name={card.panelIcon}
+                            className="h-6 w-6"
+                          />
                         </span>
+
                         <div className="min-w-0 flex-1">
                           <h2 className="font-display text-[clamp(1rem,1.15vw,1.3rem)] font-semibold uppercase leading-[1.1] text-epsom-ink [overflow-wrap:normal] [word-break:normal]">
                             {card.title}
                           </h2>
+
                           <p className="mt-1 text-[0.72rem] uppercase leading-snug tracking-[0.02em] text-epsom-ink/80">
                             {card.tagline}
                           </p>
@@ -344,7 +311,6 @@ export function HomePage() {
                     </div>
                   </article>
 
-                  {/* ---- Book Now (WhatsApp) ---- */}
                   <a
                     href={WHATSAPP_URL}
                     target="_blank"
@@ -362,14 +328,19 @@ export function HomePage() {
       </section>
 
       {/* ============================== ABOUT ============================== */}
-      <section className="py-16 md:py-24 px-4">
-        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 md:gap-16 items-center">
-          <div>
-            <p className="text-epsom-maroon text-sm uppercase tracking-[0.18em] font-medium mb-3">
+      <section className="px-4 py-16 md:py-24">
+        <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-10 md:grid-cols-2 md:gap-12 lg:gap-16">
+          {/* Text column */}
+          <div className="min-w-0">
+            <p className="mb-3 text-sm font-medium uppercase tracking-[0.18em] text-epsom-maroon">
               About Epsom Wellness
             </p>
 
-            <p className="text-epsom-muted leading-relaxed mt-6 text-base md:text-lg">
+            <h2 className="font-display text-3xl leading-tight text-epsom-ink md:text-4xl">
+              Wellness, Recovery &amp; Longevity
+            </h2>
+
+            <p className="mt-6 text-base leading-relaxed text-epsom-muted md:text-lg">
               Welcome to Epsom Wellness, the leading wellness clinic in Mumbai
               dedicated to transforming your health from the cellular level. As
               a premier wellness &amp; longevity clinic in Mumbai, we combine
@@ -377,31 +348,33 @@ export function HomePage() {
               therapies.
             </p>
 
-            <p className="text-epsom-muted leading-relaxed mt-4 text-base md:text-lg">
+            <p className="mt-4 text-base leading-relaxed text-epsom-muted md:text-lg">
               Whether your goal is cellular regeneration, chronic pain relief,
               aesthetic rejuvenation, or athletic performance, our integrated
               medical-wellness approach helps you achieve peak vitality and
               long-term well-being.
             </p>
 
-            <Link href="/about/" className="btn-outline mt-8">
+            <Link href="/about/" className="btn-outline mt-8 inline-flex">
               Read more
             </Link>
           </div>
 
-          <div className="relative">
-            <div className="aspect-square overflow-hidden rounded-2xl border border-epsom-crystal/35 shadow-soft-lg relative">
+          {/* Image column */}
+          <div className="relative mx-auto w-full max-w-xl md:mx-0 md:max-w-none">
+            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl border border-epsom-crystal/35 shadow-soft-lg md:aspect-[5/4]">
               <Image
-                src="/assets/images/imagesEpsom/home-feature.png"
+                src="/assets/images/epsom-final-images/home-feature.webp"
                 alt="Epsom Wellness wellness experience"
                 fill
+                priority
+                sizes="(max-width: 767px) 100vw, (max-width: 1279px) 50vw, 600px"
                 className="object-cover"
-                sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
 
             <div
-              className="absolute -bottom-3 -left-3 w-24 h-24 border border-epsom-maroon/40 rounded-2xl pointer-events-none hidden md:block"
+              className="pointer-events-none absolute -bottom-3 -left-3 hidden h-24 w-24 rounded-2xl border border-epsom-maroon/40 md:block"
               aria-hidden="true"
             />
           </div>
@@ -410,17 +383,23 @@ export function HomePage() {
 
       {/* ========================= CATEGORY SECTIONS ========================= */}
       {homeCategorySections.map((section) => (
-        <section key={section.id} id={section.id} className={section.bandClass}>
-          <div className="max-w-7xl mx-auto px-4">
-            <div className="flex items-center justify-between gap-4 mt-12 mb-8">
-              <h2 className="section-heading !text-3xl md:!text-4xl min-w-0 flex-1">
+        <section
+          key={section.id}
+          id={section.id}
+          className={section.bandClass}
+        >
+          <div className="mx-auto max-w-7xl px-4">
+            <div className="mt-10 mb-6 flex items-center justify-between gap-3 sm:gap-4 md:mt-12 md:mb-8">
+              <h2 className="section-heading !m-0 min-w-0 flex-1 !text-xl !leading-tight sm:!text-3xl md:!text-4xl">
                 {section.title}
               </h2>
+
               <Link
                 href={`/${section.slug}/`}
-                className="btn-ghost shrink-0 whitespace-nowrap ml-auto"
+                className="btn-ghost shrink-0 !px-2 !py-1 !text-right !text-[0.7rem] leading-tight sm:!px-4 sm:!py-2 sm:!text-base sm:whitespace-nowrap"
               >
-                View All Treatments →
+                View All
+                <span className="hidden sm:inline"> Treatments</span> →
               </Link>
             </div>
           </div>
@@ -434,26 +413,28 @@ export function HomePage() {
       ))}
 
       {/* ============================ WHY CHOOSE US ============================ */}
-      <section className="py-20 px-4">
-        <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-12">
+      <section className="px-4 py-20">
+        <div className="mx-auto max-w-5xl">
+          <div className="mb-12 text-center">
             <h2 className="section-heading">Why Choose Us?</h2>
           </div>
-          <ul className="grid sm:grid-cols-2 gap-x-10 list-none p-0">
+
+          <ul className="grid list-none gap-x-10 p-0 sm:grid-cols-2">
             {whyChooseUs.map((item, i) => (
               <RevealLtr
                 key={item.title}
                 delay={i * 40}
-                className={`flex gap-4 py-5 border-b border-epsom-crystal/35${
+                className={`flex gap-4 border-b border-epsom-crystal/35 py-5${
                   i >= 4 ? " sm:border-b-0" : ""
                 }${i === 5 ? " border-b-0" : ""}`}
               >
                 <span
-                  className="text-epsom-maroon mt-1 shrink-0"
+                  className="mt-1 shrink-0 text-epsom-maroon"
                   aria-hidden="true"
                 >
                   ✓
                 </span>
+
                 <div>
                   <h3 className="font-semibold text-epsom-ink">
                     {item.title}
@@ -467,41 +448,43 @@ export function HomePage() {
 
       {/* ============================== BENEFITS ============================== */}
       <section className="benefits-band">
-        <div className="max-w-7xl mx-auto text-center">
+        <div className="mx-auto max-w-7xl text-center">
           <h2 className="section-heading">
             Benefits of Therapies &amp; Treatments
           </h2>
           <div className="benefits-heading-rule" aria-hidden="true" />
         </div>
-        <div className="max-w-5xl mx-auto grid sm:grid-cols-2 gap-x-12">
+
+        <div className="mx-auto grid max-w-5xl gap-x-12 sm:grid-cols-2">
           {benefits.map((benefit) => (
             <div key={benefit} className="benefit-item">
               <span className="benefit-bullet" aria-hidden="true" />
-              <p className="text-epsom-ink font-medium">{benefit}</p>
+              <p className="font-medium text-epsom-ink">{benefit}</p>
             </div>
           ))}
         </div>
       </section>
 
       {/* ================================= FAQ ================================= */}
-      <FaqSection title="Epsom Wellness & Longevity FAQs" items={faqItems} />
+      <FaqSection
+        title="Epsom Wellness & Longevity FAQs"
+        items={faqItems}
+      />
 
       {/* ============================ WELLNESS NOTE ============================ */}
       <section className="py-12">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="font-display text-2xl md:text-3xl text-epsom-ink">
+        <div className="mx-auto max-w-4xl text-center">
+          <h2 className="font-display text-2xl text-epsom-ink md:text-3xl">
             {wellnessNote.title}
           </h2>
 
-          <p className="text-epsom-muted mt-4 leading-relaxed">
+          <p className="mt-4 leading-relaxed text-epsom-muted">
             {wellnessNote.description}
           </p>
         </div>
       </section>
 
-      {/* Popular Searches section removed for now.
-          To re-enable, import { normalizeHref, seoNav } from "@/lib/site"
-          and restore the block. */}
+      {/* Popular Searches section removed for now. */}
     </main>
   );
 }

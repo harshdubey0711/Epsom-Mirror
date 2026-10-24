@@ -8,9 +8,9 @@
   import ServiceBenefits from "@/components/ServiceBenefits";
   import RightForYouSection from "@/components/RightForYouSection";
 
-  import seoNav from "@/data/seo-nav.json";
-  import { Suspense } from "react";
-    import type { TreatmentRef } from "@/lib/types";
+
+ 
+
 import {
   allDynamicSlugs,
   getCategory,
@@ -99,10 +99,6 @@ import Link from "next/link";
     */
 
     
-    type Props = {
-      treatments: TreatmentRef[];
-      categorySlug?: string;
-    };
 
     if (isCategorySlug(slug)) {
       const category = getCategory(slug)!;
@@ -133,8 +129,7 @@ import Link from "next/link";
       const cta =
         category.cta;
 
-      const introduction =
-        category.introduction;
+  
 
       /*
       * ==========================================================
@@ -582,8 +577,7 @@ import Link from "next/link";
     //     .find((t) => t.slug === slug)?.name ??
     //   service.title.trim();
 
-    const getservice =
-      services[slug as keyof typeof services];
+
 
     if (!service) {
       notFound();

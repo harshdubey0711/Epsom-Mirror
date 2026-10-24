@@ -1,9 +1,9 @@
 export default {
   "cryotherapy": {
     "title": "Whole Body Cryotherapy ",
-    "bannerImage": "/assets/images/epsom-final-images/cryo-banner.png",
-    "featureImage": "/assets/images/epsom-final-images/cryo-feature.png",
-    "mobileBannerImage": "/assets/images/epsom-final-images/cryo-banner-mobile.png",
+    "bannerImage": "/assets/images/epsom-final-images/cryo-banner.webp",
+    "featureImage": "/assets/images/epsom-final-images/cryo-feature.webp",
+    "mobileBannerImage": "/assets/images/epsom-final-images/cryo-banner-mobile.webp",
 
     "introduction": {
       "title": "What is Cryotherapy?",
@@ -190,9 +190,9 @@ export default {
     },
 
     "title": "IV Drip Therapy ",
-    "bannerImage": "/assets/images/epsom-final-images/iv-drip-banner-pc.png",
+    "bannerImage": "/assets/images/epsom-final-images/iv-drip-banner-pc.webp",
     "featureImage": "/assets/images/epsom-final-images/iv-drip-therapy-feature.webp",
-    "mobileBannerImage": "/assets/images/epsom-final-images/iv-drip-mobile.png",
+    "mobileBannerImage": "/assets/images/epsom-final-images/iv-drip-mobile.webp",
 
     "introduction": {
       "title": "What is IV Drip Therapy?",
@@ -422,9 +422,9 @@ export default {
     },
 
     "title": "Epsom Salt Sauna ",
-    "bannerImage": "/assets/images/epsom-final-images/salt-banner-pc.png",
+    "bannerImage": "/assets/images/epsom-final-images/salt-banner-pc.webp",
     "featureImage": "/assets/images/epsom-final-images/epsom-salt-sauna-feature.webp",
-    "mobileBannerImage": "/assets/images/epsom-final-images/salt-banner-mobile.png",
+    "mobileBannerImage": "/assets/images/epsom-final-images/salt-banner-mobile.webp",
 
     "introduction": {
       "title": "What is Epsom Salt Sauna?",
@@ -514,9 +514,9 @@ export default {
     },
 
     "title": "Compression Therapy",
-    "bannerImage": "/assets/images/epsom-final-images/comp-banner.png",
-    "featureImage": "/assets/images/epsom-final-images/comp-feature.png",
-    "mobileBannerImage": "/assets/images/epsom-final-images/compression-banner-mobile.png",
+    "bannerImage": "/assets/images/epsom-final-images/comp-banner.webp",
+    "featureImage": "/assets/images/epsom-final-images/comp-feature.webp",
+    "mobileBannerImage": "/assets/images/epsom-final-images/compression.webp",
 
     "introduction": {
       "title": "What is Compression Therapy?",
@@ -605,9 +605,9 @@ export default {
     },
 
     "title": "Collagen Light Therapy ",
-    "bannerImage": "/assets/images/epsom-final-images/collagen-banner-pc.png",
-    "featureImage": "/assets/images/epsom-final-images/collagen-light-therapy-feature.webp",
-    "mobileBannerImage": "/assets/images/epsom-final-images/collagen-banner-mobile.png",
+    "bannerImage": "/assets/images/epsom-final-images/collagen-banner-pc.webp",
+    "featureImage": "/assets/images/epsom-final-images/collage-feature.webp",
+    "mobileBannerImage": "/assets/images/epsom-final-images/collagen-banner-mobile.webp",
 
     "introduction": {
       "title": "What is Collagen Light Therapy?",
@@ -697,9 +697,9 @@ export default {
     },
 
     "title": "Infrared Body Wrap",
-    "bannerImage": "/assets/images/epsom-final-images/body-wrap.png",
+    "bannerImage": "/assets/images/epsom-final-images/body-wrap.webp",
     "featureImage": "/assets/images/epsom-final-images/infrared-body-wrap-feature.webp",
-    "mobileBannerImage": "/assets/images/epsom-final-images/infrared-body-wrap-mobile.webp",
+    "mobileBannerImage": "/assets/images/epsom-final-images/infrared.webp",
 
     "introduction": {
       "title": "What is Infrared Body Wrap?",
@@ -785,8 +785,8 @@ export default {
   "cryotherapy-": {
     "title": "Whole Body Cryotherapy ",
     "bannerImage": "/assets/images/epsom-final-images/health-optimisation-longevity-banner-desktop.webp",
-    "featureImage": "/assets/images/final-epsom/feature image 1254 x 1254.png",
-    "mobileBannerImage": "/assets/images/epsom-final-images/feature-cryo.png",
+    "featureImage": "/assets/images/final-epsom/feature image 1254 x 1254.webp",
+    "mobileBannerImage": "/assets/images/epsom-final-images/feature-cryo.webp",
 
     "introduction": {
       "title": "What is Cryotherapy?",
@@ -881,9 +881,9 @@ export default {
     },
 
     "title": "Hyperbaric Oxygen Therapy (HBOT) ",
-    "bannerImage": "/assets/images/epsom-final-images/Hyperbaric-Wellness-banner.png",
-    "featureImage": "/assets/images/epsom-final-images/Hyperbaric-Wellness-feature.png",
-    "mobileBannerImage": "/assets/images/epsom-final-images/Hyperbaric-Wellness-feature.png",
+    "bannerImage": "/assets/images/epsom-final-images/Hyperbaric-Wellness-banner.webp",
+    "featureImage": "/assets/images/epsom-final-images/Hyperbaric-Wellness-feature.webp",
+    "mobileBannerImage": "/assets/images/epsom-final-images/Hyperbaric-Wellness-feature.webp",
 
     "introduction": {
       "title": "What is Hyperbaric Oxygen Therapy (HBOT)?",
@@ -972,8 +972,8 @@ export default {
     },
 
     "title": "Red Light Therapy",
-    "bannerImage": "/assets/images/epsom-final-images/red-light-banner.JPG",
-    "featureImage": "/assets/images/epsom-final-images/red-light-feature.JPG",
+    "bannerImage": "/assets/images/epsom-final-images/red-light-banner.webp",
+    "featureImage": "/assets/images/epsom-final-images/red-light-feature.webp",
 
     "introduction": {
       "title": "What is Red Light Therapy?",
@@ -1054,8 +1054,8 @@ export default {
     },
 
     "title": "Epsom Salt Sauna ",
-    "bannerImage": "/assets/images/epsom-final-images/Salt-Sauna-banner.png",
-    "featureImage": "/assets/images/epsom-final-images/Salt-Sauna-feature.png",
+    "bannerImage": "/assets/images/epsom-final-images/Salt-Sauna-banner.webp",
+    "featureImage": "/assets/images/epsom-final-images/Salt-Sauna-feature.webp",
 
     "introduction": {
       "title": "What is Epsom Salt Sauna?",
@@ -1144,8 +1144,8 @@ export default {
     },
 
     "title": "Compression Therapy",
-    "bannerImage": "/assets/images/epsom-final-images/compression-banner.png",
-    "featureImage": "/assets/images/epsom-final-images/compression-feature.png",
+    "bannerImage": "/assets/images/epsom-final-images/compression-banner.webp",
+    "featureImage": "/assets/images/epsom-final-images/compression-feature.webp",
 
     "introduction": {
       "title": "What is Compression Therapy?",
@@ -1234,9 +1234,9 @@ export default {
     },
 
     "title": "Infrared Body Wrap",
-    "bannerImage": "/assets/images/epsom-final-images/infrared-body-wrap-banner.png",
-    "featureImage": "/assets/images/epsom-final-images/infrared-body-wrap-feature.png",
-    "mobileBannerImage": "/assets/images/epsom-final-images/infrared-body-wrap-feature.png",
+    "bannerImage": "/assets/images/epsom-final-images/infrared-body-wrap-banner.webp",
+    "featureImage": "/assets/images/epsom-final-images/infrared-body-wrap-feature.webp",
+    "mobileBannerImage": "/assets/images/epsom-final-images/infrared-body-wrap-feature.webp",
 
     "introduction": {
       "title": "What is Infrared Body Wrap?",

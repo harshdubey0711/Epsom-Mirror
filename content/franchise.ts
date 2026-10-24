@@ -1,116 +1,95 @@
-export const franchiseWhyPartner = [
-  {
-    title: "Established Brand",
-    description:
-      "A trusted name in luxury cryotherapy, recovery, and biohacking with growing recognition in Mumbai.",
-  },
-  {
-    title: "Proven Mumbai Operations",
-    description:
-      "Multiple locations delivering cryo, IV drips, spa, aesthetics, and salon services under one ecosystem.",
-  },
-  {
-    title: "Five-Category Menu",
-    description:
-      "Bio Hack, IV Drip, Luxury Spa, Aesthetic, and Salon — diversified revenue streams for partners.",
-  },
-  {
-    title: "Medical-Guided Positioning",
-    description:
-      "Science-backed therapies and premium care standards inspired by international wellness clinics.",
-  },
-  {
-    title: "Training & SOPs",
-    description:
-      "Structured onboarding, operational playbooks, and team training aligned with brand standards.",
-  },
-  {
-    title: "Marketing Support",
-    description:
-      "Brand assets, digital presence, and launch guidance to build awareness in your market.",
-  },
+export const franchiseHero = {
+  eyebrow: "Build a business around the future of wellness.",
+  title: "Own The Future Of Wellness.",
+  subtitle:
+    "Partner with the Next Generation of Premium Wellness & Longevity. Explore exclusive franchise opportunities with Epsom Wellness & Longevity and be part of a growing world of advanced wellness, recovery and aesthetic optimization.",
+  cta: "Explore Franchise Opportunities",
+};
+
+export const franchiseOpportunities = {
+  eyebrow: "Franchise Opportunities",
+  title: "A New Era of Wellness. Your Next Business Opportunity.",
+  intro:
+    "Discover a franchise format designed to align with your business vision, investment capacity and preferred space.",
+  cta: "Enquire Now",
+};
+
+// TODO: confirm Mid-Size and Luxury CAPEX units before publishing.
+// The brief said "₹120 Crore" / "₹150 Crore", which looks like Lakhs.
+export const franchiseFormats = [
+  { format: "Basic", space: "1,000 sq. ft.", capex: "₹60 Lakhs" },
+  { format: "Mid-Size", space: "2,000 sq. ft.", capex: "₹1.20 Crore" },
+  { format: "Luxury", space: "3,000 sq. ft.", capex: "₹1.50 Crore" },
 ];
 
-export const franchiseOfferings = [
-  {
-    title: "Bio Hack",
-    description: "Cryotherapy, compression, infrared, hyperbaric oxygen, and recovery technologies",
-  },
-  {
-    title: "IV Drip",
-    description: "Physician-guided IV nutrition and wellness infusions",
-  },
-  {
-    title: "Luxury Spa",
-    description: "Premium massage, body rituals, and relaxation experiences",
-  },
-  {
-    title: "Aesthetic",
-    description: "Advanced skin rejuvenation and cosmetic wellness treatments",
-  },
-  {
-    title: "Salon",
-    description: "Hair, skin, and grooming services in a luxury setting",
-  },
-];
+export const franchiseWhyPartner = {
+  eyebrow: "Why Partner With Epsom?",
+  title: "More Than a Wellness Business. A Vision for Longevity.",
+  intro:
+    "Epsom Wellness & Longevity brings together modern wellness concepts, recovery experiences and aesthetic treatments under one premium brand.",
+  items: [
+    {
+      title: "A Distinctive Brand Positioning",
+      description: "Build within the evolving wellness and longevity sector.",
+    },
+    {
+      title: "Multiple Wellness Categories",
+      description:
+        "Explore opportunities across recovery, relaxation, skin and aesthetic wellness.",
+    },
+    {
+      title: "Flexible Franchise Formats",
+      description:
+        "Choose a format that aligns with your business goals and available space.",
+    },
+    {
+      title: "A Premium Customer Experience",
+      description:
+        "Create an environment centred on comfort, personalized care and modern wellness.",
+    },
+  ],
+};
 
-export const franchiseIdealPartner = [
-  "Capital and readiness to invest in a luxury wellness center",
-  "Strong local market knowledge and preferred city or region",
-  "Background in business, medical, hospitality, or wellness (preferred)",
-  "Commitment to operational excellence and customer experience",
-];
+export const franchiseInvestment = {
+  eyebrow: "Investment",
+  title: "Your Investment. Your Vision. The Future of Wellness.",
+  intro: "Choose a franchise format that suits your business ambitions.",
+  body:
+    "Our team can guide you through the next steps, including the proposed franchise format, investment structure and operational requirements.",
+  cta: "Request Franchise Details",
+  disclaimer:
+    "CAPEX figures are indicative and subject to final scope, location, fit-out requirements and commercial terms. Returns are not guaranteed.",
+};
 
-export const franchiseRegions = [
-  {
-    region: "North",
-    cities: "Delhi NCR, Chandigarh, Jaipur, Lucknow",
-  },
-  {
-    region: "West",
-    cities: "Mumbai, Pune, Ahmedabad, Surat",
-  },
-  {
-    region: "South",
-    cities: "Bengaluru, Hyderabad, Chennai, Kochi",
-  },
-  {
-    region: "East",
-    cities: "Kolkata, Bhubaneswar, Guwahati",
-  },
-  {
-    region: "Central",
-    cities: "Indore, Bhopal, Nagpur, Raipur",
-  },
-];
+export const franchisePartnership = {
+  eyebrow: "Partnership",
+  title: "Let’s Build the Future of Wellness Together.",
+  body: [
+    "We welcome enquiries from entrepreneurs, investors and business partners interested in exploring a premium wellness franchise.",
+    "Share your details, and our team will connect with you to discuss the available formats and partnership process.",
+  ],
+  cta: "Become A Franchise Partner",
+};
 
-export const franchiseSteps = [
-  {
-    step: "01",
-    title: "Submit Enquiry",
-    description: "Share your details, preferred city, and background using the form below.",
-  },
-  {
-    step: "02",
-    title: "Introductory Call",
-    description: "Our team connects with you to understand goals, market, and fit.",
-  },
-  {
-    step: "03",
-    title: "Location & Feasibility",
-    description: "We review site potential, investment range, and operational requirements.",
-  },
-  {
-    step: "04",
-    title: "Partnership Discussion",
-    description: "Qualified partners proceed to detailed terms and launch planning.",
-  },
-];
+export const franchiseEnquiry = {
+  eyebrow: "Get In Touch",
+  title: "Begin Your Franchise Journey",
+  submit: "Submit Enquiry",
+  note: "Our franchise team will contact you to discuss the opportunity.",
+};
 
+export const franchiseClosing = {
+  title: "The Future Of Wellness Is An Opportunity.",
+  subtitle: "Make your next business move with Epsom Wellness & Longevity.",
+  cta: "Explore Franchise Partnership",
+};
+
+export const franchiseFormatOptions = franchiseFormats.map((f) => f.format);
+
+// TODO: align these ranges with the final CAPEX once confirmed.
 export const franchiseInvestmentRanges = [
-  "Select (optional)",
-  "Under ₹50 Lakh",
-  "₹50 Lakh – ₹1 Crore",
-  "₹1 Crore – ₹2 Crore",
-  "₹2 Crore+",
+  "Under ₹60 Lakhs",
+  "₹60 Lakhs – ₹1 Crore",
+  "₹1 Crore – ₹1.5 Crore",
+  "₹1.5 Crore+",
 ];

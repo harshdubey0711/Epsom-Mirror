@@ -16,15 +16,15 @@
           "Your health is your greatest investment. At Epsom, we offer doctor-led therapies that help improve recovery, increase energy, support overall wellness, and promote healthy ageing.",
           "Every treatment is tailored to your individual health goals, so you receive care that's right for you."
         ],
-        "image": "/assets/images/imagesEpsom/healt-feature.png",
+        "image": "/assets/images/imagesEpsom/healt-feature.webp",
         "imageAlt": "Health optimisation and longevity treatments at Epsom Wellness"
       },
       "treatments": [
         {
           "slug": "cryotherapy",
           "name": "Whole Body Cryotherapy",
-          "bannerImage": "/assets/images/epsom-final-images/cryo-banner.png",
-          "featureImage": "/assets/images/epsom-final-images/cryo-feature.png"
+          "bannerImage": "/assets/images/epsom-final-images/cryo-banner.webp",
+          "featureImage": "/assets/images/epsom-final-images/cryo-feature.webp"
         },
         {
           "slug": "hyperbaric-oxygen-therapy",
@@ -109,7 +109,7 @@
           "Simple, non-invasive therapies designed to help ease everyday pain, improve mobility, and support a more comfortable, active lifestyle.",
           "At Epsom, our pain management therapies focus on helping you move better and feel better. Whether you're dealing with muscle soreness, joint discomfort, back or neck tension, post-workout aches, or the physical strain of a busy lifestyle, our treatments are designed to support your body's natural recovery process in a safe and comfortable environment."
         ],
-        "image": "/assets/images/epsom-final-images/pain-feature.png",
+        "image": "/assets/images/epsom-final-images/pain-feature.webp",
         "imageAlt": "Pain management and recovery treatments at Epsom Wellness"
       },
       "treatments": [
@@ -167,8 +167,8 @@
       "name": "Weight Loss & Body Management",
       "href": "weight-loss-management/",
       "footerLabel": "Weight Loss",
-      "bannerImage": "/assets/images/epsom-final-images/weight-loss-management-banner-desktop.png",
-      "mobileBannerImage": "/assets/images/epsom-final-images/weight-loss-management-mobile.png",
+      "bannerImage": "/assets/images/epsom-final-images/weight-loss-management-banner-desktop.webp",
+      "mobileBannerImage": "/assets/images/epsom-final-images/weight-loss.webp",
       "hero": {
         "title": "Weight Loss & Body Management in Mumbai"
       },
@@ -203,32 +203,32 @@
           "name": "SlimShot Drip",
           "description": "A specialised IV wellness therapy offered as part of Epsom's weight management range.",
           "bestSuitedFor": "Individuals looking to complement their personalised weight management routine.",
-          "bannerImage": "/assets/images/treatments/slimshot-drip-banner.jpg",
-          "featureImage": "/assets/images/treatments/slimshot-drip-feature.jpg"
+          "bannerImage": "/assets/images/treatments/slimshot-drip-banner.webp",
+          "featureImage": "/assets/images/treatments/slimshot-drip-feature.webp"
         },
         {
           "slug": "weight-loss-management",
           "name": "SlimShot Plus",
           "description": "A more comprehensive option within Epsom's weight management IV range, designed around individual wellness goals.",
           "bestSuitedFor": "People looking for additional nutritional and wellness support alongside their weight management plan.",
-          "bannerImage": "/assets/images/treatments/slimshot-plus-banner.jpg",
-          "featureImage": "/assets/images/treatments/slimshot-plus-feature.jpg"
+          "bannerImage": "/assets/images/treatments/slimshot-plus-banner.webp",
+          "featureImage": "/assets/images/treatments/slimshot-plus-feature.webp"
         },
         {
           "slug": "weight-loss-management",
           "name": "Metabolize",
           "description": "A targeted wellness drip from Epsom's weight management range, designed to complement a healthy lifestyle and personalised weight management programme.",
           "bestSuitedFor": "Individuals focusing on metabolism and overall weight management.",
-          "bannerImage": "/assets/images/treatments/metabolize-banner.jpg",
-          "featureImage": "/assets/images/treatments/metabolize-feature.jpg"
+          "bannerImage": "/assets/images/treatments/metabolize-banner.webp",
+          "featureImage": "/assets/images/treatments/metabolize-feature.webp"
         },
         {
           "slug": "weight-loss-management",
           "name": "L-Carnitine Shots",
           "description": "L-Carnitine injections are offered as part of Epsom's wellness and weight management options.",
           "bestSuitedFor": "People looking to include targeted nutritional support in their personalised wellness plan.",
-          "bannerImage": "/assets/images/treatments/l-carnitine-shots-banner.jpg",
-          "featureImage": "/assets/images/treatments/l-carnitine-shots-feature.jpg"
+          "bannerImage": "/assets/images/treatments/l-carnitine-shots-banner.webp",
+          "featureImage": "/assets/images/treatments/l-carnitine-shots-feature.webp"
         }
       ],
       "suitability": {

@@ -1,4 +1,5 @@
 import { BookButton } from "@/components/BookButton";
+import { ResponsiveHeroImage } from "@/components/ResponsiveHeroImage";
 import { aboutData } from "@/content/about";
 import { buildMetadata } from "@/lib/metadata";
 import Image from "next/image";
@@ -15,14 +16,11 @@ export default function AboutPage() {
     <main>
       {/* Hero Section */}
       <section className="relative min-h-[60vh] md:min-h-[70vh] flex items-center justify-center overflow-hidden">
-        <Image
-          src={aboutData.hero.image}
-          alt={aboutData.hero.imageAlt}
-          fill
-          priority
-          className="object-cover"
-          sizes="100vw"
-        />
+        <ResponsiveHeroImage
+                    desktopSrc={aboutData.hero.image}
+                    mobileSrc={aboutData.hero.mobileImage}
+                    alt={aboutData.hero.imageAlt}
+                  />
 
         <div className="absolute inset-0 bg-black/50" />
 
