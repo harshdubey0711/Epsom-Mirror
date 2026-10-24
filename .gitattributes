@@ -1,7 +1,9 @@
 *.mp4 filter=lfs diff=lfs merge=lfs -text
-
 *.mov filter=lfs diff=lfs merge=lfs -text
-
 *.psd filter=lfs diff=lfs merge=lfs -text
 
-public/assets/images/banners/home-banner.mp4 filter=lfs diff=lfs merge=lfs -text
+public/assets/images/epsom-final-images/cryotherapy-vid.mp4 -filter -diff -merge -text
+public/assets/images/epsom-final-images/hbot-vid.mp4 -filter -diff -merge -text
+public/assets/images/epsom-final-images/cryolipolysis-vid.mp4 -filter -diff -merge -text
+public/assets/images/epsom-final-images/IV-Drip-Vid.mp4 -filter -diff -merge -text
+public/assets/images/epsom-final-images/skin-lift.mp4 -filter -diff -merge -text
