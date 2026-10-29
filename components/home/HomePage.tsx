@@ -8,6 +8,7 @@ import { FaqSection } from "@/components/FaqSection";
 import { JsonLd } from "@/components/JsonLd";
 import { RevealLtr } from "@/components/RevealLtr";
 import { TreatmentMarquee } from "@/components/TreatmentMarquee";
+import { HomeLocationCarousel } from "@/components/HomeLocationCarousel";
 import {
   benefits,
   homeCategorySections,
@@ -16,6 +17,7 @@ import {
 } from "@/content/home";
 import { faqItems, faqSchemaAnswers } from "@/content/faq";
 import { SITE_URL } from "@/lib/site";
+
 
 /* WhatsApp booking link */
 const WHATSAPP_NUMBER = "919867670762";
@@ -378,6 +380,9 @@ export function HomePage() {
         </div>
       </section>
 
+
+            <HomeLocationCarousel />
+
       {/* ========================= CATEGORY SECTIONS ========================= */}
       {homeCategorySections.map((section) => (
         <section
@@ -395,7 +400,7 @@ export function HomePage() {
                 href={`/${section.slug}/`}
                 className="btn-ghost shrink-0 !px-2 !py-1 !text-right !text-[0.7rem] leading-tight sm:!px-4 sm:!py-2 sm:!text-base sm:whitespace-nowrap"
               >
-                View All
+                View All 
                 <span className="hidden sm:inline"> Treatments</span> →
               </Link>
             </div>

@@ -24,15 +24,22 @@ const tenor = Tenor_Sans({
   display: "swap",
 });
 
+
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
+
   ...buildMetadata({
     title: "Wellness Clinic in Mumbai | Epsom Wellness",
     description:
       "Welcome to Epsom Wellness, a premier wellness and aesthetic clinic in Mumbai. Our advanced wellness & longevity clinic in Mumbai specializes in health optimization, pain management, beauty, and sports recovery. Book your consultation today.",
     path: "/",
   }),
+
+  icons: {
+    icon: "/assets/favicon.ico",
+  },
 };
+
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (

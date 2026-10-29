@@ -8,15 +8,15 @@ export function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           <div>
-            <Link href="/" className="inline-block mb-4">
-              <Image
-                src="/assets/images/logo/logo.png"
-                alt="Epsom Cryo Spa"
-                width={140}
-                height={40}
-                className="h-10 w-auto"
-              />
-            </Link>
+            <Link href="/" className="inline-flex items-center">
+  <Image
+    src="/assets/images/logo/logo-white.webp"
+    alt="Epsom Cryo Spa"
+    width={300}
+    height={110}
+    className="h-16 md:h-20 w-auto object-contain"
+  />
+</Link>
             <h3 className="font-display text-xl text-epsom-ink mb-2">Epsom Wellness</h3>
             <p className="text-epsom-muted text-sm">
               Mumbai&apos;s premier cryotherapy &amp; wellness center for recovery, biohacking, and luxury

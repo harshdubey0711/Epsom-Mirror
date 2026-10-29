@@ -102,9 +102,9 @@
   }
 
   /* Horizontal treatment strip — CSS auto-scroll + JS L/R under */
-  .marquee-shell {
-    @apply w-4/5 max-w-7xl mx-auto;
-  }
+.marquee-shell {
+  @apply w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
   .treatment-marquee {
     overflow: hidden;
   }

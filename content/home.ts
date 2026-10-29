@@ -51,6 +51,49 @@ export type HomeCategorySection = {
   treatments: TreatmentCard[];
 };
 
+
+export type HomeLocation = {
+  id: string;
+  name: string;
+  city: string;
+  address: string;
+  image: string;
+  description: string;
+  href: string;
+};
+export const homeLocations: HomeLocation[] = [
+  {
+    id: "santacruz",
+    name: "Santacruz West",
+    city: "Mumbai",
+    address: "Kamla Spaces, Shop No. 6, S.V. Road",
+    image: "/assets/images/epsom-final-images/santacruz-banner-pc.webp",
+    description:
+      "Discover advanced wellness, recovery and longevity therapies at Epsom Wellness.",
+    href: "/santacruz/",
+  },
+  {
+    id: "borivali",
+    name: "Borivali",
+    city: "Mumbai",
+    address: "Borivali, Mumbai",
+    image: "/assets/images/epsom-final-images/borivali-banner-pc.webp",
+    description:
+      "Explore wellness experiences designed around your recovery and wellbeing.",
+    href: "/borivali/",
+  },
+  {
+    id: "andheri",
+    name: "Andheri",
+    city: "Mumbai",
+    address: "Andheri, Mumbai",
+    image: "/assets/images/epsom-final-images/andheri-banner-pc.webp",
+    description:
+      "Discover wellness, recovery and longevity experiences designed around your wellbeing.",
+    href: "/andheri/",
+  },
+];
+
 export const homeCategorySections: HomeCategorySection[] = [
   {
     id: "health-optimisation",
