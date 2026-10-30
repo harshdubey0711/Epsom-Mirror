@@ -87,16 +87,16 @@ export function Header() {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 overflow-visible">
           <div className="flex items-center justify-between py-3">
-            <Link href="/" className="flex-shrink-0">
-              <Image
-                src="/assets/images/logo/logo.png"
-                alt="Epsom Cryo Spa"
-                width={160}
-                height={48}
-                className="h-10 md:h-12 w-auto"
-                priority
-              />
-            </Link>
+           <Link href="/" className="flex-shrink-0 flex items-center">
+  <Image
+    src="/assets/images/logo/logo-white.webp"
+    alt="Epsom Cryo Spa"
+    width={280}
+    height={100}
+    className="h-16 md:h-20 w-auto object-contain"
+    priority
+  />
+</Link>
 
             <nav className="hidden lg:flex items-center gap-6 overflow-visible" aria-label="Primary">
               <Link href="/" className="nav-link-accent">

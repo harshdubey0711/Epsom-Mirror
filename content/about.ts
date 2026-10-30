@@ -10,6 +10,7 @@ export const aboutData = {
     heading:
       "Advanced Wellness, Longevity & Aesthetic Clinic in Mumbai",
 
+
     description:
       "Mumbai’s Premier Destination for Scientific Longevity, Advanced Aesthetics, & Total Body Optimization. Experience the standard of care at the premier wellness clinic in Mumbai, engineered entirely around your vitality.",
 
@@ -135,3 +136,4 @@ export const aboutData = {
     buttonText: "Book a Consultation",
   },
 };
+

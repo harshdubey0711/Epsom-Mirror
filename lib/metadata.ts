@@ -20,13 +20,13 @@ export function buildMetadata({ title, description, path }: BuildMetaInput): Met
       siteName: "Epsom Cryo Spa",
       type: "website",
       locale: "en_IN",
-      images: [{ url: `${SITE_URL}/assets/images/logo/logo.png`, alt: "Epsom Cryo Spa" }],
+      images: [{ url: `${SITE_URL}/assets/images/logo/logo-white.webp`, alt: "Epsom Cryo Spa" }],
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
-      images: [`${SITE_URL}/assets/images/logo/logo.png`],
+      images: [`${SITE_URL}/assets/images/logo/logo-white.webp`],
     },
   };
 }
